@@ -1,0 +1,99 @@
+/*FEATURED*/
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 650px;
+    background: url("../images/featured/featured-bg.png") 100% 100% no-repeat;
+    background-size: cover; 
+    &__carousel {
+        display: flex;
+        align-items: center;
+        ol {
+            margin-bottom: 0;
+        }
+    }
+    .carousel-indicators {
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+        right: initial;
+        bottom: initial;
+        li {
+            &:not(:last-child) {margin-bottom: 10px;}
+            background: #fff;
+            width: 10px;
+            height: 16px;
+            margin-right: 0;
+            margin-left: 0;
+            border-bottom: none;
+            border-top: none;
+            &.active {
+                background: $orange-text;
+                height: 36px;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__head {
+        font-family: "HarmoniaSans-black", "Arial", sans-serif;
+        font-size: 52px;
+        color: $orange-text;
+        margin-left: -2px;
+        margin-bottom: 15px;
+    }
+    &__name {
+        @include semibd-text-g;
+        margin-bottom: 15px;
+    }
+    &__description {
+        font-family: "HarmoniaSans", "Arial", sans-serif;
+        font-size: 16px;
+        color: $descr-color;
+        margin-bottom: 60px;
+    }
+    &__order {
+        display: flex;
+        &__price {
+            @include semibd-text-g;
+            margin: 0;
+        }
+        &__btn {
+            @include semibd-text-o;
+            position: relative;
+            padding-left: 34px;
+            margin-left: 28px;
+            background: none;
+            border: none;
+            &:before {
+                position: absolute;
+                content: url("../images/icons/featured/cart-ico.png");
+                width: 24px;
+                height: 17px;
+                left: 0;
+                top: 2px;
+            }
+        }
+    }
+}
+
+.carousel-item {
+    padding: 200px 0 200px 0;
+}
+
+.carousel-item-next:not(.carousel-item-left),
+.active.carousel-item-right {
+  transform: translateY(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-right),
+.active.carousel-item-left {
+  transform: translateY(-100%);
+}
+
+

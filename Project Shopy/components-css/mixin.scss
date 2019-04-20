@@ -1,0 +1,81 @@
+@mixin flex-settings {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@mixin ico_hover-anim {
+	transform: rotate(-20deg);
+	transition: transform .7s ease-out;
+}
+
+@mixin ico-hover-transition {
+	transition: transform .7s ease-out;
+}
+
+@mixin standart-text-g-14px {
+	font-family: "HarmoniaSans", "Arial", sans-serif;
+	font-size: 14px;
+	color: $gray-text;
+}
+
+@mixin standart-text-g {
+	font-family: "HarmoniaSans", "Arial", sans-serif;
+	font-size: 16px;
+	color: $gray-text;
+}
+
+@mixin semibd-text-g {
+	font-family: "HarmoniaSans-semibd", "Arial", sans-serif;
+	font-size: 18px;
+	color: $gray-text;
+}
+
+@mixin bold-text-g {
+	font-family: "HarmoniaSans-bold", "Arial", sans-serif;
+	font-size: 18px;
+	color: $gray-text;
+}
+
+@mixin black-text-g {
+	font-family: "HarmoniaSans-black", "Arial", sans-serif;
+	font-size: 18px;
+	color: $gray-text;
+}
+
+@mixin h-text-g {
+	font-family: "HarmoniaSans-black", "Arial", sans-serif;
+	font-size: 36px;
+	color: $gray-text;
+}
+
+@mixin standart-text-o {
+	font-family: "HarmoniaSans", "Arial", sans-serif;
+	font-size: 16px;
+	color: $orange-text;
+}
+
+@mixin semibd-text-o {
+	font-family: "HarmoniaSans-semibd", "Arial", sans-serif;
+	font-size: 18px;
+	color: $orange-text;
+}
+
+@mixin bold-text-o {
+	font-family: "HarmoniaSans-bold", "Arial", sans-serif;
+	font-size: 18px;
+	color: $orange-text;
+}
+
+
+@mixin black-text-o {
+	font-family: "HarmoniaSans-black", "Arial", sans-serif;
+	font-size: 18px;
+	color: $orange-text;
+}

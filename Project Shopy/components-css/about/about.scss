@@ -1,0 +1,39 @@
+/*ABOUT*/
+.about {
+	&__content {
+		background: #fff;
+		padding: 50px;
+	}
+	&__item {
+		@include standart-text-g;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	&__content {
+		&__head {
+			@include bold-text-o;
+			text-align: center;
+			text-transform: capitalize;
+			padding: 20px 0;
+		}
+	}
+	&__list {
+		list-style-type: square;
+		&__item {
+			cursor: pointer;
+			list-style-type: square;
+			&:hover {
+				border-bottom: 1px solid $orange-text;;
+    			margin-bottom: -1px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 575px) {
+	.about {
+		div[class*="col-"] {
+			padding: 0;
+		}
+	}
+}

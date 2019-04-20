@@ -1,0 +1,49 @@
+/*LOGO*/
+
+@font-face {
+	font-family: "Titillium";
+	src: url("../fonts/Titillium/TitilliumWeb-Bold.ttf");
+}
+@font-face {
+	font-family: "HarmoniaSans";
+	src: url("../fonts/HarmoniaSans/HarmoniaSansProCyr-Regular.otf");
+}
+
+.logo {
+	min-width: 130px;
+	min-height: 46px;
+	&__word {
+		display: flex;
+		align-items: flex-start;
+		&__letters {
+			font-family: "Titillium", "Arial", sans-serif;
+			font-size: 32px;
+			line-height: 22px;
+			color: #34404b;
+		}
+		&__img {
+			position: relative;
+			margin-right: 8px;
+			margin-left: 8px;
+			&-bg {
+				background-color: rgb(255, 89, 18);
+			    width: 34px;
+			    height: 17px;
+			    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+			}
+			&-svg {
+				position: absolute;
+				top: 4px;
+				left: 7px;
+			}
+		}
+	}
+	&__description {
+		&__text {
+			font-family: "HarmoniaSans", "Arial", sans-serif;
+			font-size: 17px;
+			line-height: 11px;
+			color: #46505a;
+		}
+	}
+}

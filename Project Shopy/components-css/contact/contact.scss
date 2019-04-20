@@ -1,0 +1,53 @@
+/*CONTACT*/
+.contact {
+	&__row {
+		margin: 0;	
+	}
+	&__item {
+		background-color: #fff;
+		padding: 40px;
+	}
+	&__head {
+		@include bold-text-o;
+		text-transform: capitalize;
+		text-align: center;
+		padding: 20px 0;
+		border-bottom: 1px solid $separates-color;
+		margin-bottom: 20px;
+	}
+	&__link {display: block;}
+	&__link, &__street {
+		@include semibd-text-g;
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.contact {
+		&__link, &__street {
+			font-family: "HarmoniaSans", "Arial", sans-serif;
+			font-size: 16px;
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.contact {
+		&__row {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+		&__item {
+			padding: 40px 0;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

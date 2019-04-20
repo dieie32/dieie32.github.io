@@ -1,0 +1,44 @@
+/*RESET*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	&:hover {
+		color: $orange-text;
+		text-decoration: none;
+		transition: .3s ease-in-out;
+	}
+	&:active,&:focus {
+		outline: none;
+	}
+	color: $gray-text;
+	text-decoration: none;
+	transition: .3s ease-in-out;
+}
+
+ul, li, ul>li {
+	list-style-type: none;
+}
+ul {margin-bottom: 0;}
+button {
+	background: none;
+	border: none;
+	&:active,&:focus {
+		outline: none;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+input, input:hover, input:active {
+	outline: none;
+	border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

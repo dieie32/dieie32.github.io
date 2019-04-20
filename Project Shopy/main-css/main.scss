@@ -1,0 +1,34 @@
+@import "../components-css/color-variables.scss";
+@import "../components-css/import-fonts.scss";
+@import "../components-css/mixin.scss";
+@import "../components-css/reset.scss";
+@import "../components-css/small-blocks.scss";
+
+/*HOME*/
+@import "../components-css/home/header.scss";
+@import "../components-css/home/featured.scss";
+@import "../components-css/home/arrivals.scss";
+@import "../components-css/home/hot-deal--adv.scss";
+@import "../components-css/home/best-sales.scss";
+@import "../components-css/home/letter.scss";
+@import "../components-css/home/footer.scss";
+
+/*PRODUCTS*/
+@import "../components-css/products/products.scss";
+@import "../components-css/products/product-show.scss";
+@import "../components-css/products/related.scss";
+@import "../components-css/products/products-aside.scss";
+
+/*HOT-DEALS*/
+@import "../components-css/hot-deals/hot-deals.scss";
+
+/*ABOUT*/
+@import "../components-css/about/about.scss";
+
+/*CONTACT*/
+@import "../components-css/contact/contact.scss";
+
+
+/*
+@import "../components-css//.scss";
+*/

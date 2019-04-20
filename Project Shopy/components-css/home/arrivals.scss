@@ -1,0 +1,158 @@
+/*ARRIVALS*/
+.arrivals {
+	&__face {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&--front{
+		&__img {
+			margin-top: 30px;
+			margin-bottom: 27px;
+		}
+		&__title {
+			@include bold-text-g;
+			margin-bottom: 18px;
+			text-transform: capitalize;
+		}
+		&__price {
+			@include bold-text-o;
+		}
+	}
+	&--back {
+		&__img {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		&__title {
+			@include bold-text-o;
+			text-transform: capitalize;
+		}
+		&__sizes {
+			@include standart-text-g-14px;
+			margin-bottom: 25px;
+			& span:not(:first-child) {cursor: pointer;}
+			.sizes__space {
+				padding-right: 12px;
+				padding-left: 12px;
+			}
+		}
+		&__colors {display: flex;}
+		&__color {
+			width: 13px;
+			height: 13px;
+			border-radius: 50%;
+			cursor: pointer;
+			&--red   {background-color: $products-color--red;}
+			&--gray  {background-color: $products-color--gray;}
+			&--blue  {background-color: $products-color--blue;}
+			&--green {background-color: $products-color--green;}
+			&:not(:last-child) {margin-right: 4px;}
+		}
+		&__separate {
+			width: 170px;
+			height: 1px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			background-color: $separates-color;
+		}
+		&__icons {
+			display: flex;
+			align-items: center;
+		}
+		&__icon {
+			width: 22px;
+			height: 21px;
+			&:not(:last-child) {margin-right: 30px;}
+			&--share {background: url("../images/icons/common/share.png") 50% 100% no-repeat;}
+			&--addtocart {background: url("../images/icons/common/addtocart.png") 50% 100% no-repeat;}
+			&--like {background: url("../images/icons/common/like.png") 50% 100% no-repeat;}
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 60px;
+		cursor: pointer;
+		background-color: #fff;
+		margin-top: 80px;
+		margin-bottom: 120px;
+	}
+	&__dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: $orange-text;
+		&:not(:last-child) {margin-right: 5px;}
+	}
+
+
+
+
+
+
+
+
+
+
+	// FLIP CARDS
+	&__item {
+		width: 270px;
+		height: 365px;
+		perspective: 2000px;
+		&:hover .arrivals__card-container {
+			transform: rotateY(180deg);
+			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+		}
+	}
+	&__card-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+	}
+	&__face {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: #fff;
+		backface-visibility: hidden;
+	}
+	&--back {transform: rotateY(180deg);}
+}
+
+@media screen and (max-width: 1199px) {
+	.arrivals{
+		&__item {
+			&:not(:nth-last-child(-n+2)) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.arrivals{
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.arrivals{
+		&__item {
+			padding: 0;
+		}
+		&__dots {
+			.col {
+				padding: 0;
+			}
+		}
+	}
+}

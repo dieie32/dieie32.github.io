@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Shopy</title>
+	<!-- Connecting Bootstrap 4  -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<!-- Connecting Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- Connecting Styles -->
+	<link rel="stylesheet" type="text/css" href="./main-css/main.css">
+	<!-- ICON -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	
+	
+	<header class="header">
+		<div class="container">
+
+			<div class="contacts__container row">
+				<div class="contacts__info col-lg-4 col-md-6 col-sm-8 col-12 ">
+					<div class="contacts__mail">
+						<div class="mail-info">
+							<a href="mailto:shopy-info@mail.com" class="message-ico ico_hover-anim"></a>
+							<a href="mailto:shopy-info@mail.com" class="contacts__info-text">shopy-info@mail.com</a>
+						</div>
+					</div>
+					<div class="contacts__number">
+						<div class="number-info">
+							<a href="tel:+380933377733" class="phone-ico ico_hover-anim"></a>
+							<a href="tel:+380933377733" class="contacts__info-text">+380 (93) 33-777-33</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2 col-12">
+					<div class="contacts__socials">
+						<div class="contacts__social">
+							<a href="#" class="social-ico ico_hover-anim fb"></a>
+						</div>
+						<div class="contacts__social">
+							<a href="#" class="social-ico ico_hover-anim tw"></a>
+						</div>
+						<div class="contacts__social">
+							<a href="#" class="social-ico ico_hover-anim go"></a>
+						</div>
+						<div class="contacts__social">
+							<a href="#" class="social-ico ico_hover-anim in"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__separator"></div>
+		<div class="container">
+			<div class="header__container row">
+				<div class="header__navbar col">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a href="#" class="logo header__logo"></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar__content" aria-controls="navbar__content" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbar__content">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="index.html" class="nav-link">Home</a>
+								</li>
+								<li class="nav-item">
+									<a href="products.html" class="nav-link">Products</a>
+								</li>
+								<li class="nav-item">
+									<a href="hot-deals.html" class="nav-link nav-link--active">Hot Deals</a>
+								</li>
+								<li class="nav-item">
+									<a href="about.html" class="nav-link">About</a>
+								</li>
+								<li class="nav-item">
+									<a href="contact.html" class="nav-link">Contact</a>
+								</li>
+							</ul>
+							<div class="header__profile">
+								<div class="header__profile__search ico_hover-anim">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+									    <a href="#">
+									    	<image id="search-ico" data-name="Search Ico" width="18" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA6lBMVEU0QEv///80QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEsAAADQJQzwAAAATXRSTlMAACez7fblnxSF+MxlKjF63vNYhvVbAYlO+V2W7wmyzgbreexnqMf3K3bdMn7cfLW93xD0Xoq8A1eXu/GxTe53tFl4275fBbrwUauArzmkR0MAAAABYktHRE2AaCBlAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wETEBg54vChbAAAALNJREFUGNNlz8cWgkAMBdCIgDr2hm1QLGCvqKhgwd7+/3vEIOLBt8jiviwSAADGz3IcHwjCOz6fNUIkHInG4olkyqF0Jou1kCN5m5hCET4pURGpXHEEpGoNqd74EsgKUrPlUruDxHVd6vWR+IFLwxFSYCw4MlGnSEF15tCc1exTF2Qp4c5K1w3Bfmi9qcvb3i5JqWkZEoh7pX84ns4Xal4tg59oF3qjhgB/dgevPQh4zCDPF0DUEj9iiXbuAAAAAElFTkSuQmCC"/>
+									    </a>
+									</svg>
+								</div>
+								<div class="header__profile__user ico_hover-anim">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="21" viewBox="0 0 20 21">
+									    <a href="#">
+									    	<image id="user-ico" data-name="User Ico" width="20" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAMAAABxCz6aAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABgFBMVEU0QEv///80QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEs0QEsAAADTHbL/AAAAf3RSTlMAAANMkqiurJvQ8L8CdeHrwKqfnrqp5eJ07YEHXcmRVOgl8Sy8igrsTXDZlu7pPLmk+who0aOIoJ3q2r39yxPM8/r3ZrvIUc+m73kgYta42Necb1h3NATbsA0QDgUWN7fmY/nS9qtWARfT5941mcEPx82JytW+VRsktLFrbi0wg4RvfgAAAAFiS0dEf0i/ceUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARMQFxVXsNFAAAABJ0lEQVQY013O+zfCcBgG8PdbmplRyNYkslZLzWWIhIowM+SaGrmTcr/f/e3WdzsOPb+853zOc97zAFRjs9c5CKKebKAaaYQQtqZmp6ultc3hbmdYm4UersMLZjoZ0kJfF/ym209j7OEDJghBgJAYxtgbwURHpb5+gAES46BsNIeGR5hwjIuNymMY4+OJ+IQ8OZVMienpGWfGxNk5kZxXEgvqorbELlu4kslqmrK69hfX2Q2eotRNUHiKj1BbGHPb+YKu7wDs6npRcVnj96SoNd22f1A0MXcoHB2HqlZkTk7PSlU8L1fcvvRFMHB55aeuBdF3Y+DtXQHAe19WpQdPyeg8PiF45l7Mf7R50KtqhzcC/gWh9zwkPmrxMwvSVy1+c1BJ1mKy8gM3jjBZNe5QeQAAAABJRU5ErkJggg=="/>
+									    </a>
+									</svg>
+								</div>
+								<div class="header__profile__cart ico_hover-anim">
+									<div class="header__profile__cart-counter">
+										<a href="#" class="header__profile__cart-count">7</a>
+									</div>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="17" viewBox="0 0 24 17">
+									    <a href="#">
+									    	<image id="cart-ico" data-name="Cart Ico" width="24" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAMAAADwppwCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA21BMVEX/WRL/////WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRL/WRIAAADmF1fGAAAAR3RSTlMAAA7V2nX2OArP/sRW987TdvkGw9kPgzcxUMn4Y8f9ZPxFYPrvyHvXCNYHmgHjciWxILlVcPTqlTvKEQuHRvXoSIQeE9J6NClPfP0AAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wETEBc7i2bcjwAAALtJREFUGNNt0NcSgjAQBdBYgQD2QkQREMVesPfu/v8fCQQG4nhfNpMz2SSLEE0ylfZKJsslaIJ9XsCiVyUsc3Hgc5Dn/VUBilwEpTKuVIOzNSzXfVAIIQ2sNkmYlpZtE6IgHf5GR4bZscyfdKFnuF1trY+ieP0H2tC7fAQcC2N14r9KgikLM5j7sACHhSWs6D/WGxa2sKOwhwMDAj5SOMGZgcs1GMkN7nF4gBPAEywxlhe8wyHa7Di0jwtf6hEd0tdW5LMAAAAASUVORK5CYII="/>
+									    </a>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="header__separator"></div>
+	</header>
+
+
+	<section class="hot-deals">
+		<div class="container">
+			<div class="row">
+				<div class="hot-deals__title headline-container col">
+					<h3 class="hot-deals__head headline"><span>hot</span> deals</h3>
+					<p class="hot-deals__description headline-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+				</div>
+			</div>
+			<div class="hot-deals__content row">
+				<div class="hot-deals__item col-xl-3 col-md-6 col-12">
+					<div class="hot-deals__card-container">
+						<div class="hot-deals--front hot-deals__face">
+							<img src="images/hot-deals/product-1.png" width="144" height="216" class="hot-deals--front__img" alt="overcoat">
+							<h4 class="hot-deals--front__title">Columbia overcoat</h4>
+							<p class="hot-deals--front__price">135$</p>
+						</div>
+
+						<div class="hot-deals--back hot-deals__face">
+							<img src="images/hot-deals/product-1--back.png" width="60" height="90" class="hot-deals--back__img" alt="overcoat">
+							<h4 class="hot-deals--back__title">Columbia overcoat</h4>
+							<p class="hot-deals--back__sizes">sizes<span class="sizes__space">:</span><span class="size-mean--s">s</span> - <span class="size-mean--m">m</span> - <span class="size-mean--l">l</span> - <span class="size-mean--xl">xl</span></p>
+							<div class="hot-deals--back__colors">
+								<div class="hot-deals--back__color hot-deals--back__color--red"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--gray"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--blue"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--green"></div>
+							</div>
+							<div class="hot-deals--back__separate"></div>
+							<div class="hot-deals--back__icons">
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--share"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--addtocart"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--like"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hot-deals__item col-xl-3 col-md-6 col-12">
+					<div class="hot-deals__card-container">
+						<div class="hot-deals--front hot-deals__face">
+							<img src="images/hot-deals/product-2.png" width="144" height="216" class="hot-deals--front__img" alt="overcoat">
+							<h4 class="hot-deals--front__title">Patagonia overcoat</h4>
+							<p class="hot-deals--front__price">80$</p>
+						</div>
+
+						<div class="hot-deals--back hot-deals__face">
+							<img src="images/hot-deals/product-2--back.png" width="60" height="90" class="hot-deals--back__img" alt="overcoat">
+							<h4 class="hot-deals--back__title">Patagonia overcoat</h4>
+							<p class="hot-deals--back__sizes">sizes<span class="sizes__space">:</span><span class="size-mean--s">s</span> - <span class="size-mean--m">m</span> - <span class="size-mean--l">l</span> - <span class="size-mean--xl">xl</span></p>
+							<div class="hot-deals--back__colors">
+								<div class="hot-deals--back__color hot-deals--back__color--red"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--gray"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--blue"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--green"></div>
+							</div>
+							<div class="hot-deals--back__separate"></div>
+							<div class="hot-deals--back__icons">
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--share"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--addtocart"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--like"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hot-deals__item col-xl-3 col-md-6 col-12">
+					<div class="hot-deals__card-container">
+						<div class="hot-deals--front hot-deals__face">
+							<img src="images/hot-deals/product-3.png" width="144" height="216" class="hot-deals--front__img" alt="overcoat">
+							<h4 class="hot-deals--front__title">Carhart overcoat</h4>
+							<p class="hot-deals--front__price">85$</p>
+						</div>
+
+						<div class="hot-deals--back hot-deals__face">
+							<img src="images/hot-deals/product-3--back.png" width="60" height="90" class="hot-deals--back__img" alt="overcoat">
+							<h4 class="hot-deals--back__title">Carhart overcoat</h4>
+							<p class="hot-deals--back__sizes">sizes<span class="sizes__space">:</span><span class="size-mean--s">s</span> - <span class="size-mean--m">m</span> - <span class="size-mean--l">l</span> - <span class="size-mean--xl">xl</span></p>
+							<div class="hot-deals--back__colors">
+								<div class="hot-deals--back__color hot-deals--back__color--red"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--gray"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--blue"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--green"></div>
+							</div>
+							<div class="hot-deals--back__separate"></div>
+							<div class="hot-deals--back__icons">
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--share"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--addtocart"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--like"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hot-deals__item col-xl-3 col-md-6 col-12">
+					<div class="hot-deals__card-container">
+						<div class="hot-deals--front hot-deals__face">
+							<img src="images/hot-deals/product-4.png" width="144" height="216" class="hot-deals--front__img" alt="jacket">
+							<h4 class="hot-deals--front__title">Reebok Track Jacket</h4>
+							<p class="hot-deals--front__price">60$</p>
+						</div>
+
+						<div class="hot-deals--back hot-deals__face">
+							<img src="images/hot-deals/product-4--back.png" width="60" height="90" class="hot-deals--back__img" alt="jacket">
+							<h4 class="hot-deals--back__title">Reebok Track Jacket</h4>
+							<p class="hot-deals--back__sizes">sizes<span class="sizes__space">:</span><span class="size-mean--s">s</span> - <span class="size-mean--m">m</span> - <span class="size-mean--l">l</span> - <span class="size-mean--xl">xl</span></p>
+							<div class="hot-deals--back__colors">
+								<div class="hot-deals--back__color hot-deals--back__color--red"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--gray"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--blue"></div>
+								<div class="hot-deals--back__color hot-deals--back__color--green"></div>
+							</div>
+							<div class="hot-deals--back__separate"></div>
+							<div class="hot-deals--back__icons">
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--share"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--addtocart"></a>
+								<a href="#" class="hot-deals--back__icon hot-deals--back__icon--like"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hot-deals__dots row">
+				<div class="col">
+					<div class="hot-deals__container">
+						<div class="hot-deals__dot"></div>
+						<div class="hot-deals__dot"></div>
+						<div class="hot-deals__dot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="letter">
+		<div class="container">
+			<div class="row">
+				<div class="letter__item col-xl-5 col-lg-6">
+					<div class="letter__text">
+						<h3 class="letter__title">NEWS LETTER</h3>
+						<p class="letter__description">join us now to get all news and special offers</p>
+					</div>
+				</div>
+				<div class="letter__item col-xl-5 col-lg-5 offset-xl-2 offset-lg-1">
+					<div class="letter__form">
+						<form class="letter__form__email">
+							<div class="letter__form__block">
+								<div class="letter__icon"></div>
+								<input class="letter__email" type="email" name="email-address" placeholder="type your email here" required>
+							</div>
+
+							<input class="letter__submit" type="submit" name="submit" value="join us">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-order col-lg-3 col-md-3">
+					<div class="footer__logo">
+						<div class="logo"></div>
+						<div class="copyright">SmuGi &copy; 2019</div>
+					</div>
+				</div>
+				<div class="col-md-2 col-4 offset-lg-1">
+					<nav class="footer__nav">
+						<ul class="footer__nav__inner">
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">about us</a>
+							</li>
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">contact us</a>
+							</li>
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">support</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-2 col-4">
+					<nav class="footer__nav">
+						<ul class="footer__nav__inner">
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">our feed</a>
+							</li>
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">terms and condotions</a>
+							</li>
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">our privacy</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-2 col-4">
+					<nav class="footer__nav">
+						<ul class="footer__nav__inner">
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">join us</a>
+							</li>
+							<li class="footer__nav__item">
+								<a href="#" class="footer__nav__link">live support</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="payment__container col-lg-2 col-md-3">
+					<div class="payment">
+						<div class="payment__title">Payment Methods</div>
+						<div class="payment__cards">
+							<img src="images/footer/visa.png" alt="visa" class="payment__card">
+							<img src="images/footer/amex.png" alt="amex" class="payment__card">
+							<img src="images/footer/discover.png" alt="discover" class="payment__card">
+							<img src="images/footer/mastercard.png" alt="mastercard" class="payment__card">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Connecting Bootstrap 4 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<!-- Connecting Scripts -->
+	<script src="./js/index.js"></script>
+</body>
+</html>
