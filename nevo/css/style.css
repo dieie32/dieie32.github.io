@@ -1,0 +1,283 @@
+@font-face{
+font-family: 'Californian FB';
+src: url('../fonts/CALIFB.eot');
+src: url('../fonts/CALIFB.eot?iefix') format('eot'),
+url('../fonts/CALIFB.ttf') format('truetype'),
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face{
+font-family: 'Century Schoolbook';
+src: url('../fonts/CENSCBK.eot');
+src: url('../fonts/CENSCBK.eot?iefix') format('eot'),
+url('../fonts/CENSCBK.ttf') format('truetype'),
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face{
+font-family: 'CORBEL';
+src: url('../fonts/CORBEL.eot');
+src: url('../fonts/CORBEL.eot?iefix') format('eot'),
+url('../fonts/CORBEL.ttf') format('truetype'),
+font-weight: normal;
+font-style: normal;
+}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Header */
+#section_header {
+  padding-top: 10px;
+  height: 100vh;
+  background: url(../images/background1.png) no-repeat center top / cover;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px; 
+  cursor: pointer;
+}
+
+.menu_item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu_item li {
+  list-style-type: none;
+  margin-right: 85px;
+}
+
+.menu_item li a {
+  font-size: 18px;
+  font-family: 'Californian FB', sans-serif;
+  text-decoration: none;
+  color: #1b120f;
+  padding: 12px 7px;
+  transition: all 0.5s ease;
+}
+
+.menu_item li a:hover {
+  color: #6bb346;
+}
+
+.main_title {
+  font-family: 'Century Schoolbook', sans-serif;
+  justify-content: center;
+}
+
+.main_title h1 {
+  font-size: 50px;
+  color: #74b242;  
+}
+
+.main_title p {
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* Procent */
+#section_procent {
+  background: url(../images/background2.png) no-repeat center top / cover;
+  height: 150px;
+}
+
+.procent_title h3 {
+  color: #fff;
+  font-size: 40px;
+}
+
+.procent_buttom a {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'CORBEL', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 44px;
+  background: #77c84a; 
+  transition: all 0.5s ease;
+  border-radius: 150px;
+}
+
+.procent_buttom a:hover {
+ box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/* NEVO Ecosystem */
+#section_aboutEco {
+  height: 100vh;
+  background: url(../images/background3.png) no-repeat center top / cover;
+}
+
+#section_aboutEco h2 {
+  margin-top: 55px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.supliers {
+  padding: 40px;
+  background: #fff;
+  width: 500px;
+  height: 700px;
+}
+
+.supliers h3 {
+  font-size: 35px;
+  color: #74b242;
+  font-family: 'Californian FB', sans-serif;
+}
+
+.supliers p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Californian FB', sans-serif; 
+}
+
+.clients {
+  padding: 40px;
+  background: #fff;
+  width: 500px;
+  height: 700px;
+  margin-left: 75px;
+}
+
+.clients h3 {
+  font-size: 35px;
+  color: #74b242;
+  font-family: 'Californian FB', sans-serif;
+}
+
+.clients p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 'Californian FB', sans-serif; 
+}
+
+
+
+
+
+
+/* Company Sing up */
+#section_singup {
+  padding-top: 55px;
+  height: 100vh;
+  position: relative;
+  background:url(../images/background4.png) top left no-repeat,
+             #fff;
+  background-size: 148vh;
+}
+
+#section_singup h2 {
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+#section_singup h2 span {
+  color: #74b242;
+}
+
+
+.sing_uped {
+  margin-right: auto;
+  margin-left: auto;
+  height: 560px;
+  width: 1110px;
+  background: #fff;
+}
+
+
+
+
+
+
+
+/* Clean Europe */
+#section_clean {
+  padding-top: 55px;
+  height: 100vh;
+  background: #fff,
+            linear-gradient(45deg, #fff, #e5e7e8);
+  background-size: 148vh;
+}
+
+#section_clean h2 {
+  font-size: 60px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 45px;
+}
+
+#section_clean h2 span {
+  color: #74b242;
+}
+
+.about_us {
+  display: flex;
+  justify-content: center;
+}
+
+.about_us_1 {
+  background: red;
+  height: 650px;
+  width: 350px;
+}
+
+.about_us_2 {
+  margin-left: 50px;
+  background: red;
+  height: 650px;
+  width: 350px;
+}
+
+.about_us_3 {
+  margin-left: 50px;
+  background: red;
+  height: 650px;
+  width: 350px;
+}
+
+
+
+
+
+
+
+/* Footer */
+#section_footer {
+  height: 50vh;
+  background: #22222e;
+}
