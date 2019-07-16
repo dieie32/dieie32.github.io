@@ -1,0 +1,185 @@
+/*  ADAPTIVITY  */
+
+
+@media screen and (max-width: 1200px) {
+.container {
+  padding: 10px 0;
+  width: 972px;
+}
+}
+
+@media screen and (max-width: 992px) {
+.container {
+  padding: 10px 0;
+  width: 768px;
+}
+}
+
+@media screen and (max-width: 768px) {
+.container {
+  padding: 10px 0;
+  width: 576px;
+}
+
+header nav {
+  height: 120px;
+  display: flex;
+}
+
+header nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav.navShadow {
+	height: 130px;
+}
+
+header nav .left_item ul {
+  flex-direction: column;
+}
+
+header nav .left_item .logo a h2 { 
+  font-size: 20px;
+}
+
+#latest_post .post_container {
+  flex-direction: column;
+}
+
+#latest_post .post_container .post {
+  width: 50%;
+  margin: 25px auto 0 auto;
+}
+
+#contact_us .input_modal .top_input_data {
+	flex-direction: column;
+}
+
+#contact_us .input_modal {
+	width: 500px;
+}
+}
+
+@media screen and (max-width: 576px) {
+.container {
+  padding: 10px 0;
+  width: 456px;
+}
+
+section .container h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+section .container {
+  padding: 50px 0;
+}
+
+header nav {
+  padding: 0 10px;
+}
+
+header nav .left_item .logo a h2 { 
+  font-size: 20px;
+}
+
+nav.navShadow .left_item ul li a:hover {
+  border: 0px solid #037BFC;
+  padding: 0px 0;
+  color: #037BFC;
+}
+
+header nav .right_item .social ul li {
+  padding: 0 5px;
+}
+
+
+#latest_post .post_container .post {
+  width: 60%;
+  margin: 25px auto 0 auto;
+}
+
+#contact_us .input_modal {
+  width: 400px;
+}
+
+footer .container .left_footer ul{ 
+  flex-direction: column;
+}
+
+}
+
+@media screen and (max-width: 456px) {
+.container {
+  padding: 10px 0;
+  width: 360px;
+}
+
+header nav .right_item .social ul li {
+  display: none;
+}
+
+#product_dev .container {
+  padding: 200px 30px;
+}
+
+#product_dev .container h1 {
+  font-size: 36px;
+}
+
+#product_dev .container p {
+  font-size: 20px;
+  max-width: 320px;
+}
+
+#product_dev .container .btn {
+  margin-top: 15px;
+}
+
+#product_dev .container .btn a {
+  font-size: 18px;
+}
+
+#our_services .container .services_container .service_item .icon i {
+  height: 35px;
+  width: 35px;
+}
+
+#our_services .container .services_container .service_item h3 {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+#latest_post .post_container .post {
+	width: 80%;
+}
+
+#testimonials .test_container {
+  flex-direction: column;
+}
+
+#testimonials .test_container .test {
+  width: 70%;
+  margin: 5px auto;
+}
+
+#contact_us .input_modal {
+  width: 320px;
+}
+
+#contact_us .input_modal .top_input_data .data_item {
+  width: 75%;
+}
+
+#contact_us .input_modal .bottom_input_data .data_item input {
+  min-height: 150px;
+}
+
+}
+
+
+
+
+
+
