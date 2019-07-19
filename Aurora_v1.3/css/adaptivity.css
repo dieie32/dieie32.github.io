@@ -1,0 +1,340 @@
+/*  ADAPTIVITY  */
+
+
+@media screen and (max-width: 1200px) {
+.container {
+  padding: 10px 0;
+  width: 972px;
+}
+
+.main_section .container {
+  padding: 250px 50px;
+}
+
+.develop img {
+  padding: 10px;
+  height: 200px;
+}
+
+
+}
+
+@media screen and (max-width: 992px) {
+.container {
+  padding: 10px 0;
+  width: 768px;
+}
+
+.why_we .container .advantage-container .advantage i {
+  padding: 10px;
+}
+
+.develop img {
+  padding: 5px;
+  height: 150px;
+}
+
+.about_us .container .about_us-info-container .about_us-info {
+  flex-direction: column;
+}
+
+.about_us .container .about_us-info-container .about_us-info img {
+  margin: 0 auto;
+}
+
+.why_aurora .container .why_aurora-container {
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.why_aurora .container .why_aurora-container p {
+  text-align: center;
+}
+
+.why_aurora .container .why_aurora-container img {
+  width: 400px;
+  height: 255px;  
+}
+
+.price .container .price-btn .btn a {
+  padding: 0 25px;
+}
+
+.price-design-services .container .price-design-services-container .service i {
+  font-size: 80px;
+}
+
+.price-design-services .container .price-design-services-container .service h3 {
+  font-size: 24px;
+}
+
+.price-design-services .container .price-design-services-container .service span {
+  font-size: 14px;
+}
+
+.why_aurora .container .why_aurora-container p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.why_aurora .container .why_aurora-container img {
+  margin: 5px auto;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+.container {
+  padding: 10px 0;
+  width: 576px;
+}
+
+.develop img {
+  height: 100px;
+}
+
+.main_info-container .btn a {
+  padding: 0 40px;
+}
+
+.why_we .container .advantage-container .advantage i {
+  font-size: 120px;
+}
+
+.why_we .container .advantage-container .advantage h3 {
+  font-size: 24px;
+}
+
+.newsletter .container .letter { 
+  padding: 25px;
+  width: 550px;
+}
+
+.about_us .container {
+  padding: 50px 0;
+}
+
+.why_we .container {
+  padding: 50px 0;
+}
+
+.newsletter .container {
+  padding: 50px 0;
+}
+
+.why_aurora .container {
+  padding: 50px 0;
+}
+
+.page_about-us .container {
+  padding: 50px 0;
+}
+
+.price-design-services .container {
+  padding: 50px 0;
+}
+
+.price-design .container {
+  padding: 50px 0;
+}
+
+.contact_with-us .container {
+  padding: 120px 0;
+}
+
+.work {
+  width: 48%;
+}
+
+.why_aurora .container .why_aurora-container p {
+  width: 90%;
+}
+
+.contact_with-us .container .input_modal {
+  flex-direction: column;
+}
+
+.contact_with-us .container .input_modal .input_data {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact_with-us .container .input_modal .contact_with-us-info {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+}
+
+@media screen and (max-width: 576px) {
+.container {
+  padding: 10px 0;
+  width: 456px;
+}
+
+.main_section .container {
+  padding: 150px 10px;
+}
+
+.main_info {
+  flex-direction: column;
+}
+
+.main_info-container {
+  width: 100%;
+}
+
+.develop h1 {
+  font-size: 24px;
+}
+
+.about_us .container .about_us-info-container {
+  flex-direction: column;
+}
+
+.about_us .container .about_us-info-container .about_us-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.why_we .container .advantage-container .advantage i {
+  font-size: 90px;
+}
+
+.develop {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.newsletter .container .letter {
+  padding: 10px;
+  width: 400px;
+}
+
+footer .container .footer_info {
+  flex-direction: column;
+}
+
+.price-design .container .price-design-container {
+  flex-direction: column;
+}
+
+
+.why_aurora .container .why_aurora-container {
+  width: 100%;
+}
+
+.why_aurora .container .why_aurora-container p {
+  width: 100%;
+}
+
+.price-design .container .price-design-container .price-design-info {
+  width: 90%;
+}
+
+.price-design .container .price-design-container .price-design-img {
+  width: 90%;
+  margin-top: 15px;
+}
+
+}
+
+@media screen and (max-width: 456px) {
+.container {
+  padding: 10px 0;
+  width: 360px;
+}
+
+.main_info {
+  width: 100%;
+}
+
+.why_we .container .advantage-container .advantage i {
+  font-size: 90px;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+.about_us .container .about_us-info-container .about_us-info {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.about_us .container .about_us-info-container .about_us-info img {
+  width: 100%;
+}
+
+.about_us .container .about_us-info-container .about_us-info p {
+  padding: 10px 0px;
+}
+
+.newsletter .container .letter {
+  width: 300px;
+}
+
+.newsletter .container .letter .modal_form input {
+  width: 280px;
+}
+
+.newsletter .container .letter .modal_form .btn a {
+  padding: 0 40px;
+}
+
+.why_aurora .container .why_aurora-container img {
+  height: 230px;
+}
+
+}
+
+
+@media screen and (max-width: 351px) {
+.container {
+  padding: 10px 0;
+  width: 300px;
+}
+
+.price-design .container .price-design-container {
+  padding: 10px;
+}
+
+.price-design .container .price-design-container .price-design-info {
+  width: 100%;
+}
+
+.price-design .container .price-design-container .price-design-img {
+  width: 100%;
+} 
+
+.price-design .container .price-design-container .price-design-img img {
+  height: 230px;
+}
+
+.contact_with-us .container .input_modal .contact_with-us-info {
+  margin-top: 15px;
+}
+
+.contact_with-us .container .input_modal .contact_with-us-info li {
+  padding: 5px 0;
+}
+
+.contact_with-us .container .input_modal .contact_with-us-info li p {
+  font-size: 14px;
+}
+
+header nav .nav_item {
+  min-width: 56px;
+}
+
+header nav .nav_item p {
+  font-size: 18px;
+}
+
+}
+
+
+
+
+
