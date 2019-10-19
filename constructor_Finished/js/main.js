@@ -27,7 +27,44 @@ window.addEventListener("load", () => {
 
     const cbxOne = document.querySelector("#cbxOne");
     const cbxTwo = document.querySelector("#cbxTwo");
+    const cbxThree = document.querySelector("#cbxThree");
 
+    checkedCheckboxTwo = 0;
+    checkedCheckbox = 0;
+    checkedCheckboxThree = 0;
+
+    cbxOne.addEventListener("change", e => {
+        if (cbxOne.checked) {
+            checkedCheckbox = 40;
+
+            setPrice();
+        } else {
+            checkedCheckbox = 0;
+            setPrice();
+        }
+    });
+
+
+
+    cbxTwo.addEventListener("change", e => {
+        if (cbxTwo.checked) {
+            checkedCheckboxTwo = 20;
+            setPrice();
+        } else {
+            checkedCheckboxTwo = 0;
+            setPrice();
+        }
+    });
+
+    cbxThree.addEventListener("change", e => {
+        if (cbxThree.checked) {
+            checkedCheckboxThree = 20;
+            setPriceKids();
+        } else {
+            checkedCheckboxThree = 0;
+            setPriceKids();
+        }
+    });
 
 
 
@@ -145,7 +182,7 @@ window.addEventListener("load", () => {
     };
 
     const setPrice = () => {
-        price = additionalPriceTop + additionalPriceBasicFunc + additionalPriceBottom + Number(document.querySelector('#secectorOne').value);
+        price = additionalPriceTop + additionalPriceBasicFunc + checkedCheckbox + checkedCheckboxTwo + additionalPriceBottom + Number(document.querySelector('#secectorOne').value);
         resultHolderOne.value = price + "грн";
     }
 
@@ -311,7 +348,7 @@ window.addEventListener("load", () => {
     };
 
     const setPriceKids = () => {
-        priceKids = additionalPriceTopKids + additionalPriceBotKids + additionalPriceBasicFuncKids + 500;
+        priceKids = checkedCheckboxThree + additionalPriceTopKids + additionalPriceBotKids + additionalPriceBasicFuncKids + 500;
         resultHolderOneKids.value = priceKids + "грн";
     }
 
@@ -938,7 +975,7 @@ window.addEventListener("load", () => {
 
 
     // Додає Ціну
-    const additionalPriceBot = (e,  layerPriceBot) => {
+    const additionalPriceBot = (e, layerPriceBot) => {
         additionalPriceBottom = layerPriceBot + additionalPriceBottom;
         setPrice();
     };
@@ -992,7 +1029,7 @@ window.addEventListener("load", () => {
             height: heightLayerBot,
         });
 
-        
+
 
         var att = document.createAttribute("data-material");
         att.value = el.value + l;
