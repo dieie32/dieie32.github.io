@@ -1,1 +1,0 @@
-yarn add imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-svgo -D 
