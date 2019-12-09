@@ -107,6 +107,7 @@ section.main {
     padding: 10px 0;
     margin: 10px 0; }
   section.main textarea {
+    border: 1px solid #000;
     width: 250px;
     height: 150px; }
   section.main p {
