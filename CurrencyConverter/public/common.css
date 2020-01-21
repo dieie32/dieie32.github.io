@@ -1,0 +1,39 @@
+button:hover, input:hover {
+	cursor: pointer;
+}
+
+input[type="text"]:hover {
+	cursor: text;
+}
+
+.exchange {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fa-arrows-alt-h {
+	font-size: 42px;
+}
+
+@media screen and (max-width: 1200px) {
+	.graph {
+		overflow-x: auto;
+	}
+	.graph canvas {
+		min-width: 1200px;
+		min-height: 320px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.exchange {
+		flex-direction: column;
+	}
+	.input, .output {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}

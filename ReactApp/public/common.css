@@ -1,0 +1,73 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+input:active, input:hover {
+  outline: none;
+}
+input:hover {
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: #faf5e2;
+}
+
+.switcher__generate input {
+  border: none;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.switcher__input {
+  margin-bottom: 10px;
+}
+.switcher__input .minus {
+  margin-right: 10px;
+}
+.switcher__input .count {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+.switcher__input .plus {
+  margin-left: 10px;
+}
+.switcher__input input {
+  border: none;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 40px;
+}
+.switcher__info {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.switcher__info .win {
+  color: green;
+}
+.switcher__info .loose {
+  color: red;
+}
+
+/*# sourceMappingURL=common.css.map */

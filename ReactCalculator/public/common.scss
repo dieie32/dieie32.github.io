@@ -1,0 +1,144 @@
+$mathSignsText: #1DF;
+$mathSignsBG: #2b2c3e;
+$addSignsText: #fea360;
+$addSignsBG: #575c63;
+$btnText: #fff;
+$btnBG: #575c63;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #DBDFE1;
+}
+
+.calculator {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&__body {
+		width: 30%;
+		height: 80%;
+		padding: 10px;
+		border: 1px solid black;
+	    background: #178fd6;
+	}
+	&__input {
+		width: 100%;
+		height: 72%;
+   		display: flex;
+   		border: 1px solid black;
+  		&--left {
+  			width: 75%;
+  		}
+	}
+
+	button {
+		font-size: 2.25em;
+		border: none;
+		background-color: $btnBG;
+		color: $btnText;
+		outline: none;
+		transition: .5s ease;
+		cursor: pointer;
+
+		&:hover, &:active {
+			transition: .5s ease;
+		}
+
+		&.mathematical-sign {
+			width: 100%;
+			height: 20%;
+			color: $mathSignsText;
+			background-color: $mathSignsBG;
+			&:hover, &:active {
+				background-color: $mathSignsText;
+				color: $mathSignsBG;
+			}
+		}
+		&.num-sign {
+			width: 33.33333333%;
+			height: 25%;
+			&:hover, &:active {
+				background-color: $btnText;
+				color: $btnBG;
+			}
+		}
+		&.additional-sign {
+			width: 33.33333333%;
+			height: 100%;
+			line-height: 100%;
+			color: $addSignsText;
+			background-color: $addSignsBG;
+			&:hover, &:active {
+				background-color: $addSignsText;
+				color: #fff;
+			}
+		}
+	}
+
+	.output-display {
+		height: 25%;
+		background-color: #2b2c3e;
+		margin-bottom: 3%;
+		border: 1px solid black;
+		&__result, &__temp {
+			color: #1DF;
+			padding: 10px;
+			text-align: right;
+		}
+		&__result {
+			font-size: 4em;
+			overflow: hidden;
+		}
+		&__temp {
+			font-size: 2em;
+			word-wrap: break-word;
+		}
+	}
+	.num-signs {
+		width: 100%;
+		height: 80%;
+		display: flex;
+    	flex-wrap: wrap-reverse;
+	}
+	.additional-signs {
+		width: 100%;
+		height: 20%;
+	}
+
+	.mathematical-signs {
+		width: 25%;
+		display: flex;
+    	flex-wrap: wrap-reverse;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	.calculator {
+		&__body {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.calculator {
+		&__body {
+			width: 60%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.calculator {
+		&__body {
+			width: 90%;
+		}
+	}
+}

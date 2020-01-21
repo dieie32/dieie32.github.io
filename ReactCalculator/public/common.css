@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #DBDFE1;
+}
+
+.calculator {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.calculator__body {
+  width: 30%;
+  height: 80%;
+  padding: 10px;
+  border: 1px solid black;
+  background: #178fd6;
+}
+.calculator__input {
+  width: 100%;
+  height: 72%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+.calculator__input--left {
+  width: 75%;
+}
+.calculator button {
+  font-size: 2.25em;
+  border: none;
+  background-color: #575c63;
+  color: #fff;
+  outline: none;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  cursor: pointer;
+}
+.calculator button:hover, .calculator button:active {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.calculator button.mathematical-sign {
+  width: 100%;
+  height: 20%;
+  color: #1DF;
+  background-color: #2b2c3e;
+}
+.calculator button.mathematical-sign:hover, .calculator button.mathematical-sign:active {
+  background-color: #1DF;
+  color: #2b2c3e;
+}
+.calculator button.num-sign {
+  width: 33.33333333%;
+  height: 25%;
+}
+.calculator button.num-sign:hover, .calculator button.num-sign:active {
+  background-color: #fff;
+  color: #575c63;
+}
+.calculator button.additional-sign {
+  width: 33.33333333%;
+  height: 100%;
+  line-height: 100%;
+  color: #fea360;
+  background-color: #575c63;
+}
+.calculator button.additional-sign:hover, .calculator button.additional-sign:active {
+  background-color: #fea360;
+  color: #fff;
+}
+.calculator .output-display {
+  height: 25%;
+  background-color: #2b2c3e;
+  margin-bottom: 3%;
+  border: 1px solid black;
+}
+.calculator .output-display__result, .calculator .output-display__temp {
+  color: #1DF;
+  padding: 10px;
+  text-align: right;
+}
+.calculator .output-display__result {
+  font-size: 4em;
+  overflow: hidden;
+}
+.calculator .output-display__temp {
+  font-size: 2em;
+  word-wrap: break-word;
+}
+.calculator .num-signs {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+.calculator .additional-signs {
+  width: 100%;
+  height: 20%;
+}
+.calculator .mathematical-signs {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+@media screen and (max-width: 1200px) {
+  .calculator__body {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .calculator__body {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .calculator__body {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */

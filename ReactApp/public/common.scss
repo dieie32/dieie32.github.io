@@ -1,0 +1,69 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+	outline: none;
+	&:active, &:hover {
+		outline: none;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #faf5e2;
+}
+
+.switcher {
+	&__generate {
+		input {
+			border: none;
+			background: #fff;
+			padding: 15px;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+	}
+	&__input {
+		margin-bottom: 10px;
+		.minus {
+			margin-right: 10px;
+		}
+		.count {
+			background: #fff;
+			padding: 15px;
+			border-radius: 10px;
+			font-size: 40px;
+			text-align: center;
+		}
+		.plus {
+			margin-left: 10px;
+		}
+		input {
+			border: none;
+			background: #fff;
+			padding: 15px;
+			border-radius: 10px;
+			font-size: 40px;
+		}
+	}
+	&__info {
+		margin: 10px 0;
+		font-size: 18px;
+		.win {
+			color: green;
+		}
+		.loose {
+			color: red;
+		}
+	}
+}
