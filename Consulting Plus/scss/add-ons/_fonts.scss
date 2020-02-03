@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab|Open+Sans:400,600&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Kelly Slab', cursive;
+
+  @media (max-width: $mobile) {
+    font-size: 12px !important;
+  }
+} 
+
+p,
+button,
+a,
+li,
+input,
+label, 
+span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px !important;
+
+  @media (max-width: $mobile) {
+    font-size: 8px !important;
+  }
+}
+
