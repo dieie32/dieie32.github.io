@@ -443,7 +443,7 @@ main section#live-near-sea {
     padding: 100px 0; }
     @media (max-width: 576px) {
       main section#live-near-sea .container {
-        padding: 240px 0 10px 0; } }
+        padding: 70% 0 10px 0; } }
     main section#live-near-sea .container .sea-wrapper {
       max-width: 55%; }
       @media (max-width: 576px) {
@@ -590,7 +590,7 @@ main section#promotional-tour {
     main section#promotional-tour {
       background: url(../images/background/mobile-background-promotional-tour.png) no-repeat center top/cover;
       min-height: 70vh;
-      padding: 250px 0 0 0; } }
+      padding: 70% 0 0 0; } }
   main section#promotional-tour p {
     max-width: 60%;
     font-size: 24px !important;
