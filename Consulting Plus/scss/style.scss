@@ -119,8 +119,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 56px;
+    padding: 0 56px;
     z-index: 100;
+    
+    @media (max-width: $desktop) {
+      padding: 10px;
+    }
 
     @media (max-width: $mobile) {
       margin: 0;
@@ -160,11 +164,20 @@ header {
     }
 
     ul {
+      display: flex;
+
+      @media (max-width: $desktop) {
+        flex-direction: column;
+      }
+
       @media (max-width: $mobile) {
         display: none;
       }
 
       li {
+        padding: 0 15px;
+        text-align: center;
+
         a {
           color: #000;
           font-weight: 600;
@@ -242,6 +255,10 @@ main {
     min-height: 90vh;
     text-align: center;
     padding: 100px 0;
+
+    @media (max-width: $desktop) {
+      padding: 150px 0 15px 0;
+    }
 
     @media (max-width: $mobile) {
       background: url(../images/background/mobile-background-main.png)
@@ -555,12 +572,26 @@ main {
       max-width: 70%;
       margin: 0 auto;
 
+      @media (max-width: $desktop) {
+        flex-direction: column;
+        max-width: 60%;
+        padding: 0 30px;
+      }
+
       input[type="submit"] {
         width: 110%;
+
+        @media (max-width: $desktop) {
+          width: 100%;
+        }
       }
 
       input {
         margin: 0 15px;
+
+        @media (max-width: $desktop) {
+          margin: 15px 0;
+        }
         
         @media (max-width: $mobile) {
           margin: 15px 0;
@@ -585,6 +616,10 @@ main {
       justify-content: flex-end;
       padding: 10% 200px 0 0;
 
+      @media (max-width: $desktop) {
+        padding: 10% 30px 0 0;
+      }
+
       @media (max-width: $mobile) {
         padding: 270px 0 30px 0;
       }
@@ -593,6 +628,10 @@ main {
         max-width: 55%;
         border: 5px solid #ffdf34;
         padding: 45px 80px;
+
+        @media (max-width: $desktop) {
+          max-width: 70%;
+        }
 
         @media (max-width: $mobile) {
           max-width: 100%;
@@ -685,7 +724,6 @@ main {
 
     .container {
       border: 5px solid #ffdf34;
-      padding: 30px 180px;
 
       @media (max-width: $mobile) {
         padding: 15px;
@@ -695,10 +733,21 @@ main {
 
     form {
       display: flex;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center;
+
+      @media (max-width: $desktop) {
+        flex-direction: column;
+      }
 
       input {
         margin: 0 15px;
         width: auto;
+
+        @media (max-width: $desktop) {
+          margin: 20px 0;
+        }
 
         @media (max-width: $mobile) {
           margin: 10px 0;
@@ -817,8 +866,9 @@ footer {
     max-width: 80%;
     margin: 0 auto;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $desktop) {
       flex-direction: column;
+      text-align: center;
     }
 
     .footer-item {
