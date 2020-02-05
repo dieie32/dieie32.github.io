@@ -208,8 +208,11 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 32px 56px;
+    padding: 0 56px;
     z-index: 100; }
+    @media (max-width: 1170px) {
+      header nav {
+        padding: 10px; } }
     @media (max-width: 576px) {
       header nav {
         margin: 0;
@@ -238,12 +241,25 @@ header {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex; } }
-    @media (max-width: 576px) {
-      header nav ul {
-        display: none; } }
-    header nav ul li a {
-      color: #000;
-      font-weight: 600; }
+    header nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      @media (max-width: 1170px) {
+        header nav ul {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column; } }
+      @media (max-width: 576px) {
+        header nav ul {
+          display: none; } }
+      header nav ul li {
+        padding: 0 15px;
+        text-align: center; }
+        header nav ul li a {
+          color: #000;
+          font-weight: 600; }
     header nav .menu-box {
       z-index: 5;
       top: -500px;
@@ -301,6 +317,9 @@ main section#main {
   min-height: 90vh;
   text-align: center;
   padding: 100px 0; }
+  @media (max-width: 1170px) {
+    main section#main {
+      padding: 150px 0 15px 0; } }
   @media (max-width: 576px) {
     main section#main {
       background: url(../images/background/mobile-background-main.png) no-repeat center top/cover;
@@ -530,10 +549,24 @@ main section#presentation-plan {
     display: flex;
     max-width: 70%;
     margin: 0 auto; }
+    @media (max-width: 1170px) {
+      main section#presentation-plan form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        max-width: 60%;
+        padding: 0 30px; } }
     main section#presentation-plan form input[type="submit"] {
       width: 110%; }
+      @media (max-width: 1170px) {
+        main section#presentation-plan form input[type="submit"] {
+          width: 100%; } }
     main section#presentation-plan form input {
       margin: 0 15px; }
+      @media (max-width: 1170px) {
+        main section#presentation-plan form input {
+          margin: 15px 0; } }
       @media (max-width: 576px) {
         main section#presentation-plan form input {
           margin: 15px 0; } }
@@ -553,6 +586,9 @@ main section#unique-offer {
     -ms-flex-pack: end;
     justify-content: flex-end;
     padding: 10% 200px 0 0; }
+    @media (max-width: 1170px) {
+      main section#unique-offer .container {
+        padding: 10% 30px 0 0; } }
     @media (max-width: 576px) {
       main section#unique-offer .container {
         padding: 270px 0 30px 0; } }
@@ -560,6 +596,9 @@ main section#unique-offer {
       max-width: 55%;
       border: 5px solid #ffdf34;
       padding: 45px 80px; }
+      @media (max-width: 1170px) {
+        main section#unique-offer .container .offer-wrapper {
+          max-width: 70%; } }
       @media (max-width: 576px) {
         main section#unique-offer .container .offer-wrapper {
           max-width: 100%;
@@ -622,8 +661,7 @@ main section#questions-remained {
     main section#questions-remained {
       padding: 30px 0; } }
   main section#questions-remained .container {
-    border: 5px solid #ffdf34;
-    padding: 30px 180px; }
+    border: 5px solid #ffdf34; }
     @media (max-width: 576px) {
       main section#questions-remained .container {
         padding: 15px;
@@ -631,10 +669,24 @@ main section#questions-remained {
   main section#questions-remained form {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    @media (max-width: 1170px) {
+      main section#questions-remained form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
     main section#questions-remained form input {
       margin: 0 15px;
       width: auto; }
+      @media (max-width: 1170px) {
+        main section#questions-remained form input {
+          margin: 20px 0; } }
       @media (max-width: 576px) {
         main section#questions-remained form input {
           margin: 10px 0; } }
@@ -722,12 +774,13 @@ footer {
     justify-content: space-between;
     max-width: 80%;
     margin: 0 auto; }
-    @media (max-width: 576px) {
+    @media (max-width: 1170px) {
       footer .footer-info {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column; } }
+        flex-direction: column;
+        text-align: center; } }
     footer .footer-info .footer-item a {
       border-bottom: 1px solid transparent; }
       footer .footer-info .footer-item a:hover {
