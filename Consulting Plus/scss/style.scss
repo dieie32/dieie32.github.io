@@ -240,10 +240,8 @@ main {
     background: url(../images/background/background-main.png) no-repeat
       center top/cover;
     min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    padding: 100px 0;
 
     @media (max-width: $mobile) {
       background: url(../images/background/mobile-background-main.png)
@@ -554,7 +552,7 @@ main {
 
     form {
       display: flex;
-      max-width: 60%;
+      max-width: 70%;
       margin: 0 auto;
 
       input[type="submit"] {
@@ -585,8 +583,7 @@ main {
     .container {
       display: flex;
       justify-content: flex-end;
-      padding: 170px 200px 0 0;
-      height: 88vh;
+      padding: 10% 200px 0 0;
 
       @media (max-width: $mobile) {
         padding: 270px 0 30px 0;
@@ -688,7 +685,7 @@ main {
 
     .container {
       border: 5px solid #ffdf34;
-      padding: 30px 300px;
+      padding: 30px 180px;
 
       @media (max-width: $mobile) {
         padding: 15px;

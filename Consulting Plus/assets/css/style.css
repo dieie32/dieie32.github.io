@@ -299,16 +299,8 @@ header {
 main section#main {
   background: url(../images/background/background-main.png) no-repeat center top/cover;
   min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center; }
+  text-align: center;
+  padding: 100px 0; }
   @media (max-width: 576px) {
     main section#main {
       background: url(../images/background/mobile-background-main.png) no-repeat center top/cover;
@@ -536,7 +528,7 @@ main section#presentation-plan {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto; }
     main section#presentation-plan form input[type="submit"] {
       width: 110%; }
@@ -560,8 +552,7 @@ main section#unique-offer {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 170px 200px 0 0;
-    height: 88vh; }
+    padding: 10% 200px 0 0; }
     @media (max-width: 576px) {
       main section#unique-offer .container {
         padding: 270px 0 30px 0; } }
@@ -632,7 +623,7 @@ main section#questions-remained {
       padding: 30px 0; } }
   main section#questions-remained .container {
     border: 5px solid #ffdf34;
-    padding: 30px 300px; }
+    padding: 30px 180px; }
     @media (max-width: 576px) {
       main section#questions-remained .container {
         padding: 15px;
