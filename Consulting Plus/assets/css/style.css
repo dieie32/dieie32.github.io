@@ -208,7 +208,7 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 26px 56px;
+    padding: 32px 56px;
     z-index: 100; }
     @media (max-width: 576px) {
       header nav {
@@ -297,7 +297,7 @@ header {
         transform: rotate(-45deg) translate(2px, -5px); }
 
 main section#main {
-  background: url(/assets/images/background/background-main.png) no-repeat center top/cover;
+  background: url(../images/background/background-main.png) no-repeat center top/cover;
   min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,7 +311,7 @@ main section#main {
   text-align: center; }
   @media (max-width: 576px) {
     main section#main {
-      background: url(/assets/images/background/mobile-background-main.png) no-repeat center top/cover;
+      background: url(../images/background/mobile-background-main.png) no-repeat center top/cover;
       min-height: 60vh; } }
   main section#main p,
   main section#main span {
@@ -378,7 +378,7 @@ main section#main {
             padding-top: 0px; } }
 
 main section#what-offer {
-  background: url(/assets/images/background/background-what-offer.png) no-repeat center top/cover;
+  background: url(../images/background/background-what-offer.png) no-repeat center top/cover;
   min-height: 50vh;
   padding: 60px 0; }
   @media (max-width: 576px) {
@@ -420,19 +420,19 @@ main section#what-offer {
       display: flex;
       margin: 15px 0; }
       main section#what-offer ul li:before {
-        content: url(/assets/images/eclipse-yellow.png);
+        content: url(../images/eclipse-yellow.png);
         display: block;
         margin: 0 15px 0 0; }
         @media (max-width: 576px) {
           main section#what-offer ul li:before {
-            content: url(/assets/images/eclipse-yellow-small.png); } }
+            content: url(../images/eclipse-yellow-small.png); } }
 
 main section#live-near-sea {
-  background: url(/assets/images/background/background-live-near-sea.png) no-repeat center top/cover;
+  background: url(../images/background/background-live-near-sea.png) no-repeat center top/cover;
   min-height: 90vh; }
   @media (max-width: 576px) {
     main section#live-near-sea {
-      background: url(/assets/images/background/mobile-background-live-near-sea.png) no-repeat center top/cover;
+      background: url(../images/background/mobile-background-live-near-sea.png) no-repeat center top/cover;
       min-height: 50vh; } }
   main section#live-near-sea .container {
     display: -webkit-box;
@@ -486,16 +486,16 @@ main section#live-near-sea {
             main section#live-near-sea .container .sea-wrapper ul li:last-child {
               margin: 0 0 15px 0; } }
         main section#live-near-sea .container .sea-wrapper ul li:before {
-          content: url(/assets/images/eclipse-yellow.png);
+          content: url(../images/eclipse-yellow.png);
           display: block;
           margin: 0 15px 0 0; }
           @media (max-width: 576px) {
             main section#live-near-sea .container .sea-wrapper ul li:before {
-              content: url(/assets/images/eclipse-yellow-small.png);
+              content: url(../images/eclipse-yellow-small.png);
               margin: 0 5px 0 0; } }
 
 main section#presentation-plan {
-  background: url(/assets/images/background/background-presentation-plan.png) no-repeat center top/cover;
+  background: url(../images/background/background-presentation-plan.png) no-repeat center top/cover;
   min-height: 90vh; }
   @media (max-width: 576px) {
     main section#presentation-plan {
@@ -547,11 +547,11 @@ main section#presentation-plan {
           margin: 15px 0; } }
 
 main section#unique-offer {
-  background: url(/assets/images/background/background-unique-offer.png) no-repeat center top/cover;
+  background: url(../images/background/background-unique-offer.png) no-repeat center top/cover;
   min-height: 100vh; }
   @media (max-width: 576px) {
     main section#unique-offer {
-      background: url(/assets/images/background/mobile-background-unique-offer.png) no-repeat center top/cover;
+      background: url(../images/background/mobile-background-unique-offer.png) no-repeat center top/cover;
       min-height: 50vh; } }
   main section#unique-offer .container {
     display: -webkit-box;
@@ -584,12 +584,12 @@ main section#unique-offer {
         margin: 30px 0; }
 
 main section#promotional-tour {
-  background: url(/assets/images/background/background-promotional-tour.png) no-repeat center top/cover;
+  background: url(../images/background/background-promotional-tour.png) no-repeat center top/cover;
   min-height: 50vh;
   padding: 100px 0; }
   @media (max-width: 576px) {
     main section#promotional-tour {
-      background: url(/assets/images/background/mobile-background-promotional-tour.png) no-repeat center top/cover;
+      background: url(../images/background/mobile-background-promotional-tour.png) no-repeat center top/cover;
       min-height: 70vh;
       padding: 250px 0 0 0; } }
   main section#promotional-tour p {
@@ -676,9 +676,9 @@ main section#presentation-speakers {
       main section#presentation-speakers .speaker-wrapper .speaker-item p {
         padding: 10px 0; }
   main section#presentation-speakers .slick-next:before {
-    content: url(/assets/images/next-arrow.svg); }
+    content: url(../images/next-arrow.svg); }
   main section#presentation-speakers .slick-prev:before {
-    content: url(/assets/images/previus-arrow.svg); }
+    content: url(../images/previus-arrow.svg); }
   main section#presentation-speakers .speaker-wrapper-desktop {
     display: none; }
     @media (min-width: 576px) {
@@ -695,11 +695,11 @@ main section#presentation-speakers {
         display: none; } }
 
 footer {
-  background: url(/assets/images/background/background-footer.png) no-repeat center top/cover;
+  background: url(../images/background/background-footer.png) no-repeat center top/cover;
   min-height: 30vh; }
   @media (max-width: 576px) {
     footer {
-      background: url(/assets/images/background/mobile-background-footer.png) no-repeat center top/cover;
+      background: url(../images/background/mobile-background-footer.png) no-repeat center top/cover;
       min-height: 20vh; } }
   footer .container {
     padding: 50px 0; }
