@@ -1,0 +1,144 @@
+
+// Extra Vaariables
+$bodyFF: 'Nunito', sans-serif;
+$ttu: uppercase;
+$letter-spacing: 1px;
+$h1-line-height: 5.4rem;
+$sectionPadding: 12rem;
+$z-index-200: 200;
+$boderColor: #dedede;
+$gray: #f1f1f1;
+
+// Bootstrap Custom Variables
+// ===========================
+$font-size-base: 1.4rem;
+$enable-rounded: false;
+$transfromScale : 1.2;
+$transition-base: all .3s ease-in-out;
+
+// Custom Contaier width
+$container-max-widths: (
+  xs: 320px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+// Body Variables
+$body-color: #000000;
+$white: #ffffff;
+// Theme color
+$primary: #FFFF36;
+$secondary: #1fb398;
+$warning: #fec96b;
+$dark: #262e45;
+$light: #5D5D5D;
+$blue: #478fff;
+
+// Navbar
+$navbar-padding-y: 3rem;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $navbar-light-hover-color;
+$navbar-nav-link-padding-x: 1.7rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $navbar-dark-hover-color;
+// $navbar-light-toggler-icon-bg: $primary;
+// Dropdown Menu
+$dropdown-min-width: 20rem;
+$dropdown-padding-y: 1.5rem;
+$dropdown-spacer: 2.4rem;
+$dropdown-border-width: 0;
+$dropdown-link-hover-color: $navbar-light-hover-color;
+$dropdown-link-hover-bg: transparent;
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-item-padding-x: 2rem;
+
+// $line-height-base: 1.5;
+
+
+// Heading Variables
+$headings-font-family: 'Nunito', sans-serif;
+$headings-color: $body-color;
+$headings-margin-bottom: 1.5rem;
+$headings-font-weight: 800;
+$h1-font-size: 4.4rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.4rem;
+$h4-font-size: 1.8rem;
+$h5-font-size: 1.6rem;
+
+// Paragraph Variables
+
+
+// Display Variables
+$display1-size: 8rem;
+$display3-size: 5rem;
+$display1-weight: 700;
+$display3-weight: 600;
+
+
+// Buttons Variables
+$enable-shadows: true;
+$btn-border-width: 0;
+$btn-box-shadow:  10px -15px 55px -45px rgba(0,0,0,0.75);
+$input-btn-line-height: 3.55;
+$input-btn-padding-y: 0;
+$input-btn-padding-x: 3.5rem;
+$input-btn-focus-width: 0;
+$input-btn-focus-box-shadow: none;
+
+
+// Button sm
+$btn-border-width: 0.2rem;
+$btn-line-height-sm: 3.8rem;
+$input-btn-padding-y-sm: 0;
+$input-btn-padding-x-sm: 2.5rem;
+$input-btn-line-height-sm: 3;
+
+// Links Variables
+$link-hover-decoration: none;
+$link-color: $body-color;
+
+// Pagination
+
+$pagination-padding-y:              0;
+$pagination-padding-x:              0;
+$pagination-line-height:            2.6;
+
+$pagination-color:                  #4a4a4a;
+// $pagination-bg:                  $white !default;
+$pagination-border-width:           .1rem;
+$pagination-border-color:           $boderColor;
+
+$pagination-hover-color:            $primary;
+$pagination-hover-bg:               $white;
+$pagination-hover-border-color:     $pagination-hover-color;
+
+$pagination-active-color:           $pagination-hover-color;
+$pagination-active-bg:              $pagination-hover-bg;
+$pagination-active-border-color:    $pagination-hover-border-color;
+
+// $pagination-disabled-color:         $gray-600 !default;
+// $pagination-disabled-bg:            $white !default;
+$pagination-disabled-border-color:  $boderColor;
+
+// Card
+$card-border-radius: none;
+$card-border-color: $boderColor;
+// Transtions
+
+// $transition-fade:             opacity .15s linear;
+// $transition-collapse:         height .35s ease;
+
+// Form Control
+$input-border-color: #d2d8dd;
+$input-padding-x: 2rem;
+$input-padding-y: 0;
+$input-line-height: 5rem;
+$input-color: #6f6f6f;
+
+//
+// $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

@@ -1,0 +1,65 @@
+/* Promo Part */
+.promo-area{
+  z-index: 2;
+  &.mt-minus{
+    @include media-breakpoint-up(xl){
+      margin-top: -15rem;
+    }
+    @include media-breakpoint-only(md){
+      margin-top: -15rem;
+    }
+  }
+  .promo-box{
+    border-radius: .5rem;
+    min-height: 33.5rem;
+    h1{
+      font-size: 4rem;
+      @include media-breakpoint-down(sm){
+        font-size: 3.5rem;
+      }
+    }
+    .form-control {
+      margin: 0 .5rem;
+      width: 25rem;
+      border: 0;
+      font-size: 1.6rem;
+      color: #2f2c2c;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+    }
+    button{
+      border-width: 0;
+      @include media-breakpoint-down(sm){
+        margin: 0 5px;
+        width: 100%;
+      }
+    }
+  }
+  .bg-2{
+    background-position: left 104%;
+    background-size: auto auto;
+  }
+  &.promo-2{
+    .promo-box{
+      background-size: auto auto;
+      @include media-breakpoint-up(xl){
+        .mx-auto{
+          padding-left: 6rem;
+        }
+      }
+      @include media-breakpoint-down(sm){
+        padding: 0 1rem;
+        h1{
+          text-align: center;
+        }
+      }
+      .form-control{
+        width: 32.8rem;
+        @include media-breakpoint-down(sm){
+          width: 100%;
+        }
+      }
+    }
+  }
+}

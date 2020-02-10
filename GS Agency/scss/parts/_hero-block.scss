@@ -1,0 +1,73 @@
+/* Hero Block Part */
+.hero-block{
+  .hero-text{
+    p{
+      line-height: 3.4rem;
+    }
+    .list-group{
+      li{
+        font-size: 1.8rem;
+        line-height: 3.4rem;
+      }
+    }
+    .case-info{
+      .list-group{
+        li{
+          font-size: 1.6rem;
+          font-weight: 600;
+          span{
+            font-weight: 700;
+            width: 10rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &.section-pb{
+      @include media-breakpoint-down(md){
+        padding-bottom: 3rem!important;
+      }
+    }
+    &.m-minus{
+      @include media-breakpoint-up(xl) {
+        p{
+          margin-right: -2.5rem;
+        }
+      }
+    }
+  }
+  .hero-thumb{
+    width: 100%;
+  }
+  &.style-1{
+    .hero-text{
+      @include media-breakpoint-up(xl) {
+        padding-left: 4rem;
+      }
+      @include media-breakpoint-down(lg) {
+        .mb-55{
+          margin-bottom: 2rem !important;
+        }
+      }
+    }
+  }
+  &.style-2{
+    .hero-text{
+      @include media-breakpoint-up(xl) {
+        padding-left: 4rem;
+        padding-right: 5rem;
+      }
+      .list-group{
+        li{
+          font-weight: 700;
+          line-height: 4rem;
+        }
+      }
+    }
+  }
+  &.center-mode{
+    .hero-thumb{
+      width: 100%;
+    }
+  }
+}

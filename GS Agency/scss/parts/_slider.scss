@@ -1,0 +1,28 @@
+/* Slider Part */
+.slider-area{
+  @include media-breakpoint-only(lg){
+    padding-top: 8rem;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 3rem 0;
+  }
+  &.bg-1 {
+    background-position: right bottom;
+    background-size: auto auto;
+  }
+  .caption{
+    p{
+      max-width: 60rem;
+      @include media-breakpoint-down(sm){
+        line-height: 2.5rem;
+      }
+    }
+  }
+  &.bg-secondary{
+    .image-layer{
+      @media (min-width: 1500px){
+        margin-right: -6rem;
+      }
+    }
+  }
+}

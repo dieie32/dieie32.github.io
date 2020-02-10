@@ -1,0 +1,52 @@
+/* Case Study Part */
+.case-study{
+  .single-case{
+    margin: 0 1.5rem;
+    .case-thumb{
+      overflow: hidden;
+      img{
+        width: 100%;
+        @include transition($transition-base);
+      }
+    }
+    &:hover{
+    .case-thumb{
+      img{
+        @include scale(1.1);
+      }
+    }
+    }
+  }
+  .slick-progress {
+    display: block;
+    width: 30rem;
+    height: .3rem;
+    overflow: hidden;
+    background-color: $light;
+    background-image: linear-gradient(to right, $primary, $primary);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    @include transition($transition-base);
+    @include media-breakpoint-down(md){
+      width: 20rem;
+      &.mt-80{
+        margin-top: 4rem !important;
+      }
+    }
+  }
+  &.outline-style{
+    .single-case{
+      margin: 0 0 3rem;
+      .case-title{
+        border: 1px solid $light;
+        margin-top: -1px;
+        @include transition($transition-base);
+      }
+      &:hover{
+        .case-title{
+          background-color: $light;
+        }
+      }
+    }
+  }
+}
