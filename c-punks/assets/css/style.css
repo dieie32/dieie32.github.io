@@ -320,8 +320,6 @@ footer .contact {
     font-size: 24px !important; }
   .slider__text .content-flex {
     padding: 30px 0; }
-  .slider__text .gallarey-image {
-    width: 75%; }
   .slider__text p {
     font-size: 54px;
     line-height: 80px; }
@@ -371,6 +369,13 @@ footer .contact {
     transition: ease-out 0.2s; }
     .slider__text .gallarey:hover {
       border-bottom: 1px solid #fff; }
+  .slider__text .gallarey-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .slider__text-line {
     overflow: hidden; }
 
