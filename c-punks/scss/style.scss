@@ -1,6 +1,34 @@
-@import "add-ons/_variables";
-@import "add-ons/_standart";
-@import "add-ons/_fonts";
+@import 'add-ons/_variables';
+@import 'add-ons/_standart';
+@import 'add-ons/_fonts';
+
+// CONTENT OTHER | BODY | HEADER | MAIN | FOOTER
+
+.phrase {
+  p {
+    color: #b5b5b5;
+    font-size: 12px;
+  }
+}
+
+.absolute-phrase {
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  position: absolute;
+  top: 45%;
+
+  &__left {
+    transform: rotate(180deg);
+  }
+
+  &:first-child {
+    left: 7%;
+  }
+
+  &:last-child {
+    right: 7%;
+  }
+}
 
 body {
   background: #0e0b2b;
@@ -67,33 +95,6 @@ header {
     ul {
       display: flex;
     }
-  }
-}
-
-.phrase {
-  p {
-    color: #b5b5b5;
-    font-size: 12px;
-  }
-}
-
-.absolute-phrase {
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: tb-rl;
-  position: absolute;
-
-  &__left {
-    transform: rotate(180deg);
-  }
-
-  &:first-child {
-    top: 45%;
-    left: 7%;
-  }
-
-  &:last-child {
-    top: 45%;
-    right: 7%;
   }
 }
 
@@ -185,18 +186,9 @@ footer {
     }
   }
 }
+// END OTHER | CONTENT BODY | HEADER | MAIN | FOOTER
 
-.cart-total {
-  display: block;
-  height: 2rem;
-  width: 2rem;
-  background-color: rgba(#fff, 0.25);
-  border-radius: 50%;
-  text-align: center;
-  line-height: 2rem;
-  margin-left: 1rem;
-}
-
+// SLIDER CONTENT
 .slider {
   .wfifty {
     width: 50% !important;
@@ -207,18 +199,7 @@ footer {
     left: calc(25rem + 3vw);
     top: calc(16rem + 3vw);
     z-index: 10;
-    line-height: 1.075;
     color: #fff;
-
-    .content-flex {
-      display: flex;
-      justify-content: space-between;
-      max-width: 75%;
-
-      .part {
-        display: flex;
-      }
-    }
 
     h2 {
       font-size: 124px;
@@ -227,14 +208,6 @@ footer {
     span {
       font-size: 24px !important;
     }
-
-    .content-flex {
-      padding: 30px 0;
-    }
-
-    // .gallarey-image {
-    //   width: 75%;
-    // }
 
     p {
       font-size: 54px;
@@ -259,10 +232,6 @@ footer {
       align-items: center;
       width: 75%;
 
-      &:hover > p {
-        border-bottom: 1px solid #fff;
-      }
-
       p {
         font-size: 74px;
         line-height: 124px;
@@ -270,9 +239,24 @@ footer {
         transition: ease-out 0.2s;
       }
 
+      &:hover > p {
+        border-bottom: 1px solid #fff;
+      }
+
       img {
         height: 64px;
         color: #fff;
+      }
+    }
+
+    .content-flex {
+      display: flex;
+      justify-content: space-between;
+      max-width: 75%;
+      padding: 30px 0;
+
+      .part {
+        display: flex;
       }
     }
 
@@ -311,12 +295,6 @@ footer {
     z-index: 10;
   }
 
-  &__item {
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: tb-rl;
-    transform: rotate(180deg);
-  }
-
   .bullet-item {
     -webkit-writing-mode: vertical-rl;
     writing-mode: tb-rl;
@@ -351,50 +329,9 @@ footer {
     }
   }
 }
-
-.slide {
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &__img {
-    position: relative;
-    width: 25vw;
-    height: 70vh;
-    padding: 0;
-    margin: 0;
-    min-width: 12.5rem;
-    transform-origin: top;
-
-    &:first-child {
-      top: 2rem;
-    }
-
-    &:last-child {
-      bottom: 1rem;
-    }
-
-    img {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
+// END SLIDER CONTENT
 
 // CURSOR
-
 .cursor {
   position: fixed;
   background-color: transparent;
@@ -463,113 +400,59 @@ footer {
     opacity: 1;
   }
 }
+// END CURSOR SCRIPT
 
-// preloader
-
-$boxColor: #b5b5b5;
-$waterFColor: transparent;
-$waterBColor: transparent;
-
+// PRELOADER
 .box {
-  height: 100vh;
-  width: 100vw;
   position: absolute;
-  background: $boxColor;
-  z-index: 50;
-  transition: ease 5s;
-
-  &.complete {
-    transform: translate(0, -100%);
-    transition: all 1s;
-    visibility: hidden;
-    height: 0;
-  }
+  width: 100%;
+  height: 100vh;
+  background: #0a0a0a;
+  z-index: 20;
 
   .percent-title {
-    font-size: 144px;
+    font-family: 'Gordita Bold';
+    font-size: 18rem;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 75%;
-    height: 100%;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
+    left: 26vw;
+    top: 18vw;
+    z-index: 10;
     color: #fff;
-
-    &.complete {
-      transform: translate(0, 50%);
-      transition: all 1s;
-      visibility: hidden;
-      font-size: 0px;
-    }
+    overflow: hidden;
   }
 
   .percent {
-    font-family: "Gordita Medium";
+    font-family: 'Gordita Bold';
+    font-size: 5rem;
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    height: 90%;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
+    left: 50vw;
+    top: 16vw;
     color: #fff;
-    font-size: 44px;
+    overflow: hidden;
 
-    &.complete {
-      transform: translate(0, 50%);
-      transition: all 1s;
-      visibility: hidden;
-      font-size: 0px;
-    }
-  }
-
-  .water {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    transform: translate(0, 100%);
-    background: $waterFColor;
-    transition: all 0.3s;
-
-    &_wave {
-      width: 200%;
-      position: absolute;
-      bottom: 100%;
-
-      &_back {
-        right: 0;
-        fill: $waterBColor;
-        animation: wave-back 1.4s infinite linear;
-      }
-
-      &_front {
-        left: 0;
-        fill: $waterFColor;
-        margin-bottom: -1px;
-        animation: wave-front 0.7s infinite linear;
-      }
+    div {
+      display: flex;
     }
   }
 }
+// END PRELOADER SCRIPT
 
-@keyframes wave-front {
-  100% {
-    transform: translate(-50%, 0);
-  }
+.studio_nav {
+  position: relative;
 }
 
-@keyframes wave-back {
-  100% {
-    transform: translate(50%, 0);
-  }
+.slider {
+  height: 50vh;
 }
+
+.slider-Two {
+  bottom: -100vw;
+}
+
+// .slider__text-Two {
+//   position: absolute;
+//   left: calc(25rem + 3vw) !important;
+//   bottom: -100vw !important;
+//   z-index: 10;
+//   color: #fff;
+// }

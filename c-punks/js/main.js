@@ -1,322 +1,132 @@
-
-
-
-
-
-
-
-
-
-
-// Main Slider
+// MAIN SLIDER
 class Slider {
   constructor() {
     this.bindAll();
 
-    this.vert = `
-      varying vec2 vUv;
-      void main() {
-        vUv = uv;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }
-      `;
-
-    this.frag = `
-      varying vec2 vUv;
-  
-      uniform sampler2D texture1;
-      uniform sampler2D texture2;
-      uniform sampler2D disp;
-  
-      uniform float dispPower;
-      uniform float intensity;
-  
-      uniform vec2 size;
-      uniform vec2 res;
-  
-      vec2 backgroundCoverUv( vec2 screenSize, vec2 imageSize, vec2 uv ) {
-        float screenRatio = screenSize.x / screenSize.y;
-        float imageRatio = imageSize.x / imageSize.y;
-        vec2 newSize = screenRatio < imageRatio 
-            ? vec2(imageSize.x * (screenSize.y / imageSize.y), screenSize.y)
-            : vec2(screenSize.x, imageSize.y * (screenSize.x / imageSize.x));
-        vec2 newOffset = (screenRatio < imageRatio 
-            ? vec2((newSize.x - screenSize.x) / 2.0, 0.0) 
-            : vec2(0.0, (newSize.y - screenSize.y) / 2.0)) / newSize;
-        return uv * screenSize / newSize + newOffset;
-      }
-  
-      void main() {
-        vec2 uv = vUv;
-        
-        vec4 disp = texture2D(disp, uv);
-        vec2 dispVec = vec2(disp.x, disp.y);
-        
-        vec2 distPos1 = uv + (dispVec * intensity * dispPower);
-        vec2 distPos2 = uv + (dispVec * -(intensity * (1.0 - dispPower)));
-        
-        vec4 _texture1 = texture2D(texture1, distPos1);
-        vec4 _texture2 = texture2D(texture2, distPos2);
-        
-        gl_FragColor = mix(_texture1, _texture2, dispPower);
-      }
-      `;
-
-    this.el = document.querySelector(".js-slider");
-    this.inner = this.el.querySelector(".js-slider__inner");
-    this.slides = [...this.el.querySelectorAll(".js-slide")];
-    this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
-
-    this.renderer = null;
-    this.scene = null;
-    this.clock = null;
-    this.camera = null;
-
-    this.images = ["", "", "", "", "", "", "", "", "", "", ""];
+    this.el = document.querySelector('.js-slider');
+    this.slides = [...this.el.querySelectorAll('.js-slide')];
+    this.bullets = [...this.el.querySelectorAll('.js-slider-bullet')];
 
     this.data = {
       current: 0,
       next: 1,
       previus: -1,
-      total: this.images.length - 1,
-      delta: 0
+      total: 6,
+      delta: 0,
     };
 
     this.state = {
       animating: false,
       text: false,
-      initial: true
+      initial: true,
     };
-
-    this.textures = null;
 
     this.init();
   }
 
   bindAll() {
-    ["render", "nextSlide"].forEach(fn => (this[fn] = this[fn].bind(this)));
-    
+    ['nextSlide'].forEach(fn => (this[fn] = this[fn].bind(this)));
   }
-
 
   setStyles() {
     this.slides.forEach((slide, index) => {
       if (index === 0) return;
 
-      TweenMax.set(slide, { autoAlpha: 0 });
+      TweenMax.set(slide, {autoAlpha: 0});
     });
 
     this.bullets.forEach((bullet, index) => {
       if (index === 0) return;
 
-      const txt = bullet.querySelector(".js-slider-bullet__text");
-      const line = bullet.querySelector(".js-slider-bullet__line");
+      const txt = bullet.querySelector('.js-slider-bullet__text');
 
       TweenMax.set(txt, {
-        alpha: 0.25
-      });
-      TweenMax.set(line, {
-        scaleX: 0,
-        transformOrigin: "left"
+        alpha: 0.25,
       });
     });
-  }
-
-  cameraSetup() {
-    this.camera = new THREE.OrthographicCamera(
-      this.el.offsetWidth / -2,
-      this.el.offsetWidth / 2,
-      this.el.offsetHeight / 2,
-      this.el.offsetHeight / -2,
-      1,
-      1000
-    );
-
-    this.camera.lookAt(this.scene.position);
-    this.camera.position.z = 1;
-  }
-
-  setup() {
-    this.scene = new THREE.Scene();
-    this.clock = new THREE.Clock(true);
-
-    this.renderer = new THREE.WebGLRenderer({ alpha: true });
-    this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(this.el.offsetWidth, this.el.offsetHeight);
-
-    this.inner.appendChild(this.renderer.domElement);
-  }
-
-  loadTextures() {
-    const loader = new THREE.TextureLoader();
-    loader.crossOrigin = "";
-
-    this.textures = [];
-    this.images.forEach((image, index) => {
-      const texture = loader.load(image + "?v=" + Date.now(), this.render);
-
-      texture.minFilter = THREE.LinearFilter;
-      texture.generateMipmaps = false;
-
-      if (index === 0 && this.mat) {
-        this.mat.uniforms.size.value = [
-          texture.image.naturalWidth,
-          texture.image.naturalHeight
-        ];
-      }
-
-      this.textures.push(texture);
-    });
-
-    this.disp = loader.load(
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/rock-_disp.png",
-      this.render
-    );
-    this.disp.magFilter = this.disp.minFilter = THREE.LinearFilter;
-    this.disp.wrapS = this.disp.wrapT = THREE.RepeatWrapping;
   }
 
   createMesh() {
     this.mat = new THREE.ShaderMaterial({
       uniforms: {
-        dispPower: { type: "f", value: 0.0 },
-        intensity: { type: "f", value: 0.5 },
+        dispPower: {type: 'f', value: 0.0},
+        intensity: {type: 'f', value: 0.5},
         res: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
         },
-        size: { value: new THREE.Vector2(1, 1) },
-        texture1: { type: "t", value: this.textures[0] },
-        texture2: { type: "t", value: this.textures[1] },
-        disp: { type: "t", value: this.disp }
       },
-      transparent: true,
-      vertexShader: this.vert,
-      fragmentShader: this.frag
     });
-
-    const geometry = new THREE.PlaneBufferGeometry(
-      this.el.offsetWidth,
-      this.el.offsetHeight,
-      1
-    );
-
-    const mesh = new THREE.Mesh(geometry, this.mat);
-
-    this.scene.add(mesh);
   }
 
   transitionNext() {
     TweenMax.to(this.mat.uniforms.dispPower, 2.5, {
       value: 1,
       ease: Expo.easeInOut,
-      onUpdate: this.render,
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
-        this.changeTexture();
-        this.render.bind(this);
         this.state.animating = false;
-      }
+      },
     });
 
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
-    const currentImages = current.querySelectorAll(".js-slide__img");
-    const nextImages = next.querySelectorAll(".js-slide__img");
-
-    const currentText = current.querySelectorAll(".js-slider__text-line div");
-    const nextText = next.querySelectorAll(".js-slider__text-line div");
+    const currentText = current.querySelectorAll('.js-slider__text-line div');
+    const nextText = next.querySelectorAll('.js-slider__text-line div');
 
     const currentBullet = this.bullets[this.data.current];
     const nextBullet = this.bullets[this.data.next];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
     const nextBulletTxt = nextBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
 
-    const currentBulletLine = currentBullet.querySelectorAll(
-      ".js-slider-bullet__line"
-    );
-    const nextBulletLine = nextBullet.querySelectorAll(
-      ".js-slider-bullet__line"
-    );
-
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
     }
 
-    tl.staggerFromTo(
-      currentImages,
+    tl.to(
+      currentBulletTxt,
       1.5,
       {
-        yPercent: 0,
-        scale: 1
+        alpha: 0.25,
+        ease: Linear.easeNone,
       },
-      {
-        yPercent: -185,
-        scaleY: 1.5,
-        ease: Expo.easeInOut
-      },
-      0.075
-    )
-      .to(
-        currentBulletTxt,
-        1.5,
-        {
-          alpha: 0.25,
-          ease: Linear.easeNone
-        },
-        0
-      )
-      .set(
-        currentBulletLine,
-        {
-          transformOrigin: "right"
-        },
-        0
-      )
-      .to(
-        currentBulletLine,
-        1.5,
-        {
-          scaleX: 0,
-          ease: Expo.easeInOut
-        },
-        0
-      );
+      0
+    );
 
     if (currentText) {
       tl.fromTo(
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
       next,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
@@ -326,56 +136,25 @@ class Slider {
         nextText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
     }
 
-    tl.staggerFromTo(
-      nextImages,
+    tl.to(
+      nextBulletTxt,
       1.5,
       {
-        yPercent: 150,
-        scaleY: 1.5
+        alpha: 1,
+        ease: Linear.easeNone,
       },
-      {
-        yPercent: 0,
-        scaleY: 1,
-        ease: Expo.easeInOut
-      },
-      0.075,
       1
-    )
-      .to(
-        nextBulletTxt,
-        1.5,
-        {
-          alpha: 1,
-          ease: Linear.easeNone
-        },
-        1
-      )
-      .set(
-        nextBulletLine,
-        {
-          transformOrigin: "left"
-        },
-        1
-      )
-      .to(
-        nextBulletLine,
-        1.5,
-        {
-          scaleX: 1,
-          ease: Expo.easeInOut
-        },
-        1
-      );
+    );
 
     tl.play();
   }
@@ -384,138 +163,101 @@ class Slider {
     TweenMax.to(this.mat.uniforms.dispPower, 2.5, {
       value: 1,
       ease: Expo.easeInOut,
-      onUpdate: this.render,
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
-        this.changeTexture();
-        this.render.bind(this);
         this.state.animating = false;
-      }
+      },
     });
 
     const current = this.slides[this.data.current];
-    const previus = this.slides[this.data.previus];
+    const next = this.slides[this.data.next];
 
-    const currentText = current.querySelectorAll(".js-slider__text-line div");
-    const previusText = previus.querySelectorAll(".js-slider__text-line div");
+    const currentText = current.querySelectorAll('.js-slider__text-line div');
+    const nextText = next.querySelectorAll('.js-slider__text-line div');
 
     const currentBullet = this.bullets[this.data.current];
-    const previusBullet = this.bullets[this.data.next];
+    const nextBullet = this.bullets[this.data.next];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
-    const previusBulletTxt = nextBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+    const nextBulletTxt = nextBullet.querySelectorAll(
+      '.js-slider-bullet__text'
     );
 
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
     }
+
+    tl.to(
+      currentBulletTxt,
+      1.5,
+      {
+        alpha: 0.25,
+        ease: Linear.easeNone,
+      },
+      0
+    );
 
     if (currentText) {
       tl.fromTo(
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
-      previus,
+      next,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
 
-    if (previusText) {
+    if (nextText) {
       tl.fromTo(
-        previusText,
+        nextText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
     }
 
-    tl.staggerFromTo(
-      previusImages,
+    tl.to(
+      nextBulletTxt,
       1.5,
       {
-        yPercent: 150,
-        scaleY: 1.5
+        alpha: 1,
+        ease: Linear.easeNone,
       },
-      {
-        yPercent: 0,
-        scaleY: 1,
-        ease: Expo.easeInOut
-      },
-      0.075,
       1
-    )
-      .to(
-        previusBulletTxt,
-        1.5,
-        {
-          alpha: 1,
-          ease: Linear.easeNone
-        },
-        1
-      )
-      .set(
-        previusBulletLine,
-        {
-          transformOrigin: "left"
-        },
-        1
-      )
-      .to(
-        previusBulletLine,
-        1.5,
-        {
-          scaleX: 1,
-          ease: Expo.easeInOut
-        },
-        1
-      );
+    );
 
     tl.play();
-  }
-
-  prevSlide() {
-    if (this.state.animating) return;
-
-    this.state.animating = true;
-
-    this.transitionPrevius();
-
-    this.data.current =
-      this.data.current === this.data.total ? 0 : this.data.current - 1;
-    this.data.previus =
-      this.data.current === this.data.total ? 0 : this.data.current - 1;
   }
 
   nextSlide() {
@@ -531,82 +273,42 @@ class Slider {
       this.data.current === this.data.total ? 0 : this.data.current + 1;
   }
 
-  changeTexture() {
-    this.mat.uniforms.texture1.value = this.textures[this.data.current];
-    this.mat.uniforms.texture2.value = this.textures[this.data.next];
-    this.mat.uniforms.texture2.value = this.textures[this.data.previus];
-  }
-
   listeners() {
-    window.addEventListener("wheel", this.nextSlide, { passive: true });
-    window.addEventListener("wheel", this.previusSlide, { passive: false });
-  }
-
-  render() {
-    this.renderer.render(this.scene, this.camera);
+    window.addEventListener('wheel', this.nextSlide, {passive: true});
+    // window.addEventListener('wheel', function() {
+    //   let eventTarget = event.deltaY;
+    //   if (eventTarget > 0) {
+    //     console.info(1);
+    //     return(this.nextSlide);
+    //   } else {
+    //     console.info(-1);
+    //   }
+    // });
   }
 
   init() {
-    this.setup();
-    this.cameraSetup();
-    this.loadTextures();
     this.createMesh();
     this.setStyles();
-    this.render();
     this.listeners();
   }
 }
 
-
-// LINKS NAV
-
-const links = document.querySelectorAll(".js-nav a");
+const links = document.querySelectorAll('.js-nav a');
 
 links.forEach(link => {
-  link.addEventListener("click", e => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    links.forEach(other => other.classList.remove("is-active"));
-    link.classList.add("is-active");
+    links.forEach(other => other.classList.remove('is-active'));
+    link.classList.add('is-active');
   });
 });
 
 const slider = new Slider();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// END MAIN SLIDER
 
 // CURSOR
-var cursor = $(".cursor"),
-  follower = $(".cursor-follower");
+var cursor = $('.cursor'),
+  follower = $('.cursor-follower');
 
 var posX = 0,
   posY = 0;
@@ -623,51 +325,163 @@ TweenMax.to({}, 0.016, {
     TweenMax.set(follower, {
       css: {
         left: posX - 12,
-        top: posY - 12
-      }
+        top: posY - 12,
+      },
     });
 
     TweenMax.set(cursor, {
       css: {
         left: mouseX,
-        top: mouseY
-      }
+        top: mouseY,
+      },
     });
-  }
+  },
 });
 
-$(document).on("mousemove", function(e) {
+$(document).on('mousemove', function(e) {
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
 
-// yellow circle
-$(".link").on("mouseenter", function() {
-  cursor.addClass("active");
-  follower.addClass("active");
+$('.link').on('mouseenter', function() {
+  cursor.addClass('active');
+  follower.addClass('active');
 });
-$(".link").on("mouseleave", function() {
-  cursor.removeClass("active");
-  follower.removeClass("active");
+$('.link').on('mouseleave', function() {
+  cursor.removeClass('active');
+  follower.removeClass('active');
 });
+// END CURSOR
 
-let box = document.querySelector(".box");
-let percent_item = document.querySelector(".percent");
-let percent_title = document.querySelector(".percent-title");
-
-var cnt = document.getElementById("count");
-var water = document.getElementById("water");
+// PRELOADER
+var cnt = document.getElementById('count');
 var percent = cnt.innerText;
 var interval;
 
 interval = setInterval(function() {
   percent++;
   cnt.innerHTML = percent;
-  water.style.transform = "translate(0" + "," + (100 - percent) + ".)";
   if (percent == 100) {
     clearInterval(interval);
-    box.classList.add("complete");
-    percent_item.classList.add("complete");
-    percent_title.classList.add("complete");
+
+    TweenMax.to('.box', 2, {
+      top: '-110%',
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.fromTo(
+      '.percent-title div',
+      2,
+      {
+        yPercent: 0,
+      },
+      {
+        yPercent: -100,
+        ease: Power4.easeInOut,
+      },
+      2
+    );
+
+    TweenMax.from('.logo', 3, {
+      delay: 0.4,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.from('.phrase', 2, {
+      delay: 0.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.from('.navigation', 4, {
+      delay: 0.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.from('.email', 4, {
+      delay: 0.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.fromTo(
+      '.percent div',
+      1,
+      {
+        yPercent: 0,
+      },
+      {
+        yPercent: -100,
+        ease: Power4.easeInOut,
+      },
+      1
+    );
   }
-}, 10);
+}, 30);
+
+TweenMax.fromTo(
+  '.percent div',
+  2,
+  {
+    yPercent: 100,
+  },
+  {
+    yPercent: 0,
+    ease: Power4.easeOut,
+  },
+  1
+);
+
+TweenMax.fromTo(
+  '.percent-title div',
+  2,
+  {
+    yPercent: 100,
+  },
+  {
+    yPercent: 0,
+    ease: Power4.easeInOut,
+  },
+  1
+);
+// END PRELOADER
+
+// START ABOUT NAV
+let studioNav = document.querySelector('.studio_nav');
+
+studioNav.addEventListener('click', function() {
+  TweenMax.to('.slider__text', 2, {top: '-110%', ease: Power4.easeInOut});
+  // TweenMax.fromTo(
+  //   '.slider-Two',
+  //   2,
+  //   {
+  //     yPercent: 200,
+  //   },
+  //   {
+  //     yPercent: 0,
+  //     ease: Power4.easeInOut,
+  //   },
+  //   1
+  // );
+  // TweenMax.to('.slider__text-Two', 2, {top: '-110%', ease: Power4.easeInOut});
+});
+// END ABOUT NAV
+
+// TweenMax.fromTo(
+//   '.slider-Two',
+//   2,
+//   {
+//     yPercent: 1000,
+//   },
+//   {
+//     yPercent: 0,
+//     ease: Power4.easeInOut,
+//   },
+//   1
+// );
