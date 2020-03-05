@@ -6,20 +6,12 @@ class Slider {
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
-<<<<<<< HEAD
     this.el = document.querySelector(".js-slider");
     this.slides = [...this.el.querySelectorAll(".js-slide")];
     this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
 
     this.xDown = null;
     this.yDown = null;
-=======
-    this.handleTouchMove = this.handleTouchMove.bind(this);
-
-    this.el = document.querySelector(".js-slider");
-    this.slides = [...this.el.querySelectorAll(".js-slide")];
-    this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
 
     this.data = {
       current: 0,
@@ -83,7 +75,7 @@ class Slider {
         this.state.animating = false;
       }
     });
-    // console.log(this.data);
+
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
@@ -206,10 +198,6 @@ class Slider {
 
     const current = this.slides[this.data.current];
     const previous = this.slides[this.data.previous];
-<<<<<<< HEAD
-=======
-    // console.info(current," ",previous);
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
 
     const currentText = current.querySelectorAll(".js-slider__text-line div");
     const previousText = previous.querySelectorAll(".js-slider__text-line div");
@@ -267,7 +255,6 @@ class Slider {
       previous,
       {
         autoAlpha: 1
-<<<<<<< HEAD
       },
       1
     );
@@ -293,40 +280,10 @@ class Slider {
       {
         alpha: 1,
         ease: Linear.easeNone
-=======
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
       },
       1
     );
 
-<<<<<<< HEAD
-=======
-    if (previousText) {
-      tl.fromTo(
-        previousText,
-        2,
-        {
-          yPercent: 100
-        },
-        {
-          yPercent: 0,
-          ease: Power4.easeOut
-        },
-        1.5
-      );
-    }
-
-    tl.to(
-      previousBulletTxt,
-      1.5,
-      {
-        alpha: 1,
-        ease: Linear.easeNone
-      },
-      1
-    );
-
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
     tl.play();
   }
 
@@ -347,7 +304,6 @@ class Slider {
 
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
-<<<<<<< HEAD
 
     window.addEventListener('touchstart', function(ev) {
       this.xDown = ev.touches[0].clientX;
@@ -457,91 +413,8 @@ class Slider_Two {
       if (index === 0) return;
 
       TweenMax.set(slide, { autoAlpha: 0 });
-=======
-    // window.addEventListener("touchstart", this.handleTouchStart, {
-    //   passive: true
-    // });
-    // window.addEventListener("touchend", this.handleTouchEnd, { passive: true });
-    window.addEventListener("touchmove", this.handleTouchMove, {
-      passive: true
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
-    });
-  }
-
-  handleTouchMove() {
-    // alert("touchMove");
-    var delta;
-    if (!event.originalEvent.touches[0].pageY) {
-      return false;
-    }
-
-    resizableBlock(delta);
-    console.info(delta)
-  }
-
-  handleWheel() {
-    let eventTarget = event.deltaY;
-    if (eventTarget > 0) {
-      this.nextSlide();
-    } else {
-      this.previousSlide();
-    }
-  }
-
-  init() {
-    this.createMesh();
-    this.setStyles();
-    this.listeners();
-  }
-}
-
-const slider = new Slider();
-// ----------------------------- END MAIN SLIDER -----------------------------
-
-// ----------------------------- SECOND SLIDER -----------------------------
-class Slider_Two {
-  constructor() {
-    this.bindAll();
-
-    this.previousSlide = this.previousSlide.bind(this);
-    this.nextSlide = this.nextSlide.bind(this);
-    this.handleWheel = this.handleWheel.bind(this);
-    this.el = document.querySelector(".js-slider_Two");
-    this.slides = [...this.el.querySelectorAll(".js-slide_Two")];
-    this.bullets = [...this.el.querySelectorAll(".js-slider_Two-bullet")];
-
-    this.data = {
-      current: 0,
-      next: 1,
-      previous: 5,
-      total: 5
-    };
-
-    this.state = {
-      animating: false,
-      text: false,
-      initial: true
-    };
-
-<<<<<<< HEAD
-=======
-    this.init();
-  }
-
-  bindAll() {
-    ["nextSlide", "previousSlide"].forEach(
-      fn => (this[fn] = this[fn].bind(this))
-    );
-  }
-
-  setStyles() {
-    this.slides.forEach((slide, index) => {
-      if (index === 0) return;
-
-      TweenMax.set(slide, { autoAlpha: 0 });
     });
 
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
     //////////////////////////////////
     this.bullets.forEach((bullet, index) => {
       if (index === 0) return;
@@ -575,10 +448,6 @@ class Slider_Two {
         this.state.animating = false;
       }
     });
-<<<<<<< HEAD
-=======
-    // console.log(this.data);
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
@@ -814,7 +683,6 @@ class Slider_Two {
 
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
-<<<<<<< HEAD
 
     window.addEventListener('touchstart', function(ev) {
       this.xDown = ev.touches[0].clientX;
@@ -827,19 +695,12 @@ class Slider_Two {
   }
 
   handleWheel() {
-=======
-  }
-
-  handleWheel() {
-    console.log(this.data);
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
     let eventTarget = event.deltaY;
     if (eventTarget > 0) {
       this.nextSlide();
     } else {
       this.previousSlide();
     }
-<<<<<<< HEAD
   }
 
   handleTouchMove(ev) {
@@ -875,8 +736,6 @@ class Slider_Two {
     this.onDown = callback;
 
     return this;
-=======
->>>>>>> 6396763875f521a4786421924a222e53c3725f71
   }
 
   init() {
