@@ -160,6 +160,33 @@ header nav {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 4% 12% 0; }
+  @media (max-width: 600px) {
+    header nav .logo {
+      font-size: 12px; } }
+  @media (max-width: 600px) {
+    header nav .navigation {
+      display: none; } }
+  header nav .toggle-button {
+    position: absolute;
+    right: 6%;
+    top: 2%;
+    height: 15px;
+    width: 30px; }
+    header nav .toggle-button .slise {
+      height: 2px;
+      width: 25px;
+      margin: 5px 0;
+      background: #fff; }
+      header nav .toggle-button .slise.active:nth-child(1) {
+        -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        transform: translateY(5px); }
+      header nav .toggle-button .slise.active:nth-child(2) {
+        opacity: 0; }
+      header nav .toggle-button .slise.active:nth-child(3) {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px); }
   @media (max-width: 1600px) {
     header nav {
       padding: 5% 5% 0; } }
@@ -252,6 +279,10 @@ main section .container {
     width: 5px;
     margin: 0 5px;
     border-radius: 100%; }
+    @media (max-width: 600px) {
+      main section .container .round {
+        width: 3px;
+        height: 3px; } }
   main section .container .content {
     max-height: 50vh;
     max-width: 75%;
@@ -278,6 +309,9 @@ footer .contact {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 10%; }
+  @media (max-width: 600px) {
+    footer .contact {
+      padding: 0; } }
   footer .contact a {
     width: 10%;
     text-decoration: underline; }
@@ -299,6 +333,13 @@ footer .contact {
       -webkit-transform: translate(10px, 0px);
       -ms-transform: translate(10px, 0px);
       transform: translate(10px, 0px); }
+  footer .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
   footer .contact .hr-wrapper {
     width: 90%;
     padding: 50px 100px; }
@@ -307,7 +348,7 @@ footer .contact {
         padding: 50px 100px 50px 130px; } }
     @media (max-width: 600px) {
       footer .contact .hr-wrapper {
-        padding: 50px 20px 50px 70px; } }
+        padding: 8px 0px 7px 80px; } }
     footer .contact .hr-wrapper hr {
       background: #ffffff;
       height: 2px;
@@ -353,7 +394,18 @@ footer .contact {
         font-size: 4rem; } }
     @media (max-width: 600px) {
       .slider__text h2 {
-        font-size: 3rem; } }
+        font-size: 3.8rem; } }
+  .slider__text h3 {
+    font-size: 8rem; }
+    @media (max-width: 1000px) {
+      .slider__text h3 {
+        font-size: 6rem; } }
+    @media (max-width: 800px) {
+      .slider__text h3 {
+        font-size: 4rem; } }
+    @media (max-width: 600px) {
+      .slider__text h3 {
+        font-size: 2.7rem; } }
   .slider__text span {
     font-size: 24px; }
     @media (max-width: 600px) {
@@ -376,7 +428,7 @@ footer .contact {
         line-height: 34px; } }
     @media (max-width: 600px) {
       .slider__text p {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 30px; } }
     .slider__text p.small {
       font-size: 14px;
@@ -406,7 +458,7 @@ footer .contact {
       transition: ease-out 0.2s; }
       @media (max-width: 600px) {
         .slider__text a p {
-          font-size: 2rem;
+          font-size: 3rem;
           line-height: 3rem; } }
     .slider__text a:hover > p {
       border-bottom: 1px solid #fff; }
@@ -487,6 +539,10 @@ footer .contact {
   align-items: center;
   padding: 60px 0;
   width: 15px; }
+  @media (max-width: 600px) {
+    .slider-bullet {
+      padding: 15px 0;
+      width: 8px; } }
   .slider-bullet:hover > .bullet-item {
     font-size: 12px;
     color: #fff;
@@ -507,7 +563,7 @@ footer .contact {
 .slider_Two__text {
   position: absolute;
   left: 25vw;
-  bottom: -50vw;
+  bottom: -150vw;
   z-index: 10;
   color: #fff;
   overflow: hidden; }
@@ -517,6 +573,9 @@ footer .contact {
   @media (max-width: 600px) {
     .slider_Two__text {
       left: 12vw; } }
+  @media (max-width: 400px) {
+    .slider_Two__text {
+      left: 4vw; } }
   .slider_Two__text h2 {
     font-size: 8rem; }
     @media (max-width: 1000px) {
@@ -527,9 +586,12 @@ footer .contact {
         font-size: 4rem; } }
     @media (max-width: 600px) {
       .slider_Two__text h2 {
-        font-size: 3.2rem; } }
+        font-size: 2.7rem; } }
   .slider_Two__text span {
-    font-size: 24px !important; }
+    font-size: 24px; }
+    @media (max-width: 600px) {
+      .slider_Two__text span {
+        font-size: 14px; } }
   .slider_Two__text p {
     font-size: 54px;
     line-height: 80px; }
@@ -541,6 +603,14 @@ footer .contact {
       .slider_Two__text p {
         font-size: 34px;
         line-height: 44px; } }
+    @media (max-width: 600px) {
+      .slider_Two__text p {
+        font-size: 24px;
+        line-height: 34px; } }
+    @media (max-width: 600px) {
+      .slider_Two__text p {
+        font-size: 20px;
+        line-height: 30px; } }
     .slider_Two__text p.small {
       font-size: 14px;
       line-height: 15px;
@@ -567,6 +637,10 @@ footer .contact {
       -webkit-transition: ease-out 0.2s;
       -o-transition: ease-out 0.2s;
       transition: ease-out 0.2s; }
+      @media (max-width: 600px) {
+        .slider_Two__text a p {
+          font-size: 2rem;
+          line-height: 3rem; } }
     .slider_Two__text a:hover > p {
       border-bottom: 1px solid #fff; }
     .slider_Two__text a img {
@@ -598,6 +672,9 @@ footer .contact {
     -webkit-transition: ease-out 0.2s;
     -o-transition: ease-out 0.2s;
     transition: ease-out 0.2s; }
+    @media (max-width: 600px) {
+      .slider_Two__text .gallarey {
+        font-size: 3rem; } }
     .slider_Two__text .gallarey:hover {
       border-bottom: 1px solid #fff; }
   .slider_Two__text .gallarey-wrapper {
@@ -616,7 +693,7 @@ footer .contact {
   display: flex;
   position: absolute;
   left: 100px;
-  bottom: -400px;
+  bottom: -50vw;
   z-index: 10; }
   @media (max-width: 600px) {
     .slider_Two__nav {
@@ -643,6 +720,10 @@ footer .contact {
   align-items: center;
   padding: 60px 0;
   width: 15px; }
+  @media (max-width: 600px) {
+    .slider_Two-bullet {
+      padding: 15px 0;
+      width: 8px; } }
   .slider_Two-bullet:hover > .bullet-item {
     font-size: 12px;
     color: #fff;
@@ -762,8 +843,8 @@ footer .contact {
     overflow: hidden; }
     @media (max-width: 800px) {
       .box .percent-title {
-        font-size: 8rem;
-        left: 12vw;
+        font-size: 6rem;
+        left: 20vw;
         top: 46vw; } }
   .box .percent {
     font-family: "Gordita Bold";
@@ -775,8 +856,9 @@ footer .contact {
     overflow: hidden; }
     @media (max-width: 600px) {
       .box .percent {
-        font-size: 3rem;
-        top: 36vw; } }
+        font-size: 1rem;
+        top: 46vw;
+        left: 70vw; } }
     .box .percent div {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -795,5 +877,5 @@ footer .contact {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: #8c8c90;
+  background: #363636;
   z-index: 0; }

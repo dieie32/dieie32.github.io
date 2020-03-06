@@ -305,14 +305,22 @@ class Slider {
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
 
-    window.addEventListener('touchstart', function(ev) {
-      this.xDown = ev.touches[0].clientX;
-      this.yDown = ev.touches[0].clientY;
-    }.bind(this), false);
+    window.addEventListener(
+      "touchstart",
+      function(ev) {
+        this.xDown = ev.touches[0].clientX;
+        this.yDown = ev.touches[0].clientY;
+      }.bind(this),
+      false
+    );
 
-    window.addEventListener('touchmove', function(ev) {
-      this.handleTouchMove(ev);
-    }.bind(this), false);
+    window.addEventListener(
+      "touchmove",
+      function(ev) {
+        this.handleTouchMove(ev);
+      }.bind(this),
+      false
+    );
   }
 
   handleWheel() {
@@ -327,18 +335,18 @@ class Slider {
   }
 
   handleTouchMove(ev) {
-    if ( ! this.xDown || ! this.yDown ) {
+    if (!this.xDown || !this.yDown) {
       return;
     }
-    
+
     let xUp = ev.touches[0].clientX;
     let yUp = ev.touches[0].clientY;
 
     this.xDiff = this.xDown - xUp;
     this.yDiff = this.yDown - yUp;
 
-    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
-      if ( this.yDiff > 0 ) {
+    if (Math.abs(this.xDiff) < Math.abs(this.yDiff)) {
+      if (this.yDiff > 0) {
         this.onUp(this.nextSlide);
       } else {
         this.onDown(this.previousSlide);
@@ -684,14 +692,22 @@ class Slider_Two {
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
 
-    window.addEventListener('touchstart', function(ev) {
-      this.xDown = ev.touches[0].clientX;
-      this.yDown = ev.touches[0].clientY;
-    }.bind(this), false);
+    window.addEventListener(
+      "touchstart",
+      function(ev) {
+        this.xDown = ev.touches[0].clientX;
+        this.yDown = ev.touches[0].clientY;
+      }.bind(this),
+      false
+    );
 
-    window.addEventListener('touchmove', function(ev) {
-      this.handleTouchMove(ev);
-    }.bind(this), false);
+    window.addEventListener(
+      "touchmove",
+      function(ev) {
+        this.handleTouchMove(ev);
+      }.bind(this),
+      false
+    );
   }
 
   handleWheel() {
@@ -704,7 +720,7 @@ class Slider_Two {
   }
 
   handleTouchMove(ev) {
-    if ( ! this.xDown || ! this.yDown ) {
+    if (!this.xDown || !this.yDown) {
       return;
     }
 
@@ -714,8 +730,8 @@ class Slider_Two {
     this.xDiff = this.xDown - xUp;
     this.yDiff = this.yDown - yUp;
 
-    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
-      if ( this.yDiff > 0 ) {
+    if (Math.abs(this.xDiff) < Math.abs(this.yDiff)) {
+      if (this.yDiff > 0) {
         this.onUp(this.previousSlide);
       } else {
         this.onDown(this.nextSlide);
@@ -925,3 +941,18 @@ studioNav.addEventListener("click", function() {
   });
 });
 // ----------------------------- END ABOUT NAV -----------------------------
+
+// ----------------------------- TOGGLE MENU -----------------------------
+let toggle = document.querySelector(".toggle-button");
+let slise = document.querySelector(".slise");
+// let slTwo = document.querySelector(".slise-two");
+// let slThree = document.querySelector(".slise-three");
+
+const closeMenuBox = Array.from(document.querySelectorAll(".menu-box li a"));
+
+closeMenuBox &&
+  closeMenuBox.forEach(toggle =>
+    toggle.addEventListener("click", function() {
+      slise.classList.add("active");
+    })
+  );
