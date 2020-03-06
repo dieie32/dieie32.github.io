@@ -6,11 +6,12 @@ class Slider {
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
-    this.handleTouchMove = this.handleTouchMove.bind(this);
-
     this.el = document.querySelector(".js-slider");
     this.slides = [...this.el.querySelectorAll(".js-slide")];
     this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
+
+    this.xDown = null;
+    this.yDown = null;
 
     this.data = {
       current: 0,
@@ -74,7 +75,7 @@ class Slider {
         this.state.animating = false;
       }
     });
-    // console.log(this.data);
+
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
@@ -197,7 +198,6 @@ class Slider {
 
     const current = this.slides[this.data.current];
     const previous = this.slides[this.data.previous];
-    // console.info(current," ",previous);
 
     const currentText = current.querySelectorAll(".js-slider__text-line div");
     const previousText = previous.querySelectorAll(".js-slider__text-line div");
@@ -304,33 +304,61 @@ class Slider {
 
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
-    // window.addEventListener("touchstart", this.handleTouchStart, {
-    //   passive: true
-    // });
-    // window.addEventListener("touchend", this.handleTouchEnd, { passive: true });
-    window.addEventListener("touchmove", this.handleTouchMove, {
-      passive: true
-    });
-  }
 
-  handleTouchMove() {
-    // alert("touchMove");
-    var delta;
-    if (!event.originalEvent.touches[0].pageY) {
-      return false;
-    }
+    window.addEventListener('touchstart', function(ev) {
+      this.xDown = ev.touches[0].clientX;
+      this.yDown = ev.touches[0].clientY;
+    }.bind(this), false);
 
-    resizableBlock(delta);
-    console.info(delta)
+    window.addEventListener('touchmove', function(ev) {
+      this.handleTouchMove(ev);
+    }.bind(this), false);
   }
 
   handleWheel() {
-    let eventTarget = event.deltaY;
-    if (eventTarget > 0) {
-      this.nextSlide();
-    } else {
-      this.previousSlide();
+    if (event.deltaY) {
+      let eventTarget = event.deltaY;
+      if (eventTarget > 0) {
+        this.nextSlide();
+      } else {
+        this.previousSlide();
+      }
     }
+  }
+
+  handleTouchMove(ev) {
+    if ( ! this.xDown || ! this.yDown ) {
+      return;
+    }
+    
+    let xUp = ev.touches[0].clientX;
+    let yUp = ev.touches[0].clientY;
+
+    this.xDiff = this.xDown - xUp;
+    this.yDiff = this.yDown - yUp;
+
+    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
+      if ( this.yDiff > 0 ) {
+        this.onUp(this.nextSlide);
+      } else {
+        this.onDown(this.previousSlide);
+      }
+    }
+
+    this.xDown = null;
+    this.yDown = null;
+  }
+
+  onUp(callback) {
+    this.onUp = callback;
+
+    return this;
+  }
+
+  onDown(callback) {
+    this.onDown = callback;
+
+    return this;
   }
 
   init() {
@@ -354,6 +382,9 @@ class Slider_Two {
     this.el = document.querySelector(".js-slider_Two");
     this.slides = [...this.el.querySelectorAll(".js-slide_Two")];
     this.bullets = [...this.el.querySelectorAll(".js-slider_Two-bullet")];
+
+    this.xDown = null;
+    this.yDown = null;
 
     this.data = {
       current: 0,
@@ -417,7 +448,6 @@ class Slider_Two {
         this.state.animating = false;
       }
     });
-    // console.log(this.data);
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
@@ -653,16 +683,59 @@ class Slider_Two {
 
   listeners() {
     window.addEventListener("wheel", this.handleWheel, { passive: true });
+
+    window.addEventListener('touchstart', function(ev) {
+      this.xDown = ev.touches[0].clientX;
+      this.yDown = ev.touches[0].clientY;
+    }.bind(this), false);
+
+    window.addEventListener('touchmove', function(ev) {
+      this.handleTouchMove(ev);
+    }.bind(this), false);
   }
 
   handleWheel() {
-    console.log(this.data);
     let eventTarget = event.deltaY;
     if (eventTarget > 0) {
       this.nextSlide();
     } else {
       this.previousSlide();
     }
+  }
+
+  handleTouchMove(ev) {
+    if ( ! this.xDown || ! this.yDown ) {
+      return;
+    }
+
+    let xUp = ev.touches[0].clientX;
+    let yUp = ev.touches[0].clientY;
+
+    this.xDiff = this.xDown - xUp;
+    this.yDiff = this.yDown - yUp;
+
+    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
+      if ( this.yDiff > 0 ) {
+        this.onUp(this.previousSlide);
+      } else {
+        this.onDown(this.nextSlide);
+      }
+    }
+
+    this.xDown = null;
+    this.yDown = null;
+  }
+
+  onUp(callback) {
+    this.onUp = callback;
+
+    return this;
+  }
+
+  onDown(callback) {
+    this.onDown = callback;
+
+    return this;
   }
 
   init() {
