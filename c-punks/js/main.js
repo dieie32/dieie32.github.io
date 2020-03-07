@@ -6,9 +6,9 @@ class Slider {
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
-    this.el = document.querySelector(".js-slider");
-    this.slides = [...this.el.querySelectorAll(".js-slide")];
-    this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
+    this.el = document.querySelector('.js-slider');
+    this.slides = [...this.el.querySelectorAll('.js-slide')];
+    this.bullets = [...this.el.querySelectorAll('.js-slider-bullet')];
 
     this.xDown = null;
     this.yDown = null;
@@ -17,20 +17,20 @@ class Slider {
       current: 0,
       next: 1,
       previous: 6,
-      total: 6
+      total: 6,
     };
 
     this.state = {
       animating: false,
       text: false,
-      initial: true
+      initial: true,
     };
 
     this.init();
   }
 
   bindAll() {
-    ["nextSlide", "previousSlide"].forEach(
+    ['nextSlide', 'previousSlide'].forEach(
       fn => (this[fn] = this[fn].bind(this))
     );
   }
@@ -39,17 +39,17 @@ class Slider {
     this.slides.forEach((slide, index) => {
       if (index === 0) return;
 
-      TweenMax.set(slide, { autoAlpha: 0 });
+      TweenMax.set(slide, {autoAlpha: 0});
     });
 
     //////////////////////////////////
     this.bullets.forEach((bullet, index) => {
       if (index === 0) return;
 
-      const txt = bullet.querySelector(".js-slider-bullet__text");
+      const txt = bullet.querySelector('.js-slider-bullet__text');
 
       TweenMax.set(txt, {
-        alpha: 0.25
+        alpha: 0.25,
       });
     });
   }
@@ -57,12 +57,12 @@ class Slider {
   createMesh() {
     this.mat = new THREE.ShaderMaterial({
       uniforms: {
-        dispPower: { type: "f", value: 0.0 },
-        intensity: { type: "f", value: 0.5 },
+        dispPower: {type: 'f', value: 0.0},
+        intensity: {type: 'f', value: 0.5},
         res: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
-        }
-      }
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
+      },
     });
   }
 
@@ -73,32 +73,32 @@ class Slider {
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
         this.state.animating = false;
-      }
+      },
     });
 
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
-    const currentText = current.querySelectorAll(".js-slider__text-line div");
-    const nextText = next.querySelectorAll(".js-slider__text-line div");
+    const currentText = current.querySelectorAll('.js-slider__text-line div');
+    const nextText = next.querySelectorAll('.js-slider__text-line div');
 
     const currentBullet = this.bullets[this.data.current];
     const nextBullet = this.bullets[this.data.next];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
     const nextBulletTxt = nextBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
 
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
@@ -109,7 +109,7 @@ class Slider {
       1.5,
       {
         alpha: 0.25,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       0
     );
@@ -119,22 +119,22 @@ class Slider {
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
       next,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
@@ -144,11 +144,11 @@ class Slider {
         nextText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
@@ -159,7 +159,7 @@ class Slider {
       1.5,
       {
         alpha: 1,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       1
     );
@@ -193,32 +193,32 @@ class Slider {
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
         this.state.animating = false;
-      }
+      },
     });
 
     const current = this.slides[this.data.current];
     const previous = this.slides[this.data.previous];
 
-    const currentText = current.querySelectorAll(".js-slider__text-line div");
-    const previousText = previous.querySelectorAll(".js-slider__text-line div");
+    const currentText = current.querySelectorAll('.js-slider__text-line div');
+    const previousText = previous.querySelectorAll('.js-slider__text-line div');
 
     const currentBullet = this.bullets[this.data.current];
     const previousBullet = this.bullets[this.data.previous];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
     const previousBulletTxt = previousBullet.querySelectorAll(
-      ".js-slider-bullet__text"
+      '.js-slider-bullet__text'
     );
 
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
@@ -229,7 +229,7 @@ class Slider {
       1.5,
       {
         alpha: 0.25,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       0
     );
@@ -239,22 +239,22 @@ class Slider {
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
       previous,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
@@ -264,11 +264,11 @@ class Slider {
         previousText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
@@ -279,7 +279,7 @@ class Slider {
       1.5,
       {
         alpha: 1,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       1
     );
@@ -303,16 +303,24 @@ class Slider {
   }
 
   listeners() {
-    window.addEventListener("wheel", this.handleWheel, { passive: true });
+    window.addEventListener('wheel', this.handleWheel, {passive: true});
 
-    window.addEventListener('touchstart', function(ev) {
-      this.xDown = ev.touches[0].clientX;
-      this.yDown = ev.touches[0].clientY;
-    }.bind(this), false);
+    window.addEventListener(
+      'touchstart',
+      function(ev) {
+        this.xDown = ev.touches[0].clientX;
+        this.yDown = ev.touches[0].clientY;
+      }.bind(this),
+      false
+    );
 
-    window.addEventListener('touchmove', function(ev) {
-      this.handleTouchMove(ev);
-    }.bind(this), false);
+    window.addEventListener(
+      'touchmove',
+      function(ev) {
+        this.handleTouchMove(ev);
+      }.bind(this),
+      false
+    );
   }
 
   handleWheel() {
@@ -327,18 +335,18 @@ class Slider {
   }
 
   handleTouchMove(ev) {
-    if ( ! this.xDown || ! this.yDown ) {
+    if (!this.xDown || !this.yDown) {
       return;
     }
-    
+
     let xUp = ev.touches[0].clientX;
     let yUp = ev.touches[0].clientY;
 
     this.xDiff = this.xDown - xUp;
     this.yDiff = this.yDown - yUp;
 
-    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
-      if ( this.yDiff > 0 ) {
+    if (Math.abs(this.xDiff) < Math.abs(this.yDiff)) {
+      if (this.yDiff > 0) {
         this.onUp(this.nextSlide);
       } else {
         this.onDown(this.previousSlide);
@@ -379,9 +387,9 @@ class Slider_Two {
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
-    this.el = document.querySelector(".js-slider_Two");
-    this.slides = [...this.el.querySelectorAll(".js-slide_Two")];
-    this.bullets = [...this.el.querySelectorAll(".js-slider_Two-bullet")];
+    this.el = document.querySelector('.js-slider_Two');
+    this.slides = [...this.el.querySelectorAll('.js-slide_Two')];
+    this.bullets = [...this.el.querySelectorAll('.js-slider_Two-bullet')];
 
     this.xDown = null;
     this.yDown = null;
@@ -390,20 +398,20 @@ class Slider_Two {
       current: 0,
       next: 1,
       previous: 5,
-      total: 5
+      total: 5,
     };
 
     this.state = {
       animating: false,
       text: false,
-      initial: true
+      initial: true,
     };
 
     this.init();
   }
 
   bindAll() {
-    ["nextSlide", "previousSlide"].forEach(
+    ['nextSlide', 'previousSlide'].forEach(
       fn => (this[fn] = this[fn].bind(this))
     );
   }
@@ -412,17 +420,17 @@ class Slider_Two {
     this.slides.forEach((slide, index) => {
       if (index === 0) return;
 
-      TweenMax.set(slide, { autoAlpha: 0 });
+      TweenMax.set(slide, {autoAlpha: 0});
     });
 
     //////////////////////////////////
     this.bullets.forEach((bullet, index) => {
       if (index === 0) return;
 
-      const txt = bullet.querySelector(".js-slider_Two-bullet__text");
+      const txt = bullet.querySelector('.js-slider_Two-bullet__text');
 
       TweenMax.set(txt, {
-        alpha: 0.25
+        alpha: 0.25,
       });
     });
   }
@@ -430,12 +438,12 @@ class Slider_Two {
   createMesh() {
     this.mat = new THREE.ShaderMaterial({
       uniforms: {
-        dispPower: { type: "f", value: 0.0 },
-        intensity: { type: "f", value: 0.5 },
+        dispPower: {type: 'f', value: 0.0},
+        intensity: {type: 'f', value: 0.5},
         res: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
-        }
-      }
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
+      },
     });
   }
 
@@ -446,33 +454,33 @@ class Slider_Two {
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
         this.state.animating = false;
-      }
+      },
     });
     const current = this.slides[this.data.current];
     const next = this.slides[this.data.next];
 
     const currentText = current.querySelectorAll(
-      ".js-slider_Two__text-line div"
+      '.js-slider_Two__text-line div'
     );
-    const nextText = next.querySelectorAll(".js-slider_Two__text-line div");
+    const nextText = next.querySelectorAll('.js-slider_Two__text-line div');
 
     const currentBullet = this.bullets[this.data.current];
     const nextBullet = this.bullets[this.data.next];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider_Two-bullet__text"
+      '.js-slider_Two-bullet__text'
     );
     const nextBulletTxt = nextBullet.querySelectorAll(
-      ".js-slider_Two-bullet__text"
+      '.js-slider_Two-bullet__text'
     );
 
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
@@ -483,7 +491,7 @@ class Slider_Two {
       1.5,
       {
         alpha: 0.25,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       0
     );
@@ -493,22 +501,22 @@ class Slider_Two {
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
       next,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
@@ -518,11 +526,11 @@ class Slider_Two {
         nextText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
@@ -533,7 +541,7 @@ class Slider_Two {
       1.5,
       {
         alpha: 1,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       1
     );
@@ -567,7 +575,7 @@ class Slider_Two {
       onComplete: () => {
         this.mat.uniforms.dispPower.value = 0.0;
         this.state.animating = false;
-      }
+      },
     });
 
     const current = this.slides[this.data.current];
@@ -575,29 +583,29 @@ class Slider_Two {
     // console.info(current," ",previous);
 
     const currentText = current.querySelectorAll(
-      ".js-slider_Two__text-line div"
+      '.js-slider_Two__text-line div'
     );
     const previousText = previous.querySelectorAll(
-      ".js-slider_Two__text-line div"
+      '.js-slider_Two__text-line div'
     );
 
     const currentBullet = this.bullets[this.data.current];
     const previousBullet = this.bullets[this.data.previous];
 
     const currentBulletTxt = currentBullet.querySelectorAll(
-      ".js-slider_Two-bullet__text"
+      '.js-slider_Two-bullet__text'
     );
     const previousBulletTxt = previousBullet.querySelectorAll(
-      ".js-slider_Two-bullet__text"
+      '.js-slider_Two-bullet__text'
     );
 
-    const tl = new TimelineMax({ paused: true });
+    const tl = new TimelineMax({paused: true});
 
     if (this.state.initial) {
-      TweenMax.to(".js-scroll", 1.5, {
+      TweenMax.to('.js-scroll', 1.5, {
         yPercent: 100,
         alpha: 0,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       });
 
       this.state.initial = false;
@@ -608,7 +616,7 @@ class Slider_Two {
       1.5,
       {
         alpha: 0.25,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       0
     );
@@ -618,22 +626,22 @@ class Slider_Two {
         currentText,
         2,
         {
-          yPercent: 0
+          yPercent: 0,
         },
         {
           yPercent: -300,
-          ease: Power4.easeInOut
+          ease: Power4.easeInOut,
         },
         0
       );
     }
 
     tl.set(current, {
-      autoAlpha: 0
+      autoAlpha: 0,
     }).set(
       previous,
       {
-        autoAlpha: 1
+        autoAlpha: 1,
       },
       1
     );
@@ -643,11 +651,11 @@ class Slider_Two {
         previousText,
         2,
         {
-          yPercent: 100
+          yPercent: 100,
         },
         {
           yPercent: 0,
-          ease: Power4.easeOut
+          ease: Power4.easeOut,
         },
         1.5
       );
@@ -658,7 +666,7 @@ class Slider_Two {
       1.5,
       {
         alpha: 1,
-        ease: Linear.easeNone
+        ease: Linear.easeNone,
       },
       1
     );
@@ -682,16 +690,24 @@ class Slider_Two {
   }
 
   listeners() {
-    window.addEventListener("wheel", this.handleWheel, { passive: true });
+    window.addEventListener('wheel', this.handleWheel, {passive: true});
 
-    window.addEventListener('touchstart', function(ev) {
-      this.xDown = ev.touches[0].clientX;
-      this.yDown = ev.touches[0].clientY;
-    }.bind(this), false);
+    window.addEventListener(
+      'touchstart',
+      function(ev) {
+        this.xDown = ev.touches[0].clientX;
+        this.yDown = ev.touches[0].clientY;
+      }.bind(this),
+      false
+    );
 
-    window.addEventListener('touchmove', function(ev) {
-      this.handleTouchMove(ev);
-    }.bind(this), false);
+    window.addEventListener(
+      'touchmove',
+      function(ev) {
+        this.handleTouchMove(ev);
+      }.bind(this),
+      false
+    );
   }
 
   handleWheel() {
@@ -704,7 +720,7 @@ class Slider_Two {
   }
 
   handleTouchMove(ev) {
-    if ( ! this.xDown || ! this.yDown ) {
+    if (!this.xDown || !this.yDown) {
       return;
     }
 
@@ -714,8 +730,8 @@ class Slider_Two {
     this.xDiff = this.xDown - xUp;
     this.yDiff = this.yDown - yUp;
 
-    if ( Math.abs( this.xDiff ) < Math.abs( this.yDiff ) ) {
-      if ( this.yDiff > 0 ) {
+    if (Math.abs(this.xDiff) < Math.abs(this.yDiff)) {
+      if (this.yDiff > 0) {
         this.onUp(this.previousSlide);
       } else {
         this.onDown(this.nextSlide);
@@ -749,8 +765,8 @@ const slider_Two = new Slider_Two();
 // ----------------------------- END SECOND SLIDER -----------------------------
 
 // ----------------------------- CURSOR -----------------------------
-var cursor = $(".cursor"),
-  follower = $(".cursor-follower");
+var cursor = $('.cursor'),
+  follower = $('.cursor-follower');
 
 var posX = 0,
   posY = 0;
@@ -767,36 +783,36 @@ TweenMax.to({}, 0.016, {
     TweenMax.set(follower, {
       css: {
         left: posX - 12,
-        top: posY - 12
-      }
+        top: posY - 12,
+      },
     });
 
     TweenMax.set(cursor, {
       css: {
         left: mouseX,
-        top: mouseY
-      }
+        top: mouseY,
+      },
     });
-  }
+  },
 });
 
-$(document).on("mousemove", function(e) {
+$(document).on('mousemove', function(e) {
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
 
-$(".link").on("mouseenter", function() {
-  cursor.addClass("active");
-  follower.addClass("active");
+$('.link').on('mouseenter', function() {
+  cursor.addClass('active');
+  follower.addClass('active');
 });
-$(".link").on("mouseleave", function() {
-  cursor.removeClass("active");
-  follower.removeClass("active");
+$('.link').on('mouseleave', function() {
+  cursor.removeClass('active');
+  follower.removeClass('active');
 });
 // ----------------------------- END CURSOR -----------------------------
 
 // ----------------------------- PRELOADER -----------------------------
-var cnt = document.getElementById("count");
+var cnt = document.getElementById('count');
 var percent = cnt.innerText;
 var interval;
 
@@ -806,61 +822,61 @@ interval = setInterval(function() {
   if (percent == 100) {
     clearInterval(interval);
 
-    TweenMax.to(".box", 2, {
-      top: "-110%",
-      ease: Expo.easeInOut
+    TweenMax.to('.box', 2, {
+      top: '-110%',
+      ease: Expo.easeInOut,
     });
 
     TweenMax.fromTo(
-      ".percent-title div",
+      '.percent-title div',
       2,
       {
-        yPercent: 0
+        yPercent: 0,
       },
       {
         yPercent: -100,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       },
       2
     );
 
-    TweenMax.from(".logo", 3, {
+    TweenMax.from('.logo', 3, {
       delay: 0.4,
       opacity: 0,
       y: 20,
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
     });
 
-    TweenMax.from(".phrase", 2, {
+    TweenMax.from('.phrase', 2, {
       delay: 0.6,
       opacity: 0,
       y: 20,
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
     });
 
-    TweenMax.from(".navigation", 4, {
+    TweenMax.from('.navigation', 4, {
       delay: 0.6,
       opacity: 0,
       y: 20,
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
     });
 
-    TweenMax.from(".email", 4, {
+    TweenMax.from('.email', 4, {
       delay: 0.6,
       opacity: 0,
       y: 20,
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
     });
 
     TweenMax.fromTo(
-      ".percent div",
+      '.percent div',
       1,
       {
-        yPercent: 0
+        yPercent: 0,
       },
       {
         yPercent: -100,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
       },
       1
     );
@@ -868,60 +884,85 @@ interval = setInterval(function() {
 }, 30);
 
 TweenMax.fromTo(
-  ".percent div",
+  '.percent div',
   2,
   {
-    yPercent: 100
+    yPercent: 100,
   },
   {
     yPercent: 0,
-    ease: Power4.easeOut
+    ease: Power4.easeOut,
   },
   1
 );
 
 TweenMax.fromTo(
-  ".percent-title div",
+  '.percent-title div',
   2,
   {
-    yPercent: 100
+    yPercent: 100,
   },
   {
     yPercent: 0,
-    ease: Power4.easeInOut
+    ease: Power4.easeInOut,
   },
   1
 );
 // ----------------------------- END PRELOADER -----------------------------
 
 // ----------------------------- START ABOUT NAV HOME + STUDIO -----------------------------
-let studioHome = document.querySelector(".studio_home");
+let studioHome = document.querySelector('.studio_home');
 
-studioHome.addEventListener("click", function() {
-  TweenMax.to(".slider__text", 2, { top: "30%", ease: Power4.easeInOut });
-  TweenMax.to(".slider__nav", 2, { bottom: "0%", ease: Power4.easeInOut });
-  TweenMax.to(".slider_Two__text", 2, { top: "110%", ease: Power4.easeInOut });
-  TweenMax.to(".slider_Two__nav", 2, {
-    bottom: "-25%",
-    ease: Power4.easeInOut
+studioHome.addEventListener('click', function() {
+  TweenMax.to('.slider__text', 2, {top: '30%', ease: Power4.easeInOut});
+  TweenMax.to('.slider__nav', 2, {bottom: '0%', ease: Power4.easeInOut});
+  TweenMax.to('.slider_Two__text', 2, {top: '110%', ease: Power4.easeInOut});
+  TweenMax.to('.slider_Two__nav', 2, {
+    bottom: '-25%',
+    ease: Power4.easeInOut,
   });
-  TweenMax.to(".background-contact", 2, {
-    bottom: "0%",
-    ease: Power4.easeInOut
+  TweenMax.to('.background-contact', 2, {
+    bottom: '0%',
+    ease: Power4.easeInOut,
   });
 });
 
 // ------------------------------
-let studioNav = document.querySelector(".studio_nav");
+let studioNav = document.querySelector('.studio_nav');
 
-studioNav.addEventListener("click", function() {
-  TweenMax.to(".slider__text", 2, { top: "110%", ease: Power4.easeInOut });
-  TweenMax.to(".slider__nav", 2, { bottom: "-25%", ease: Power4.easeInOut });
-  TweenMax.to(".slider_Two__text", 2, { top: "30%", ease: Power4.easeInOut });
-  TweenMax.to(".slider_Two__nav", 2, { bottom: "0%", ease: Power4.easeInOut });
-  TweenMax.to(".background-contact", 2, {
-    bottom: "-110%",
-    ease: Power4.easeInOut
+studioNav.addEventListener('click', function() {
+  TweenMax.to('.slider__text', 2, {top: '110%', ease: Power4.easeInOut});
+  TweenMax.to('.slider__nav', 2, {bottom: '-25%', ease: Power4.easeInOut});
+  TweenMax.to('.slider_Two__text', 2, {top: '30%', ease: Power4.easeInOut});
+  TweenMax.to('.slider_Two__nav', 2, {bottom: '0%', ease: Power4.easeInOut});
+  TweenMax.to('.background-contact', 2, {
+    bottom: '-110%',
+    ease: Power4.easeInOut,
   });
 });
 // ----------------------------- END ABOUT NAV -----------------------------
+
+// ----------------------------- TOGGLE MENU -----------------------------
+const toggle = document.querySelector('.toggle-button');
+const navigation = document.querySelector('.navigation');
+
+const slises = Array.from(document.querySelectorAll('.slise'));
+const links = Array.from(document.querySelectorAll('.links li a'));
+
+slises &&
+  slises.forEach(slises =>
+    toggle.addEventListener('click', () => {
+      slises.classList.toggle('active');
+    })
+  );
+
+// slises &&
+//   slises.forEach(slises =>
+//     links.addEventListener('click', () => {
+//       slises.classList.remove('active');
+//     })
+//   );
+
+toggle.addEventListener('click', () => {
+  navigation.classList.toggle('active');
+});
