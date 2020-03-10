@@ -2,6 +2,10 @@
 @import "add-ons/_standart";
 @import "add-ons/_fonts";
 
+section {
+  padding: 50px 0;
+}
+
 header {
   .top_bar {
     background: url("/assets/images/bg-top_bar.png") no-repeat center top/cover;
@@ -183,7 +187,26 @@ main {
       display: flex;
     }
   }
+
+  section#gallarey {
+    .gallarey-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        width: 25%;
+      }
+    }
+  }
 }
 
 footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .visa-card {
+      display: flex;
+    }
+  }
 }

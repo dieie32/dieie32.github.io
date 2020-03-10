@@ -77,6 +77,9 @@ label,
 span {
   font-family: "Montserrat Regular" !important; }
 
+section {
+  padding: 50px 0; }
+
 header .top_bar {
   background: url("/assets/images/bg-top_bar.png") no-repeat center top/cover;
   color: #fff; }
@@ -231,3 +234,24 @@ main section#increase_price .increase_price-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+main section#gallarey .gallarey-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  main section#gallarey .gallarey-wrapper img {
+    width: 25%; }
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  footer .container .visa-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
