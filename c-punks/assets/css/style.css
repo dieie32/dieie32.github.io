@@ -149,8 +149,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: hidden;
-  height: 100vh !important; }
+  height: 100vh !important;
+  overflow-y: hidden; }
 
 header nav {
   display: -webkit-box;
@@ -163,30 +163,36 @@ header nav {
   @media (max-width: 600px) {
     header nav .logo {
       font-size: 12px; } }
-  @media (max-width: 600px) {
-    header nav .navigation {
-      display: none; } }
   header nav .toggle-button {
     position: absolute;
     right: 6%;
     top: 2%;
-    height: 15px;
-    width: 30px; }
+    width: 30px;
+    z-index: 36; }
+    @media (min-width: 600px) {
+      header nav .toggle-button {
+        display: none; } }
     header nav .toggle-button .slise {
       height: 2px;
       width: 25px;
       margin: 5px 0;
-      background: #fff; }
+      background: #fff;
+      -webkit-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out; }
       header nav .toggle-button .slise.active:nth-child(1) {
-        -webkit-transform: translateY(5px);
-        -ms-transform: translateY(5px);
-        transform: translateY(5px); }
+        -webkit-transform: translateY(14px) rotate(45deg);
+        -ms-transform: translateY(14px) rotate(45deg);
+        transform: translateY(14px) rotate(45deg); }
       header nav .toggle-button .slise.active:nth-child(2) {
         opacity: 0; }
       header nav .toggle-button .slise.active:nth-child(3) {
-        -webkit-transform: translateY(-5px);
-        -ms-transform: translateY(-5px);
-        transform: translateY(-5px); }
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
   @media (max-width: 1600px) {
     header nav {
       padding: 5% 5% 0; } }
@@ -198,6 +204,21 @@ header nav {
     @media (max-width: 1600px) {
       header nav .navigation {
         width: 60%; } }
+    @media (max-width: 600px) {
+      header nav .navigation {
+        height: 100vh;
+        width: 100vw;
+        background: #000;
+        position: absolute;
+        top: -110%;
+        left: 0;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        z-index: 35;
+        padding: 80px 30px; }
+        header nav .navigation.active {
+          top: 0%; } }
     header nav .navigation .links {
       z-index: 1005;
       display: -webkit-box;
@@ -208,7 +229,12 @@ header nav {
       justify-content: space-between; }
       @media (max-width: 600px) {
         header nav .navigation .links {
-          font-size: 10px; } }
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          line-height: 45px;
+          font-size: 35px; } }
       header nav .navigation .links li:hover {
         color: red !important; }
       header nav .navigation .links li a {
@@ -831,9 +857,9 @@ footer .contact {
   width: 100%;
   height: 100vh;
   background: #0a0a0a;
-  z-index: 20; }
+  z-index: 38; }
   .box .percent-title {
-    font-family: "Gordita Bold";
+    font-family: 'Gordita Bold';
     font-size: 18rem;
     position: absolute;
     left: 26vw;
@@ -847,7 +873,7 @@ footer .contact {
         left: 20vw;
         top: 46vw; } }
   .box .percent {
-    font-family: "Gordita Bold";
+    font-family: 'Gordita Bold';
     font-size: 5rem;
     position: absolute;
     left: 50vw;
