@@ -1,0 +1,189 @@
+@import "add-ons/_variables";
+@import "add-ons/_standart";
+@import "add-ons/_fonts";
+
+header {
+  .top_bar {
+    background: url("/assets/images/bg-top_bar.png") no-repeat center top/cover;
+    color: #fff;
+  }
+}
+
+main {
+  section#main {
+    background: url("/assets/images/bg-main_section.png") no-repeat center
+      top/cover;
+    min-height: 100vh;
+  }
+
+  section#advantages {
+    .advantages_name-wrapper {
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0;
+
+        .advantages-item {
+          border: 1px solid #bbbbbb;
+          padding: 25px;
+          margin: 0 15px;
+
+          p {
+            font-size: 25px;
+
+            span {
+              color: #134032;
+            }
+          }
+        }
+      }
+    }
+
+    .advantages_info-wrapper {
+      background: url("/assets/images/bg-thith-section-4.png") no-repeat center
+        top/cover;
+      min-height: 60vh;
+
+      .container {
+        display: flex;
+      }
+    }
+  }
+
+  section#how_it_work {
+    h2 {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .work_select-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .work_select-item {
+        display: flex;
+        align-items: center;
+        border: 1px solid #bbbbbb;
+        padding: 3px 140px;
+
+        img {
+          margin: 0 15px 0 auto;
+        }
+      }
+    }
+
+    .work_select_info-wrapper {
+      .work_select_info-item {
+        display: flex;
+
+        img {
+          margin: 15px;
+        }
+
+        .video_info {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  section#professional_response {
+    .container {
+      display: flex;
+
+      .professional-video_response {
+        display: flex;
+      }
+    }
+  }
+
+  section#strong_and_durable {
+    .container {
+      padding: 100px 0;
+
+      .strong_and_durable-heading {
+        text-align: center;
+      }
+
+      .zhilet-wrapper {
+        display: flex;
+
+        .zhilet-item {
+          max-width: 30%;
+        }
+      }
+
+      .tissue-wrapper {
+        display: flex;
+
+        .tissue-info {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  section#comfortable_and_safe {
+    .container {
+      display: flex;
+    }
+  }
+
+  section#video_reports {
+    background: #fbfbfb;
+    padding: 50px 0;
+
+    h2 {
+      text-align: center;
+    }
+
+    .video-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 22%;
+        margin: 15px 0;
+      }
+    }
+  }
+
+  section#customer_reviews {
+    .clients_reviews-item {
+      .clients-name {
+        display: flex;
+      }
+
+      .clients-image {
+        display: flex;
+      }
+    }
+  }
+
+  section#not_suitable {
+    .not_suitable-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .not_suitable-item {
+        max-width: 30%;
+        margin: 1%;
+        text-align: center;
+      }
+    }
+  }
+
+  section#increase_price {
+    .increase_price-wrapper {
+      display: flex;
+    }
+  }
+}
+
+footer {
+}

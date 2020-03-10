@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Montserrat Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat Regular"),
+    url("../fonts/Montserrat/Montserrat-Regular.otf") format("otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat Regular" !important;
+}
+
+p,
+button,
+a,
+li,
+input,
+label,
+span {
+  font-family: "Montserrat Regular" !important;
+}
