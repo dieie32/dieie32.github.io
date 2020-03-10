@@ -81,11 +81,11 @@ section {
   padding: 50px 0; }
 
 header .top_bar {
-  background: url("/assets/images/bg-top_bar.png") no-repeat center top/cover;
+  background: url("../images/bg-top_bar.png") no-repeat center top/cover;
   color: #fff; }
 
 main section#main {
-  background: url("/assets/images/bg-main_section.png") no-repeat center top/cover;
+  background: url("../images/bg-main_section.png") no-repeat center top/cover;
   min-height: 100vh; }
 
 main section#advantages .advantages_name-wrapper .container {
@@ -109,7 +109,7 @@ main section#advantages .advantages_name-wrapper .container {
         color: #134032; }
 
 main section#advantages .advantages_info-wrapper {
-  background: url("/assets/images/bg-thith-section-4.png") no-repeat center top/cover;
+  background: url("../images/bg-thith-section-4.png") no-repeat center top/cover;
   min-height: 60vh; }
   main section#advantages .advantages_info-wrapper .container {
     display: -webkit-box;
