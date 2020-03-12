@@ -772,21 +772,23 @@
       <!-- Customer Reviews Section -->
       <section id="customer_reviews">
         <div class="container">
-          <h2>
-            <span>Отзывы</span> некоторых клиентов 
-          </h2>
+          <h2><span>Отзывы</span> некоторых клиентов</h2>
           <div class="clients_reviews-item">
             <div class="clients-name">
               <img
                 src="assets/images/client-reviev-icon-1.png"
                 alt="DsL Dog Sport Life Clients Logo"
               />
-              <h4>Стас Михайлов</h4>
-              <img
-                src="assets/images/calendar-icon.png"
-                alt="DsL Dog Sport Life Calendar Icon"
-              />
-              <p>30.10.2019</p>
+              <div class="part">
+                <h4>Стас Михайлов</h4>
+                <div class="date">
+                  <img
+                    src="assets/images/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>30.10.2019</p>
+                </div>
+              </div>
             </div>
             <p>
               На данный момент жилет более, чем устраивает. Использую как и для
@@ -830,12 +832,16 @@
                 src="assets/images/second-client-reviev-icon-1.png"
                 alt="DsL Dog Sport Life Clients Logo"
               />
-              <h4>Ирина Рузанова</h4>
-              <img
-                src="assets/images/calendar-icon.png"
-                alt="DsL Dog Sport Life Calendar Icon"
-              />
-              <p>08.11.2019</p>
+              <div class="part">
+                <h4>Ирина Рузанова</h4>
+                <div class="date">
+                  <img
+                    src="assets/images/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>08.11.2019</p>
+                </div>
+              </div>
             </div>
             <p>
               Жилет пришёл 3 дня назад, очень понравился!Прислали программу
@@ -875,12 +881,16 @@
                 src="assets/images/thirth-client-reviev-icon-1.png"
                 alt="DsL Dog Sport Life Clients Logo"
               />
-              <h4>Катриэль Тейрин</h4>
-              <img
-                src="assets/images/calendar-icon.png"
-                alt="DsL Dog Sport Life Calendar Icon"
-              />
-              <p>30.10.2019</p>
+              <div class="part">
+                <h4>Катриэль Тейрин</h4>
+                <div class="date">
+                  <img
+                    src="assets/images/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>30.10.2019</p>
+                </div>
+              </div>
             </div>
             <p>
               Давно заприметили себе данный жилет, хотя нам рано еще заниматься
@@ -985,18 +995,12 @@
                   При заказе до окончания таймера, вы получите
                   <span> 2 подарка</span>
                 </h3>
-                <p>
-                  12 Часов
-                </p>
-                <p>
-                  34 Минут
-                </p>
-                <p>
-                  13 Секунд
-                </p>
-                <p>
-                  84 Мс
-                </p>
+                <div class="timer-wrapper">
+                  <p>12 <br /><span>Часов</span></p>
+                  <p>34 <br /><span>Минут</span></p>
+                  <p>13 <br /><span>Секунд</span></p>
+                  <p>84 <br /><span>Мс</span></p>
+                </div>
               </div>
 
               <div class="delivery-info-wrapper">
@@ -1010,8 +1014,8 @@
                   <div class="part">
                     <h4>Бесплатная Доставка</h4>
                     <p>
-                      До пункта СДЭК в вашем городе. С отслеживанием заказа
-                      онлайн.
+                      До пункта <span>СДЭК</span> в вашем городе.
+                      <span>С отслеживанием заказа онлайн.</span>
                     </p>
                   </div>
                 </div>
@@ -1028,13 +1032,14 @@
                       Бесплатно!
                     </h4>
                     <p>
-                      Используйте потенциал фитнес-жилета на 100%, ускоряя рост
-                      мышц, выносливости и скорости вашей собаки. Комплексная
-                      программа из 3 уровней и 36 упражнений разной сложности
-                      помогает системно подойти к тренировкам и значительно
-                      улучшить результаты на соревнованиях. Разработана
-                      совместно с физиотерапевтом- реабилитологом Еленой
-                      Шпиндлер.
+                      Используйте потенциал фитнес-жилета на 100%,
+                      <span>ускоряя рост мышц, выносливости и скорости</span>
+                      вашей собаки. Комплексная программа из 3 уровней и
+                      <span>36 упражнений разной сложности</span> помогает
+                      системно подойти к тренировкам и значительно улучшить
+                      результаты на соревнованиях. Разработана совместно с
+                      физиотерапевтом- реабилитологом
+                      <span>Еленой Шпиндлер.</span>
                     </p>
                   </div>
                 </div>
@@ -1107,7 +1112,11 @@
               </div>
 
               <div class="form">
-                <h3>Закажите Фитнес-Жилет DSL сейчас и заберите бонусы</h3>
+                <h3>
+                  Закажите Фитнес-Жилет DSL сейчас и
+                  <span>заберите бонусы</span>
+                </h3>
+                <h4></h4>
                 <form action="">
                   <input type="text" name="" id="" placeholder="Ваше Имя" />
                   <input type="email" name="" id="" placeholder="Ваше e-mail" />
@@ -1133,15 +1142,31 @@
         <div class="container">
           <div class="question">
             <p>Как чистить жилет?</p>
+            <img
+              src="assets/images/arrow-round.png"
+              alt="DsL DOG SPORT LIFE Arrow Round"
+            />
           </div>
           <div class="question">
             <p>В чём отличие от шлейки?</p>
+            <img
+              src="assets/images/arrow-round.png"
+              alt="DsL DOG SPORT LIFE Arrow Round"
+            />
           </div>
           <div class="question">
             <p>Есть ли гарантия?</p>
+            <img
+              src="assets/images/arrow-round.png"
+              alt="DsL DOG SPORT LIFE Arrow Round"
+            />
           </div>
           <div class="question">
             <p>Как быстро я получу жилет?</p>
+            <img
+              src="assets/images/arrow-round.png"
+              alt="DsL DOG SPORT LIFE Arrow Round"
+            />
           </div>
         </div>
       </section>
