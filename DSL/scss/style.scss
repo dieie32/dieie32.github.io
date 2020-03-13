@@ -123,8 +123,14 @@ main {
       text-align: center;
     }
 
+    .logo {
+      margin: 0 0 55px 0;
+    }
+
     img {
-      margin: 0 auto;
+      @media (max-width: 425px) {
+        margin: 0 auto;
+      }
     }
 
     .info_country {
@@ -149,7 +155,7 @@ main {
         background: #000;
         color: #fff;
         text-transform: uppercase;
-        
+
         @media (max-width: 425px) {
           justify-content: center;
         }
@@ -157,7 +163,7 @@ main {
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 45px;
       max-width: 750px;
       font-weight: bold;
       padding: 15px 0;
@@ -172,7 +178,7 @@ main {
     }
 
     p {
-      font-size: 25px;
+      font-size: 20px;
       max-width: 750px;
 
       @media (max-width: 425px) {
@@ -187,7 +193,7 @@ main {
     .watch_video {
       display: flex;
       align-items: center;
-      margin: 15px 0;
+      margin: 45px 0;
 
       p {
         margin: 0 15px;
@@ -222,13 +228,25 @@ main {
           margin: 0 10px;
           width: 23%;
 
+          &:hover {
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          }
+
+          &.active {
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          }
+
           @media (max-width: 425px) {
             width: 45%;
             margin: 15px 0;
           }
 
           p {
-            font-size: 25px;
+            font-size: 22px;
             font-weight: bold;
 
             @media (max-width: 425px) {
@@ -244,13 +262,13 @@ main {
     }
 
     .advantages_info-wrapper {
-      background: url("../images/bg-thith-section-4.png") no-repeat center
+      background: url("../images/bg-thith-section-1.png") no-repeat center
         top/cover;
       min-height: 630px;
       padding: 65px 0;
 
       @media (max-width: 425px) {
-        background: url("../images/mobile-bg-thith-section-4.png") no-repeat
+        background: url("../images/mobile-bg-thith-section-1.png") no-repeat
           center top/cover;
         padding: 0;
       }
@@ -261,6 +279,11 @@ main {
 
         .advantages_info-item {
           width: 50%;
+          display: none;
+
+          &.active {
+            display: block;
+          }
 
           @media (max-width: 425px) {
             width: 100%;
@@ -339,6 +362,18 @@ main {
         padding: 3px 140px;
         width: 50%;
 
+        &:hover {
+          box-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &.active {
+          box-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        }
+
         @media (max-width: 425px) {
           padding: 10px;
           width: 80%;
@@ -366,10 +401,20 @@ main {
       }
 
       .work_select_info-item {
-        display: flex;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
 
         .part {
+          min-height: 382px;
+
           &:first-child {
+            img {
+              height: 382px;
+            }
+
             @media (max-width: 425px) {
               display: none;
             }
@@ -431,7 +476,7 @@ main {
 
         @media (max-width: 425px) {
           font-size: 20px;
-        } 
+        }
       }
 
       .green-color {
@@ -505,6 +550,8 @@ main {
   }
 
   section#strong_and_durable {
+    background: #fbfbfb;
+
     .container {
       padding: 100px 0;
 
@@ -530,21 +577,24 @@ main {
 
           @media (max-width: 425px) {
             font-size: 25px;
-          } 
+          }
 
           span {
             color: #134032;
           }
         }
 
+        .strong-center-p {
+          margin: 0 auto;
+        }
+
         p {
           font-size: 25px;
           max-width: 650px;
-          margin: 0 auto;
 
           @media (max-width: 425px) {
             font-size: 14px;
-          } 
+          }
 
           span {
             font-weight: bold;
@@ -610,11 +660,10 @@ main {
       }
 
       .tissue-container {
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
         padding: 20px;
         margin: 50px 0;
+        min-height: 332px;
+        background: url("../images/bg-tissue.png") no-repeat center top/cover;
 
         .tissue-wrapper {
           display: flex;
@@ -720,7 +769,8 @@ main {
       }
 
       .comfortable-image {
-        width: 80%;
+        width: 110%;
+        margin: auto;
 
         @media (max-width: 425px) {
           position: absolute;
@@ -784,13 +834,13 @@ main {
             display: none;
           }
         }
-        
+
         &:nth-child(4) {
           @media (max-width: 425px) {
             display: none;
           }
         }
-        
+
         &:nth-child(5) {
           @media (max-width: 425px) {
             display: none;
@@ -833,6 +883,22 @@ main {
       }
     }
 
+    a {
+      .btn {
+        border: 1px solid #184a00;
+        color: #184a00;
+        padding: 17px 38px;
+        border-radius: 50px;
+        font-weight: bold;
+        max-width: 190px;
+        margin: 0 auto;
+
+        @media (max-width: 425px) {
+          padding: 14px 20px;
+        }
+      }
+    }
+
     .clients_reviews-item {
       border: 1px solid #bbbbbb;
       padding: 25px;
@@ -869,43 +935,43 @@ main {
               width: 90%;
             }
           }
-  
+
           &:nth-child(2) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-  
+
           &:nth-child(3) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-          
+
           &:nth-child(4) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-          
+
           &:nth-child(5) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-  
+
           &:nth-child(6) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-  
+
           &:nth-child(7) {
             @media (max-width: 425px) {
               display: none;
             }
           }
-  
+
           &:nth-child(8) {
             @media (max-width: 425px) {
               display: none;
@@ -921,7 +987,7 @@ main {
       font-size: 50px;
       font-weight: bold;
       text-align: center;
-      
+
       @media (max-width: 425px) {
         font-size: 25px;
       }
@@ -967,6 +1033,7 @@ main {
       font-size: 50px;
       font-weight: bold;
       text-align: center;
+      margin: 35px 0;
 
       @media (max-width: 425px) {
         font-size: 25px;
@@ -979,9 +1046,45 @@ main {
 
     .increase_price-wrapper {
       display: flex;
+      justify-content: space-between;
 
       @media (max-width: 425px) {
         flex-wrap: wrap;
+      }
+
+      .part {
+        max-width: 48%;
+
+        @media (max-width: 425px) {
+          max-width: 90%;
+        }
+      }
+
+      .increase_price-image {
+        .top-wrapper {
+          display: flex;
+
+          .top {
+            margin: 0 8px;
+
+            img {
+              margin: 16px 0;
+            }
+          }
+        }
+
+        .bottom {
+          margin: 10px 0 0 78px;
+          display: flex;
+
+          @media (max-width: 425px) {
+            display: none;
+          }
+
+          img {
+            margin: 0 5px;
+          }
+        }
       }
 
       .increase-timer {
@@ -989,6 +1092,7 @@ main {
           font-size: 25px;
           font-weight: bold;
           text-align: center;
+          margin: 35px 0 0 0;
 
           span {
             color: #134032;
@@ -1001,14 +1105,23 @@ main {
           justify-content: space-around;
           padding: 25px 0;
 
-          p {
-            padding: 25px 0;
+          .timer-item {
+            padding: 15px 0;
             width: 15%;
             border: 1px solid #bbbbbb;
-            font-weight: bold;
 
-            span {
-              font-weight: normal;
+            @media (max-width: 425px) {
+              width: 20%;
+            }
+
+            p {
+              font-weight: bold;
+              font-size: 30px;
+
+              span {
+                font-weight: normal;
+                font-size: 16px;
+              }
             }
           }
         }
@@ -1041,6 +1154,8 @@ main {
     .increase_price-info {
       .price {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         h3 {
           color: red;
@@ -1064,7 +1179,7 @@ main {
       .increase_price-info-wrapper {
         .increase_price-info-item {
           display: flex;
-          margin: 15px 0 0 0;
+          margin: 45px 0;
 
           img {
             max-height: 53px;
@@ -1084,6 +1199,36 @@ main {
       -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
       box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
       margin: 50px 0;
+
+      hr {
+        width: 100%;
+        height: 5px;
+        background: #134032;
+      }
+
+      .part-line {
+        display: flex;
+        height: 80px;
+
+        .part {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+
+          h5 {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          span {
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #134032;
+          }
+        }
+      }
 
       h3 {
         font-size: 25px;
@@ -1140,6 +1285,20 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &:hover {
+          -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      .answer {
+        display: none;
+
+        &.active {
+          display: block;
+        }
       }
     }
   }
@@ -1152,6 +1311,15 @@ main {
       img {
         width: 25%;
       }
+    }
+
+    p {
+      text-align: center;
+      color: #184a00;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 15px 0;
+      text-decoration: underline;
     }
   }
 }
