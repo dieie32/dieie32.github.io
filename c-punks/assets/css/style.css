@@ -151,6 +151,9 @@ body {
   flex-direction: column;
   height: 100vh !important;
   overflow-y: hidden; }
+  @media (max-width: 600px) {
+    body {
+      height: 92vh !important; } }
 
 header nav {
   display: -webkit-box;
