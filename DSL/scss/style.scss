@@ -1,6 +1,6 @@
-@import "add-ons/_variables";
-@import "add-ons/_standart";
-@import "add-ons/_fonts";
+@import 'add-ons/_variables';
+@import 'add-ons/_standart';
+@import 'add-ons/_fonts';
 
 section {
   padding: 50px 0;
@@ -8,14 +8,15 @@ section {
 
 header {
   .top_bar {
-    background: url("../images/bg-top_bar.png") no-repeat center top/cover;
+    background: url('../images/bg-folder/bg-top_bar.png') no-repeat center
+      top/cover;
     color: #fff;
     min-height: 100px;
     padding: 10px 0;
 
     @media (max-width: 425px) {
-      background: url("../images/mobile-bg-top_bar.png") no-repeat center
-        top/cover;
+      background: url('../images/bg-folder/mobile-bg-top_bar.png') no-repeat
+        center top/cover;
     }
 
     .container {
@@ -52,8 +53,8 @@ header {
       }
 
       .timer {
-        background: url("../images/timer-background.png") no-repeat center
-          top/cover;
+        background: url('../images/bg-folder/timer-background.png') no-repeat
+          center top/cover;
         width: 266px;
         height: 84px;
         display: flex;
@@ -112,14 +113,15 @@ header {
   }
 }
 
-main {
+main.index {
   section#main {
-    background: url("../images/bg-main_section.png") no-repeat center top/cover;
+    background: url('../images/bg-folder/bg-main_section.png') no-repeat center
+      top/cover;
     min-height: 850px;
 
     @media (max-width: 425px) {
-      background: url("../images/mobile-bg-main_section.png") no-repeat center
-        top/cover;
+      background: url('../images/bg-folder/mobile-bg-main_section.png')
+        no-repeat center top/cover;
       text-align: center;
     }
 
@@ -262,14 +264,14 @@ main {
     }
 
     .advantages_info-wrapper {
-      background: url("../images/bg-thith-section-1.png") no-repeat center
-        top/cover;
+      background: url('../images/bg-folder/bg-thith-section-1.png') no-repeat
+        center top/cover;
       min-height: 630px;
       padding: 65px 0;
 
       @media (max-width: 425px) {
-        background: url("../images/mobile-bg-thith-section-1.png") no-repeat
-          center top/cover;
+        background: url('../images/bg-folder/mobile-bg-thith-section-1.png')
+          no-repeat center top/cover;
         padding: 0;
       }
 
@@ -390,16 +392,6 @@ main {
     }
 
     .work_select_info-wrapper {
-      .part {
-        &:first-child {
-          width: 50%;
-
-          @media (max-width: 425px) {
-            width: 100%;
-          }
-        }
-      }
-
       .work_select_info-item {
         display: none;
 
@@ -407,16 +399,43 @@ main {
           display: flex;
         }
 
-        .part {
-          min-height: 382px;
+        &:first-child {
+          .part {
+            min-height: 382px;
 
-          &:first-child {
-            img {
-              height: 382px;
+            &:first-child {
+              width: 50%;
+
+              @media (max-width: 425px) {
+                width: 100%;
+              }
             }
 
-            @media (max-width: 425px) {
-              display: none;
+            &:first-child {
+              img {
+                height: 382px;
+              }
+
+              @media (max-width: 425px) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .part {
+            &:first-child {
+              width: 220%;
+              padding: 30px;
+
+              @media (max-width: 425px) {
+                width: 100%;
+              }
+
+              @media (max-width: 425px) {
+                display: none;
+              }
             }
           }
         }
@@ -426,15 +445,15 @@ main {
           font-weight: bold;
         }
 
+        span {
+          font-weight: bold;
+        }
+
         .text_info {
           padding: 0 30px;
 
           p {
             padding: 5px 0;
-
-            span {
-              font-weight: bold;
-            }
           }
         }
 
@@ -663,7 +682,8 @@ main {
         padding: 20px;
         margin: 50px 0;
         min-height: 332px;
-        background: url("../images/bg-tissue.png") no-repeat center top/cover;
+        background: url('../images/bg-folder/bg-tissue.png') no-repeat center
+          top/cover;
 
         .tissue-wrapper {
           display: flex;
@@ -1257,7 +1277,7 @@ main {
           border-radius: 30px;
           margin: 10px auto;
 
-          &[type="submit"] {
+          &[type='submit'] {
             border: 2px solid #134032;
             color: #134032;
             font-weight: bold;
@@ -1322,6 +1342,98 @@ main {
       text-decoration: underline;
     }
   }
+}
+
+main.second-page-order {
+  section#main {
+    min-height: 70vh;
+    background: url('../images/bg-folder/bg-main-second-order.png') no-repeat
+      center top/cover;
+  }
+
+  section#detail-order {
+    .container {
+      display: flex;
+
+      .image-gallarey {
+        .images {
+          display: flex;
+        }
+      }
+
+      .order-addition {
+        .order-addition-item {
+          margin: 30px 0;
+
+          &:first-child {
+            background: url('../images/bg-folder/bg-dog-addition.png') no-repeat
+              center top/cover;
+          }
+
+          &:last-child {
+            background: url('../images/bg-folder/bg-dog-addition-two.png')
+              no-repeat center top/cover;
+          }
+        }
+      }
+
+      .price {
+        display: flex;
+      }
+
+      .color {
+        display: flex;
+
+        .color-items-wrapper {
+          display: flex;
+        }
+      }
+
+      .size {
+        display: flex;
+      }
+
+      .number {
+        display: flex;
+      }
+
+      .grouz {
+        .top-info {
+          display: flex;
+
+          .grouz-wrapper {
+            display: flex;
+          }
+        }
+      }
+
+      .breed-dog {
+        display: flex;
+      }
+
+      .country {
+        display: flex;
+      }
+
+      .card-info {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+        margin: 20px 0;
+
+        .card-info-header {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+main.thank-page {
+  min-height: 90vh;
+  background: url('../images/bg-folder/bg-main_section-thank-page.png')
+    no-repeat center top/cover;
 }
 
 footer {
