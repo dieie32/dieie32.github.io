@@ -498,6 +498,7 @@ header nav p {
 @media (max-width: 475px) {
   header nav .logo {
     padding: 0 10px;
+    max-width: 100%;
   }
 }
 header nav button {
@@ -529,6 +530,11 @@ header nav .toggle-button {
   z-index: 36;
   display: none;
 }
+@media (max-width: 475px) {
+  header nav .toggle-button {
+    display: block;
+  }
+}
 header nav .toggle-button .slise {
   height: 4px;
   width: 30px;
@@ -551,6 +557,40 @@ header nav .navigation li:hover {
 @media (max-width: 1300px) {
   header nav .navigation li:hover {
     border: 2px solid #00aca0;
+  }
+}
+@media (max-width: 475px) {
+  header nav .navigation {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    top: -110vh;
+    left: 0;
+    transition: all 0.5s ease-out;
+  }
+  header nav .navigation.active {
+    top: 0;
+  }
+  header nav .navigation ul.links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  header nav .navigation ul.links li {
+    margin: 0 5px;
+    border: 3px solid transparent;
+    padding: 5px;
+  }
+  header nav .navigation ul.links li a p {
+    font-size: 4vw;
+  }
+  header nav .navigation ul.links li:hover {
+    border: 3px solid #00aca0;
   }
 }
 header nav .social-navigation ul.links li {
@@ -1272,6 +1312,11 @@ main section#catalog .catalog-part-wrapper {
   width: 90%;
   margin: auto;
 }
+@media (max-width: 475px) {
+  main section#catalog .catalog-part-wrapper {
+    flex-direction: column;
+  }
+}
 main section#catalog .catalog-part-wrapper .part {
   width: 45%;
 }
@@ -1357,8 +1402,19 @@ footer .container .footer-item-wrapper {
     justify-content: space-between;
   }
 }
+@media (max-width: 475px) {
+  footer .container .footer-item-wrapper {
+    flex-direction: column;
+  }
+}
 footer .container .footer-item-wrapper .footer-item {
   width: 30%;
+}
+@media (max-width: 475px) {
+  footer .container .footer-item-wrapper .footer-item {
+    width: 100%;
+    padding: 10px 0;
+  }
 }
 footer .container .footer-item-wrapper .footer-item h3 {
   color: #00aca0;

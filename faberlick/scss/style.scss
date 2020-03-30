@@ -304,6 +304,7 @@ header {
 
       @media (max-width: 475px) {
         padding: 0 10px;
+        max-width: 100%;
       }
     }
 
@@ -337,9 +338,9 @@ header {
       z-index: 36;
       display: none;
 
-      // @media (max-width: 1715px) {
-      //   display: block;
-      // }
+      @media (max-width: 475px) {
+        display: block;
+      }
 
       .slise {
         height: 4px;
@@ -375,45 +376,45 @@ header {
         }
       }
 
-      // @media (max-width: 1715px) {
-      //   width: 100vw;
-      //   height: 100vh;
-      //   background: #fff;
-      //   position: absolute;
-      //   top: -110vh;
-      //   left: 0;
-      //   transition: all 0.5s ease-out;
+      @media (max-width: 475px) {
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        position: absolute;
+        top: -110vh;
+        left: 0;
+        transition: all 0.5s ease-out;
 
-      //   &.active {
-      //     top: 0;
-      //   }
+        &.active {
+          top: 0;
+        }
 
-      //   ul.links {
-      //     display: flex;
-      //     flex-direction: column;
-      //     position: absolute;
-      //     top: 50%;
-      //     left: 50%;
-      //     margin-right: -50%;
-      //     transform: translate(-50%, -50%);
+        ul.links {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%);
 
-      //     li {
-      //       margin: 0 5px;
-      //       border: 3px solid transparent;
-      //       padding: 5px;
+          li {
+            margin: 0 5px;
+            border: 3px solid transparent;
+            padding: 5px;
 
-      //       a {
-      //         p {
-      //           font-size: 4vw;
-      //         }
-      //       }
+            a {
+              p {
+                font-size: 4vw;
+              }
+            }
 
-      //       &:hover {
-      //         border: 3px solid #00aca0;
-      //       }
-      //     }
-      //   }
-      // }
+            &:hover {
+              border: 3px solid #00aca0;
+            }
+          }
+        }
+      }
     }
 
     .social-navigation {
@@ -1186,6 +1187,10 @@ main {
       width: 90%;
       margin: auto;
 
+      @media (max-width: 475px) {
+        flex-direction: column;
+      }
+
       .part {
         width: 45%;
 
@@ -1272,8 +1277,17 @@ footer {
         justify-content: space-between;
       }
 
+      @media (max-width: 475px) {
+        flex-direction: column;
+      }
+
       .footer-item {
         width: 30%;
+
+        @media (max-width: 475px) {
+          width: 100%;
+          padding: 10px 0;
+        }
 
         h3 {
           color: #00aca0;
