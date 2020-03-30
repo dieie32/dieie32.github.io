@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -33,7 +37,7 @@
     animation-duration: 0.4s;
 
     @media (max-width: 475px) {
-      width: 95%;
+      width: 80%;
     }
 
     .close {

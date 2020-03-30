@@ -222,6 +222,10 @@ span,
   scroll-behavior: smooth;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -250,7 +254,7 @@ span,
 }
 @media (max-width: 475px) {
   .modal .modal-content {
-    width: 95%;
+    width: 80%;
   }
 }
 .modal .modal-content .close {
