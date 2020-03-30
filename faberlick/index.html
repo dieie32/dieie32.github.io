@@ -19,6 +19,7 @@
       href="assets/slick/slick-theme.css"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
@@ -254,25 +255,30 @@
       <section id="main">
         <div class="container">
           <div class="part">
-            <img src="assets/images/image-folder/main-image.png" alt="" />
+            <div data-aos="fade-down" data-aos-duration="1000">
+              <img src="assets/images/image-folder/main-image.png" alt="" />
+            </div>
           </div>
+
           <div class="part">
-            <!-- Logo -->
-            <a href="/" class="logo logo-anim">
-              <img src="assets/images/logo-white.svg" alt="" />
-            </a>
+            <div data-aos="fade-up">
+              <!-- Logo -->
+              <a href="/" class="logo logo-anim">
+                <img src="assets/images/logo-white.svg" alt="" />
+              </a>
 
-            <!-- Main Text -->
-            <h1>
-              S Faberlic život je krásnější
-            </h1>
+              <!-- Main Text -->
+              <h1>
+                S Faberlic život je krásnější
+              </h1>
 
-            <!-- Button -->
-            <button class="white-btn" id="myBtnTwo">
-              <p>
-                Připojít se k týmu
-              </p>
-            </button>
+              <!-- Button -->
+              <button class="white-btn" id="myBtnTwo">
+                <p>
+                  Připojít se k týmu
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -282,32 +288,43 @@
         <section id="about_company">
           <div class="container">
             <div class="part">
-              <img src="assets/images/image-folder/about-us-image.png" alt="" />
+              <img
+                src="assets/images/image-folder/about-us-image.png"
+                alt=""
+                data-aos="fade-right"
+              />
             </div>
             <div class="part">
-              <!-- Main Text -->
-              <h2>O společnosti</h2>
+              <div>
+                <!-- Main Text -->
+                <h2 data-aos="fade-left" data-aos-delay="100">O společnosti</h2>
 
-              <!-- Info About Company -->
-              <p>
-                Faberlic je jedna z největších společnosti na trhu přímého
-                prodeje, výrobce unikátní
-                <span>patentované kyslíkové kosmetiky,</span> která dodává
-                kyslík do hlubokých vrstev pokožky.
-                <br />
-                <br />
-                V sortimentu Faberlic je také celá škála přípravků pro péči o
-                pokožku a vlasy, exkluzívní francouzská parfumerie, dekorativní
-                kosmetika, produkty pro domácnost a zdraví, dětské, dámské a
-                pánské oděvy, prádlo, doplňky a obuv.
-              </p>
-
-              <!-- About Company Button -->
-              <button class="pink-btn" id="myBtnThree">
-                <p>
-                  Zeptat se
+                <!-- Info About Company -->
+                <p data-aos="fade-left" data-aos-delay="200">
+                  Faberlic je jedna z největších společnosti na trhu přímého
+                  prodeje, výrobce unikátní
+                  <span>patentované kyslíkové kosmetiky,</span> která dodává
+                  kyslík do hlubokých vrstev pokožky.
+                  <br />
+                  <br />
+                  V sortimentu Faberlic je také celá škála přípravků pro péči o
+                  pokožku a vlasy, exkluzívní francouzská parfumerie,
+                  dekorativní kosmetika, produkty pro domácnost a zdraví,
+                  dětské, dámské a pánské oděvy, prádlo, doplňky a obuv.
                 </p>
-              </button>
+
+                <!-- About Company Button -->
+                <button
+                  class="pink-btn"
+                  id="myBtnThree"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                >
+                  <p>
+                    Zeptat se
+                  </p>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -320,7 +337,11 @@
 
             <!-- Standarts Item -->
             <div class="standart-items-wrapper">
-              <div class="standart-item">
+              <div
+                class="standart-item"
+                data-aos="fade-up-right"
+                data-aos-delay="100"
+              >
                 <img
                   src="assets/images/icon-folder/Quality_Standards/item-1.svg"
                   alt=""
@@ -331,14 +352,22 @@
                   9001
                 </p>
               </div>
-              <div class="standart-item">
+              <div
+                class="standart-item"
+                data-aos="fade-up-right"
+                data-aos-delay="200"
+              >
                 <img
                   src="assets/images/icon-folder/Quality_Standards/item-2.svg"
                   alt=""
                 />
                 <p>Faberlic je členem Asociace přímého prodeje</p>
               </div>
-              <div class="standart-item">
+              <div
+                class="standart-item"
+                data-aos="fade-up-right"
+                data-aos-delay="300"
+              >
                 <img
                   src="assets/images/icon-folder/Quality_Standards/item-3.svg"
                   alt=""
@@ -348,7 +377,11 @@
                   Vitro a neprovádí se žádné testování na zvířatech
                 </p>
               </div>
-              <div class="standart-item">
+              <div
+                class="standart-item"
+                data-aos="fade-up-right"
+                data-aos-delay="400"
+              >
                 <img
                   src="assets/images/icon-folder/Quality_Standards/item-4.svg"
                   alt=""
@@ -420,13 +453,13 @@
         <section id="trust_us">
           <div class="container">
             <!-- Main Text -->
-            <h2>Proč nám důvěřují?</h2>
+            <h2 data-aos="flip-up">Proč nám důvěřují?</h2>
 
             <!-- Trust Us Item -->
             <div class="trust-us-item-wrapper">
               <div class="part">
-                <div class="trust-us-item">
-                  <span>1</span>
+                <div class="trust-us-item" data-aos="flip-left" data-aos-delay="100">
+                  <span class="bold-number">1</span>
                   <p>
                     Společnost je velkým hráčem na mezinárodním trhu, dnes
                     obchoduje ve 42 zemích, Faberlic má zastoupení ve 20 zemích.
@@ -434,8 +467,8 @@
                     spotřebitelů!
                   </p>
                 </div>
-                <div class="trust-us-item">
-                  <span>3</span>
+                <div class="trust-us-item" data-aos="flip-left" data-aos-delay="200">
+                  <span class="bold-number">3</span>
                   <p>
                     Faberlic má vlastní výrobu založenou na evropských
                     standardech kvality a vybavenou nejmodernějším a ekologickým
@@ -443,30 +476,33 @@
                     balení kosmetické produkce.
                   </p>
                 </div>
-                <div class="trust-us-item">
-                  <span>5</span>
+                <div class="trust-us-item" data-aos="flip-left" data-aos-delay="300">
+                  <span class="bold-number">5</span>
                   <p>
                     Po registraci dostanete kvalitní výrobky za příznívé ceny,
-                    dárky každý měsíc a navíc možnost rozvoje vlastního byznysu.
+                    dárky každý měsíc a navíc možnost rozvoje
+                    <span>vlastního byznysu.</span>
                   </p>
                 </div>
               </div>
               <div class="part">
-                <div class="trust-us-item">
-                  <span>2</span>
+                <div class="trust-us-item" data-aos="flip-right" data-aos-delay="100">
+                  <span class="bold-number">2</span>
                   <p>
-                    Společnost vyrábí více než 8 000 položek produkce, vlastní
-                    32 patentů, patří do TOP 100 kosmetických společností ve
-                    světě, v SNS patří do trojice lídrů na trhu přímých prodejů,
-                    ve světovém žebříčku společností přímých prodejů je na 33.
-                    místě (podle verze DNS v roce 2018).
+                    Společnost vyrábí více než
+                    <span>8 000 položek produkce, vlastní 32 patentů,</span>
+                    patří do TOP 100 kosmetických společností ve světě, v SNS
+                    patří do trojice lídrů na trhu přímých prodejů, ve světovém
+                    žebříčku společností přímých prodejů je na 33. místě (podle
+                    verze DNS v roce 2018).
                   </p>
                 </div>
-                <div class="trust-us-item">
-                  <span>4</span>
+                <div class="trust-us-item" data-aos="flip-right" data-aos-delay="200">
+                  <span class="bold-number">4</span>
                   <p>
                     Faberlic je jedna z největších společnosti na trhu přímého
-                    prodeje, výrobce unikátní patentované kyslíkové kosmetiky,
+                    prodeje, výrobce unikátní
+                    <span>patentované kyslíkové kosmetiky,</span>
                     která dodává kyslík do hlubokých vrstev pokožky.
                   </p>
                 </div>
@@ -474,7 +510,7 @@
             </div>
 
             <!-- Trust Us Button -->
-            <button class="green-btn" id="myBtnFour">
+            <button class="green-btn" id="myBtnFour" data-aos="flip-down">
               <p>
                 Připojít se k týmu
               </p>
@@ -644,13 +680,14 @@
                 </form>
               </div>
               <div class="part">
-                <h3>
+                <h3 data-aos="fade-down">
                   Vyplňte formulář a staňte se klientem nebo technickým
                   konzultantem Faberlic
                 </h3>
                 <img
                   src="assets/images/image-folder/registration-image.png"
                   alt=""
+                  data-aos="fade-up"
                 />
               </div>
             </div>
@@ -666,7 +703,7 @@
             <!-- Events Item -->
             <div class="events-item-wrapper">
               <div class="event-wrap">
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="100">
                   <img
                     src="assets/images/image-folder/event-image/event-item-1.svg"
                     alt=""
@@ -676,7 +713,7 @@
                     objednávce.
                   </p>
                 </div>
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="200">
                   <img
                     src="assets/images/image-folder/event-image/event-item-2.svg"
                     alt=""
@@ -688,7 +725,7 @@
                 </div>
               </div>
               <div class="event-wrap">
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="300">
                   <img
                     src="assets/images/image-folder/event-image/event-item-3.svg"
                     alt=""
@@ -698,7 +735,7 @@
                     dárky.
                   </p>
                 </div>
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="400">
                   <img
                     src="assets/images/image-folder/event-image/event-item-4.svg"
                     alt=""
@@ -707,7 +744,7 @@
                 </div>
               </div>
               <div class="event-wrap">
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="500">
                   <img
                     src="assets/images/image-folder/event-image/event-item-5.svg"
                     alt=""
@@ -717,7 +754,7 @@
                     konzultanty.
                   </p>
                 </div>
-                <div class="event-item">
+                <div class="event-item" data-aos="fade-up-left" data-aos-delay="600">
                   <img
                     src="assets/images/image-folder/event-image/event-item-6.svg"
                     alt=""
@@ -742,10 +779,10 @@
         <div class="container">
           <!-- Catalog Parts -->
           <div class="catalog-part-wrapper">
-            <div class="part">
+            <div class="part" data-aos="fade-right">
               <img src="assets/images/image-folder/catalog-image.png" alt="" />
             </div>
-            <div class="part">
+            <div class="part" data-aos="fade-left">
               <!-- Main Text -->
               <h2>Podívejte se na aktuální katalog</h2>
 
@@ -896,6 +933,11 @@
   ></script>
 
   <script type="text/javascript" src="assets/slick/slick.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <script src="js/main.js"></script>
 </html>

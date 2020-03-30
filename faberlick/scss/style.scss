@@ -32,6 +32,10 @@
     animation-name: animatetop;
     animation-duration: 0.4s;
 
+    @media (max-width: 475px) {
+      width: 95%;
+    }
+
     .close {
       position: absolute;
       color: #888;
@@ -40,6 +44,10 @@
       font-size: 38px;
       font-weight: bold;
       margin: 5px;
+
+      @media (max-width: 475px) {
+        font-size: 24px;
+      }
     }
 
     .close:hover,
@@ -64,10 +72,19 @@
           font-size: 20px;
           margin: 20px;
           padding: 10px;
+
+          @media (max-width: 475px) {
+            width: 50%;
+            font-size: 14px;
+          }
         }
 
         label {
           font-size: 20px;
+
+          @media (max-width: 475px) {
+            font-size: 14px;
+          }
         }
 
         .client-info {
@@ -87,6 +104,10 @@
               padding: 20px;
               color: #fefefe;
               font-size: 20px;
+
+              @media (max-width: 475px) {
+                padding: 10px;
+              }
             }
           }
         }
@@ -215,7 +236,7 @@ h2 {
   font-size: 72px;
 
   @media (max-width: 475px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -223,7 +244,7 @@ h3 {
   font-size: 48px;
 
   @media (max-width: 475px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -290,7 +311,7 @@ header {
 
         &.active {
           &:nth-child(1) {
-            transform: translateY(14px) rotate(45deg);
+            transform: translateY(18px) rotate(45deg);
           }
 
           &:nth-child(2) {
@@ -298,7 +319,6 @@ header {
           }
 
           &:nth-child(3) {
-            transform: translateX(20px);
             transform: rotate(-45deg);
           }
         }
@@ -454,6 +474,11 @@ main {
   .second-bg {
     background: url('../images/bg-folder/second-bg.png') no-repeat center
       top/cover;
+
+    @media (max-width: 475px) {
+      background: url('../images/bg-folder/mobile-second-bg.png') no-repeat
+        center top/cover;
+    }
   }
 
   section#about_company {
@@ -649,7 +674,7 @@ main {
       @media (max-width: 475px) {
         flex-direction: row;
       }
-      
+
       .part {
         width: 50%;
 
@@ -670,12 +695,17 @@ main {
             font-size: 32px;
             color: #656565;
 
+            span {
+              font-weight: bold;
+              color: #656565;
+            }
+
             @media (max-width: 475px) {
               font-size: 12px;
             }
           }
 
-          span {
+          span.bold-number {
             margin-top: -60px;
             font-size: 200px;
             font-weight: bolder;
@@ -686,8 +716,8 @@ main {
             justify-content: center;
 
             @media (max-width: 475px) {
-              font-size: 65px;
-              min-width: 50px;
+              font-size: 44px;
+              min-width: 35px;
             }
           }
         }
@@ -706,6 +736,11 @@ main {
   .thirth-bg {
     background: url('../images/bg-folder/thirth-bg.png') no-repeat center
       top/cover;
+
+    @media (max-width: 475px) {
+      background: url('../images/bg-folder/mobile-thirth-bg.png') no-repeat
+        center top/cover;
+    }
   }
 
   section#expert_reviews {
@@ -956,7 +991,7 @@ main {
           max-width: 730px;
 
           @media (max-width: 475px) {
-            font-size: 20px;
+            font-size: 16px;
           }
         }
       }
@@ -1123,6 +1158,8 @@ footer {
 
   @media (max-width: 475px) {
     padding: 30px 0;
+    background: url('../images/bg-folder/mobile-footer-bg.png') no-repeat center
+      top/cover;
   }
 
   .container {

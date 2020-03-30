@@ -248,6 +248,11 @@ span,
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
+@media (max-width: 475px) {
+  .modal .modal-content {
+    width: 95%;
+  }
+}
 .modal .modal-content .close {
   position: absolute;
   color: #888;
@@ -256,6 +261,11 @@ span,
   font-size: 38px;
   font-weight: bold;
   margin: 5px;
+}
+@media (max-width: 475px) {
+  .modal .modal-content .close {
+    font-size: 24px;
+  }
 }
 .modal .modal-content .close:hover,
 .modal .modal-content .close:focus {
@@ -279,8 +289,19 @@ span,
   margin: 20px;
   padding: 10px;
 }
+@media (max-width: 475px) {
+  .modal .modal-content .modal-body form input[type=submit] {
+    width: 50%;
+    font-size: 14px;
+  }
+}
 .modal .modal-content .modal-body form label {
   font-size: 20px;
+}
+@media (max-width: 475px) {
+  .modal .modal-content .modal-body form label {
+    font-size: 14px;
+  }
 }
 .modal .modal-content .modal-body form .client-info {
   display: flex;
@@ -299,6 +320,11 @@ span,
   padding: 20px;
   color: #fefefe;
   font-size: 20px;
+}
+@media (max-width: 475px) {
+  .modal .modal-content .modal-body form .client-info .client-info-item input {
+    padding: 10px;
+  }
 }
 @keyframes animatetop {
   from {
@@ -397,7 +423,7 @@ h2 {
 }
 @media (max-width: 475px) {
   h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -406,7 +432,7 @@ h3 {
 }
 @media (max-width: 475px) {
   h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -469,13 +495,12 @@ header nav .toggle-button .slise {
   transition: all 0.5s ease-out;
 }
 header nav .toggle-button .slise.active:nth-child(1) {
-  transform: translateY(14px) rotate(45deg);
+  transform: translateY(18px) rotate(45deg);
 }
 header nav .toggle-button .slise.active:nth-child(2) {
   opacity: 0;
 }
 header nav .toggle-button .slise.active:nth-child(3) {
-  transform: translateX(20px);
   transform: rotate(-45deg);
 }
 header nav .navigation li:hover {
@@ -604,6 +629,11 @@ main section#main .container .part:last-child h1 {
 }
 main .second-bg {
   background: url("../images/bg-folder/second-bg.png") no-repeat center top/cover;
+}
+@media (max-width: 475px) {
+  main .second-bg {
+    background: url("../images/bg-folder/mobile-second-bg.png") no-repeat center top/cover;
+  }
 }
 main section#about_company .container {
   display: flex;
@@ -808,12 +838,16 @@ main section#trust_us .trust-us-item-wrapper .part .trust-us-item p {
   font-size: 32px;
   color: #656565;
 }
+main section#trust_us .trust-us-item-wrapper .part .trust-us-item p span {
+  font-weight: bold;
+  color: #656565;
+}
 @media (max-width: 475px) {
   main section#trust_us .trust-us-item-wrapper .part .trust-us-item p {
     font-size: 12px;
   }
 }
-main section#trust_us .trust-us-item-wrapper .part .trust-us-item span {
+main section#trust_us .trust-us-item-wrapper .part .trust-us-item span.bold-number {
   margin-top: -60px;
   font-size: 200px;
   font-weight: bolder;
@@ -824,9 +858,9 @@ main section#trust_us .trust-us-item-wrapper .part .trust-us-item span {
   justify-content: center;
 }
 @media (max-width: 475px) {
-  main section#trust_us .trust-us-item-wrapper .part .trust-us-item span {
-    font-size: 65px;
-    min-width: 50px;
+  main section#trust_us .trust-us-item-wrapper .part .trust-us-item span.bold-number {
+    font-size: 44px;
+    min-width: 35px;
   }
 }
 main section#trust_us .trust-us-item-wrapper .part:last-child {
@@ -839,6 +873,11 @@ main section#trust_us .trust-us-item-wrapper .part:last-child {
 }
 main .thirth-bg {
   background: url("../images/bg-folder/thirth-bg.png") no-repeat center top/cover;
+}
+@media (max-width: 475px) {
+  main .thirth-bg {
+    background: url("../images/bg-folder/mobile-thirth-bg.png") no-repeat center top/cover;
+  }
 }
 main section#expert_reviews {
   padding: 100px 0;
@@ -1074,7 +1113,7 @@ main section#registration .registration-info-wrapper .part h3 {
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 main section#events_reviews {
@@ -1224,6 +1263,7 @@ footer {
 @media (max-width: 475px) {
   footer {
     padding: 30px 0;
+    background: url("../images/bg-folder/mobile-footer-bg.png") no-repeat center top/cover;
   }
 }
 footer .container {
