@@ -9,43 +9,337 @@
       DsL DOG SPORT LIFE – Многофункциональный Фитнес-Жилет для СОБАК
     </title>
 
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <script>
+      (function(a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y;
+        h.start = 1 * new Date();
+        h.end = i = function() {
+          s.className = s.className.replace(RegExp(' ?' + y), '');
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function() {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+        CONTAINER_ID: true,
+      });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K56MQJD');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/slick/slick-theme.css" />
   </head>
 
-  <body>
+  <body onload="startTimerOne();">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K56MQJD"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="myModalVideoOne" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeVideoOne">&times;</span>
+        <iframe
+          src="https://www.youtube.com/embed/Le4sFwXCxjs"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="myModalVideoTwo" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeVideoTwo">&times;</span>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/aRxhz07tloM"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="myModalVideoThree" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeVideoThree">&times;</span>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EHXYBZ55ZIM"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="myModalPolitic" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closePolitic">&times;</span>
+        <embed
+          src="assets/files/politic.pdf"
+          type="application/pdf"
+          width="100%"
+          height="600px"
+        />
+      </div>
+    </div>
+
+    <div id="myModalVideoFour" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeVideoFour">&times;</span>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/aRxhz07tloM"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="myModalVideoFive" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeVideoFive">&times;</span>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EHXYBZ55ZIM"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="myModalPhotoIgor" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closePhotoIgor">&times;</span>
+        <img
+          src="assets/images/images-folder/igor-rogozin-fullscreen.jpg"
+          alt="DsL Dog Sport Life Igor Rogozin"
+        />
+        <img
+          src="assets/images/images-folder/igor-rogozin-2-fullscreen.jpg"
+          alt="DsL Dog Sport Life Igor Rogozin"
+        />
+      </div>
+    </div>
+
+    <div id="myModalPhotoZhilet" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closePhotoZhilet">&times;</span>
+        <img
+          src="assets/images/images-folder/ph_left.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-2.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-3.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-4.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-5.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-6.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-7.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-8.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-9.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-10.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-11.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-12.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-13.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-14.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-15.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-16.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-17.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+        <img
+          src="assets/images/images-folder/ph_left-18.jpg"
+          alt="DsL Dog Sport Life Left Photo"
+        />
+      </div>
+    </div>
+
+    <div id="myModalGallarey" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeGallarey">&times;</span>
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-1.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-2.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-3.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-4.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-5.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-6.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-7.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-8.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-9.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-10.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-11.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-12.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-13.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-14.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-15.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-17.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+        <img
+          src="assets/images/images-folder/gallarey-bottom-popup/gallarey-ph-18.jpg"
+          alt="DsL Dog Sport Life Gallarey"
+        />
+      </div>
+    </div>
+
     <header>
       <!-- Top Bar -->
-      <div class="top_bar">
+      <div class="top_bar" id="top_bar">
         <div class="container">
           <h2>
             Получите
             <span>
-              Безплатную
+              15% скидку,
             </span>
-            доставку, оформив заказ
+            оформив заказ
             <span>
               сейчас!
             </span>
+            (оплатить можно позже)
           </h2>
           <div class="timer">
             <div class="timer-item">
-              <p>30</p>
+              <p id="timer-minute">30</p>
               <span>Минут</span>
             </div>
             <div class="timer-item">
-              <p>00</p>
+              <p id="timer-second">00</p>
               <span>Секунд</span>
             </div>
             <div class="timer-item">
-              <p>
-                00
-              </p>
+              <p id="timer-ms">00</p>
               <span>мс</span>
             </div>
           </div>
           <img src="assets/images/icons-folder/arrow.png" alt="Arrow" />
           <a href="second-page-order.html">
-            <div class="btn">Заказать Сейчас</div>
+            <div class="btn">ОФОРМИТЬ ЗАКАЗ</div>
           </a>
         </div>
       </div>
@@ -55,9 +349,12 @@
       <!-- Main Section -->
       <section id="main">
         <div class="container">
-          <div class="logo">
-            <img src="assets/images/logo.png" alt="DsL DOG SPORT LIFE Logo" />
-          </div>
+          <a href="index.html">
+            <div class="logo">
+              <img src="assets/images/logo.png" alt="DsL DOG SPORT LIFE Logo" />
+            </div>
+          </a>
+
           <div class="info_country">
             <p class="black-bg">
               Первый в Росии, Украине, СНГ
@@ -75,13 +372,15 @@
             Для оздоравливающих регулярных прогулок и более эффективных
             тренировок <span>средних, крупных и некоторых маленьких пород</span>
           </p>
-          <div class="watch_video">
-            <img
-              src="assets/images/icons-folder/play-button.png"
-              alt="DsL Dog Sport Life Play Button"
-            />
-            <p>Смотреть <span>Видео</span></p>
-          </div>
+          <button id="myBtnVideoOne" style="cursor: pointer;">
+            <div class="watch_video">
+              <img
+                src="assets/images/icons-folder/play-button.png"
+                alt="DsL Dog Sport Life Play Button"
+              />
+              <p>Смотреть <span>Видео</span></p>
+            </div>
+          </button>
         </div>
       </section>
 
@@ -164,7 +463,9 @@
                       src="assets/images/icons-folder/galka-icon.png"
                       alt="DsL DOG SPORT LIFE Logo Galka"
                     />
-                    <p>Улучшит всех органов<span>кровообращение</span></p>
+                    <p>
+                      Улучшит всех органов <br /><span>кровообращение</span>
+                    </p>
                   </div>
                   <div class="detail_info-item">
                     <img
@@ -220,8 +521,8 @@
                       alt="DsL DOG SPORT LIFE Logo Galka"
                     />
                     <p>
-                      Дольше сохранять <span>послушание,</span> благодаря
-                      <span>большей выносливости</span>
+                      <span>Дольше сохранять послушание,</span> благодаря
+                      <span>повышенной выносливости</span>
                     </p>
                   </div>
                   <div class="detail_info-item">
@@ -243,37 +544,20 @@
                 <div class="detail_info-wrapper">
                   <div class="detail_info-item">
                     <p>
-                      У многих нет возможности гулять
-                      <span>3-5 часов ежедневно</span>
-                      или тренировать такую собаку. Поэтому она
+                      У многих нет возможности гулять 3-5 часов ежедневно или
+                      тренировать такую собаку. Поэтому она
                       <span>«сжигает» энергию дома</span>
                       - уничтожая мебель, игрушки, носясь по квартире и лая без
                       остановок.
                     </p>
                   </div>
+
                   <div class="detail_info-item">
                     <p>
-                      Для некоторых пород это даже
-                      <span>губительно.</span>
-                      Например, когда Хаски не дают ежедневных прогулок по 5-6
-                      часов, её
-                      <span>психическое состояние ухудшается.</span>
-                      Она начинает болеть, чахнуть и «разносить» дом.
-                    </p>
-                  </div>
-                  <div class="detail_info-item">
-                    <p>
-                      <a href="">
-                        Наш фитнес-жилет помогает и здесь!
-                      </a>
-                    </p>
-                  </div>
-                  <div class="detail_info-item">
-                    <p>
-                      Теперь, во время прогулок (20-30 минут в день), ваш
-                      питомец направляет избыточную энергию в
+                      Теперь, во время прогулок, ваш питомец направляет
+                      избыточную энергию в
                       <span>
-                        укрепление здоровья и мышц, и ведёт себя дома спокойно!
+                        укрепление здоровья и мышц, и ВЕДЁТ СЕБЯ ДОМА СПОКОЙНО!
                       </span>
                     </p>
                   </div>
@@ -347,7 +631,7 @@
         <div class="container">
           <h2>Как фитнес-жилет <span>работает</span></h2>
           <div class="work_select-wrapper">
-            <div class="work_select-item work_select-item-one">
+            <div class="work_select-item work_select-item-one ">
               <img
                 src="assets/images/icons-folder/grouz-icon.png"
                 alt="DsL DOG SPORT LIFE Grouz Icon"
@@ -363,8 +647,42 @@
               <h3>Продвинутые “тренажёры”</h3>
             </div>
           </div>
+
           <div class="work_select_info-wrapper">
             <div class="work_select_info-item work_select_info-item-one">
+              <div class="part">
+                <img
+                  src="assets/images/images-folder/grouz-image.png"
+                  alt="DsL DOG SPORT LIFE Grouz Image"
+                />
+              </div>
+              <div class="part">
+                <h2>Утяжелители</h2>
+                <p>
+                  <span>Груз из нержавеющей стали</span> округлой формы
+                  равномерно кладут по нескольким карманам с обеих сторон. Как
+                  правило, это 2 - 4 кг в 4 открываемых пакетиках с замком
+                  zip-lock, благодаря которым
+                  <span>можно легко регулировать вес.</span>
+                  <br />
+                  <br />
+                  Эти <span>утяжелители эффективно фиксируются,</span> поскольку
+                  карманы плотно прижаты к жилету и закрываются прочными
+                  липучками.
+                  <br />
+                  <br />
+                  <span> Рекомендуется не менее 2 кг груза </span>и не более 10%
+                  от веса собаки. Первые 1-5 недель начинают с 200 грамм с
+                  постепенным увеличением
+                  <span
+                    >(пошаговые рекомендации по использованию жилета и
+                    тренировкам прилагается).</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="work_select_info-item work_select_info-item-two active">
               <div class="part">
                 <img
                   src="assets/images/images-folder/dog-image.png"
@@ -375,11 +693,11 @@
                 <div class="text_info">
                   <h3>Продвинутые “тренажёры”</h3>
                   <p>
+                    4 полукольца (на спинке и по бокам) позволяют использовать
                     <span>
-                      4 полукольца (на спинке и по бокам)
-                    </span>
-                    позволяют использовать парашюты, силовой трос, эспандер и
-                    безопасно фиксировать собаку в беговой дорожке.
+                      парашюты, эспандер и безопасно фиксировать собаку в
+                      беговой дорожке.</span
+                    >
                   </p>
                   <p>
                     Добиться <span>максимальных результатов</span> поможет
@@ -390,46 +708,33 @@
                   </p>
                 </div>
                 <div class="video_info">
-                  <img
-                    src="assets/images/images-folder/video-image-one.png"
-                    alt="DsL DOG SPORT LIFE Video Dog Image"
-                  />
-                  <img
-                    src="assets/images/images-folder/video-image-two.png"
-                    alt="DsL DOG SPORT LIFE Video Dog Image"
-                  />
+                  <iframe
+                    src="https://www.youtube.com/embed/aRxhz07tloM"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <button style="cursor: pointer;" id="myBtnVideoFour">
+                    <img
+                      src="assets/images/images-folder/video-image-one.png"
+                      alt="DsL DOG SPORT LIFE Video Dog Image"
+                      class="video-hide"
+                    />
+                  </button>
+                  <iframe
+                    src="https://www.youtube.com/embed/EHXYBZ55ZIM"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <button style="cursor: pointer;" id="myBtnVideoFive">
+                    <img
+                      src="assets/images/images-folder/video-image-two.png"
+                      alt="DsL DOG SPORT LIFE Video Dog Image"
+                      class="video-hide"
+                    />
+                  </button>
                 </div>
-              </div>
-            </div>
-
-            <div class="work_select_info-item work_select_info-item-two active">
-              <div class="part">
-                <img
-                  src="assets/images/images-folder/grouz-image.png"
-                  alt="DsL DOG SPORT LIFE Grouz Image"
-                />
-              </div>
-              <div class="part">
-                <h2>Утяжелители</h2>
-                <p>
-                  Груз из нержавеющей стали округлой формы равномерно
-                  распределяется по
-                  <span>4, 6 карманам жилета</span> (количество зависит от веса
-                  и размеров собаки). Можно регулировать вес вплоть до грамма.
-                  <br />
-                  <br />
-                  <span>
-                    В комплекте 2 - 4 килограмма в 4-6 прозрачных
-                    пакетиках.</span
-                  >
-                  Больше груза можно заказать отдельно.
-                  <br />
-                  <br />
-
-                  Первые 1-5 недель начинаются с 200 грамм с постепенным
-                  увеличением (подробные рекомендации по использованию жилета
-                  прилагаются).
-                </p>
               </div>
             </div>
           </div>
@@ -452,7 +757,7 @@
             <p class="green-color">
               Участник профессионального спорта
             </p>
-            <a href="vk.com/id377977265" class="vk-link">
+            <a style="cursor: default;" class="vk-link">
               <img
                 src="assets/images/icons-folder/vk-icon.png"
                 alt="DsL DOG SPORT LIFE VK Icon"
@@ -475,22 +780,38 @@
               в разы увеличилась, вход при атаке стал ещё мощнее.
             </p>
             <div class="professional-video_response">
-              <img
-                src="assets/images/images-folder/video-response-one.png"
-                alt="DsL DOG SPORT LIFE Video Response One"
-              />
-              <img
-                src="assets/images/images-folder/video-response-two.png"
-                alt="DsL DOG SPORT LIFE Video Response Two"
-              />
-              <img
-                src="assets/images/images-folder/video-response-three.png"
-                alt="DsL DOG SPORT LIFE Video Response Three"
-              />
-              <img
-                src="assets/images/images-folder/video-response-four.png"
-                alt="DsL DOG SPORT LIFE Video Response Four"
-              />
+              <button style="cursor: pointer;" id="myBtnPhotoIgor">
+                <img
+                  src="assets/images/images-folder/video-response-one.png"
+                  alt="DsL DOG SPORT LIFE Video Response One"
+                />
+              </button>
+              <button
+                id="myBtnVideoTwo"
+                style="cursor: pointer;"
+                href="https://www.youtube.com/watch?v=EtUNslMXwGg&feature=youtu.be"
+              >
+                <img
+                  src="assets/images/images-folder/video-response-two.png"
+                  alt="DsL DOG SPORT LIFE Video Response Two"
+                />
+              </button>
+              <button
+                id="myBtnVideoThree"
+                style="cursor: pointer;"
+                href="https://www.youtube.com/watch?v=EtUNslMXwGg&feature=youtu.be"
+              >
+                <img
+                  src="assets/images/images-folder/video-response-three.png"
+                  alt="DsL DOG SPORT LIFE Video Response Three"
+                />
+              </button>
+              <button style="cursor: pointer;" id="myBtnPhotoIgorTwo">
+                <img
+                  src="assets/images/images-folder/video-response-four.png"
+                  alt="DsL DOG SPORT LIFE Video Response Four"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -514,17 +835,28 @@
               собак в мире
             </h2>
             <p class="strong-center-p">
-              Даже крупнейший <span>западный аналог</span> делает фитнес-жилеты
-              в Китае из <span>дешёвых материалов</span>
+              Даже крупнейший
+              <span>западный аналог делает фитнес-жилеты в Китае</span> из
+              дешёвых материалов
             </p>
-            <a href="https://www.youtube.com/">
+            <a
+              href="https://www.youtube.com/watch?v=X1rnMPoC2WM&feature=youtu.be"
+            >
               <img
                 src="assets/images/icons-folder/youtube-icon.png"
                 alt="DsL Dog Sport Life YouTube Icon"
               />
-              Смотреть видеообзор
+              Смотреть обзор
             </a>
+
+            <iframe
+              src="https://www.youtube.com/embed/X1rnMPoC2WM"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
+
           <div class="info-about-zhilet">
             <div class="zhilet-wrapper">
               <div class="zhilet-item">
@@ -534,10 +866,10 @@
                     alt="DsL Dog Sport Life Zhilet Icon"
                   />
                   <p>
-                    <span>2 полукольца из нержавеющей стали</span> на спинке (25
-                    мм) и 2 по бокам (35 мм) для дополни- тельной амуниции
-                    (парашюты, силовой рос, эспандер) и фиксации на беговой
-                    дорожке
+                    2 полукольца из нержавеющей стали на спинке (25 мм) и 2 по
+                    бокам (35 мм)
+                    <span>для дополнительной амуниции</span> (парашюты,
+                    эспандер) и надёжной фиксации на беговой дорожке
                   </p>
                 </div>
                 <div class="zhilet-item-info">
@@ -552,10 +884,80 @@
                 </div>
               </div>
               <div class="zhilet-img">
+                <p class="watch-description">
+                  Нажмите на круг, чтобы увидеть описание
+                </p>
                 <img
                   src="assets/images/images-folder/zelet-image.png"
                   alt="DsL Dog Sport Life Zhilet Image"
                 />
+                <img
+                  src="assets/images/icons-folder/red-round.png"
+                  alt="DsL Dog Sport Life Round Icon"
+                  class="round-icon"
+                  id="red-round"
+                />
+                <img
+                  src="assets/images/icons-folder/green-round.png"
+                  alt="DsL Dog Sport Life Round Icon"
+                  class="round-icon"
+                  id="green-round"
+                />
+                <img
+                  src="assets/images/icons-folder/blue-round.png"
+                  alt="DsL Dog Sport Life Round Icon"
+                  class="round-icon"
+                  id="blue-round"
+                />
+                <img
+                  src="assets/images/icons-folder/orange-round.png"
+                  alt="DsL Dog Sport Life Round Icon"
+                  class="round-icon"
+                  id="orange-round"
+                />
+
+                <div class="mobile-zhilet-item-info red-zhilet-item active">
+                  <img
+                    src="assets/images/icons-folder/zhilet-icon.png"
+                    alt="DsL Dog Sport Life Zhilet Icon"
+                  />
+                  <p>
+                    2 полукольца из нержавеющей стали на спинке (25 мм) и 2 по
+                    бокам (35 мм)
+                    <span>для дополнительной амуниции</span> (парашюты,
+                    эспандер) и надёжной фиксации на беговой дорожке
+                  </p>
+                </div>
+                <div class="mobile-zhilet-item-info green-zhilet-item">
+                  <img
+                    src="assets/images/icons-folder/zhilet-icon-two.png"
+                    alt="DsL Dog Sport Life Zhilet Icon"
+                  />
+                  <p>
+                    <span> На спинке усиленная ручка из стропы</span> для
+                    максимального контроля собаки
+                  </p>
+                </div>
+                <div class="mobile-zhilet-item-info blue-zhilet-item">
+                  <img
+                    src="assets/images/icons-folder/zhilet-icon-three.png"
+                    alt="DsL Dog Sport Life Zhilet Icon"
+                  />
+                  <p>
+                    <span>4-6 карманов на замках- липучках для груза</span>
+                    (кол-во карманов зависит от размера и веса собаки)
+                  </p>
+                </div>
+                <div class="mobile-zhilet-item-info orange-zhilet-item">
+                  <img
+                    src="assets/images/icons-folder/zhilet-icon-four.png"
+                    alt="DsL Dog Sport Life Zhilet Icon"
+                  />
+                  <p>
+                    <span> На спинке усиленная ручка из стропы</span> для
+                    максимального контроля собаки
+                  </p>
+                </div>
               </div>
               <div class="zhilet-item">
                 <div class="zhilet-item-info">
@@ -581,6 +983,7 @@
               </div>
             </div>
           </div>
+
           <div class="tissue-container">
             <div class="tissue-wrapper">
               <div class="tissue-item">
@@ -592,14 +995,9 @@
                   <p>
                     Используются <span>прочные армированные нитки 70ЛЛ.</span> У
                     них высокая сопротивляемость вытяжке и трению, что даёт
-                    очень крепкий
-                  </p>
-                </div>
-                <div class="tissue-info">
-                  <p>
-                    и долговечный шов. Все узлы, куда приходят максимальные
-                    силовые нагрузки дополнительно укреплены на реверсивной
-                    машине. <span>При замерзании не лопается</span>
+                    очень крепкий и долговечный шов. Все узлы, куда приходят
+                    максимальные силовые нагрузки дополнительно укреплены на
+                    реверсивной машине. <span>При замерзании не лопается</span>
                   </p>
                 </div>
               </div>
@@ -610,30 +1008,39 @@
                     alt="DsL Dog Sport Life Roulon Icon"
                   />
                   <p>
-                    Жилет сделан из одной из
-                    <span>самых прочных тканей Оксфорд 1680Д,</span>
-                    которую используют для армейских палаток,
-                  </p>
-                </div>
-                <div class="tissue-info">
-                  <p>
-                    рюкзаков и спецназовской одежды. Она не только выдерживает
-                    высокие нагрузки и резкие движения,
-                    <span>но отталкивает грязь и воду</span>
+                    Жилет сделан из
+                    <span>прочнейшей ткани Оксфорд 1680Д,</span> которую
+                    используют для армейских палаток, тур. рюкзаков и
+                    спецназовской одежды.
+                    Она не только выдерживает высокие нагрузки и резкие
+                    движения,
+                    <span>но отталкивает грязь и воду.</span> Дополнительная PU
+                    пропитка фиксирует ткань, делая её более прочной.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="test-strength">
-              <img
-                src="assets/images/icons-folder/youtube-test.png"
-                alt="DsL Dog Sport Life YouTube Test"
-              />
-              <p>
-                <span>Тест на прочность:</span> качок весом 86 кг. подтягивается
-                на жилете
-              </p>
-            </div>
+            <a
+              href="https://www.youtube.com/watch?v=OP8PZyDj3Uk&feature=youtu.be"
+            >
+              <div class="test-strength">
+                <img
+                  src="assets/images/icons-folder/youtube-test.png"
+                  alt="DsL Dog Sport Life YouTube Test"
+                />
+                <p>
+                  <span>Тест на прочность:</span> качок весом 86 кг.
+                  подтягивается на жилете
+                </p>
+              </div>
+            </a>
+
+            <iframe
+              src="https://www.youtube.com/embed/OP8PZyDj3Uk"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -644,12 +1051,9 @@
           <div class="comfortable-info">
             <h2>Комфортно и <span>безопасно</span> для собаки</h2>
             <p>
-              Жилет плотно «сидит», благодаря
-              <span
-                >анатомичной конструкции, ткани Оксфорд 1680Д и Y-образной
-                системе крепления с регулируемыми стропами и прочными застёжками
-                «Фастекс».</span
-              >
+              <span>Жилет плотно «сидит»,</span> благодаря анатомичной
+              конструкции и Y-образной системе крепления с регулируемыми
+              стропами и прочными застёжками «Фастекс».
             </p>
             <div class="comfortable-advantages">
               <div class="advantages">
@@ -657,7 +1061,7 @@
                   src="assets/images/icons-folder/kick-icon.png"
                   alt="DsL Dog Sport Life Kick Icon"
                 />
-                <p>Прокладка-пенка смягчает нагрузку на кожу.</p>
+                <p>Прокладка-пенка <span>смягчает нагрузку</span> на кожу.</p>
               </div>
               <div class="advantages">
                 <img
@@ -665,8 +1069,9 @@
                   alt="DsL Dog Sport Life Strockes Icon"
                 />
                 <p>
-                  Прочные стропы (с разрывной нагрузкой 360 кг) не натирают,
-                  благодаря <span>гладкому плетению.</span>
+                  Прочные <span>стропы</span> (с разрывной нагрузкой 360 кг)
+                  <span>не натирают,</span>
+                  благодаря гладкому плетению.
                 </p>
               </div>
             </div>
@@ -676,7 +1081,7 @@
                   src="assets/images/icons-folder/galka-icon.png"
                   alt="DsL Dog Sport Life Galka Icon"
                 />
-                <p>Не цепляет шерсть</p>
+                <p><span>Не цепляет</span> шерсть</p>
               </div>
               <div class="safe-item">
                 <img
@@ -685,8 +1090,9 @@
                 />
                 <p>
                   <span>
-                    Не сковывает движения
+                    Не сковывает
                   </span>
+                  движения
                 </p>
               </div>
               <div class="safe-item">
@@ -716,13 +1122,7 @@
                   </span>
                 </p>
               </div>
-              <div class="safe-item">
-                <img
-                  src="assets/images/icons-folder/galka-icon.png"
-                  alt="DsL Dog Sport Life Galka Icon"
-                />
-                <p><span>Не «ездит»</span> по телу</p>
-              </div>
+
               <div class="safe-item">
                 <img
                   src="assets/images/icons-folder/galka-icon.png"
@@ -746,38 +1146,70 @@
         <div class="container">
           <h2><span>Видеоролики</span> некоторых клиентов</h2>
           <div class="video-wrapper">
-            <img
-              src="assets/images/images-folder/second-video-1.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-2.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-3.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-4.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-5.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-6.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-7.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
-            <img
-              src="assets/images/images-folder/second-video-8.png"
-              alt="DsL Dog Sport Life Video Image"
-            />
+            <a
+              href="https://www.youtube.com/watch?v=69afBgQSDow&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-1.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=NElVqzwNzFo&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-2.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=X_6QwoTDP9o&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-3.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=lsgXSj4VqOU&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-4.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=sfK921HNF9c&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-5.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=lWp7FeFSb3g&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-6.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=XBQy_FoEuxU&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-7.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=RZ_l-8hSwKI&feature=youtu.be"
+            >
+              <img
+                src="assets/images/images-folder/second-video-8.png"
+                alt="DsL Dog Sport Life Video Image"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -794,6 +1226,11 @@
               />
               <div class="part">
                 <h4>Стас Михайлов</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id377977265
+                  </p>
+                </a>
                 <div class="date">
                   <img
                     src="assets/images/icons-folder/calendar-icon.png"
@@ -847,6 +1284,12 @@
               />
               <div class="part">
                 <h4>Ирина Рузанова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id377977265
+                  </p>
+                </a>
+
                 <div class="date">
                   <img
                     src="assets/images/icons-folder/calendar-icon.png"
@@ -896,6 +1339,12 @@
               />
               <div class="part">
                 <h4>Катриэль Тейрин</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id377977265
+                  </p>
+                </a>
+
                 <div class="date">
                   <img
                     src="assets/images/icons-folder/calendar-icon.png"
@@ -936,6 +1385,427 @@
               />
             </div>
           </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/4-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Натали Чистюхина</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/nataliya_bor
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>30.10.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Мы рады быть одними из обладателей этой крутой амуниции.
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/4-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/4-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/5-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Валерия Никтонова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/idhardlucky686008
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>30.10.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Добрый день,наконец-то дошли руки. Огромное спасибо всем кто делал
+              нам заказ. Сделано все на высшем уровне,все супер! Отдельное
+              спасибо за Ручку,она великолепна. Мы первые обладатели такого
+              эксклюзива, и хочу сказать,что это Безумно удобно. Спасибо за
+              проделанную работу!!!
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-4.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-5.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/5-client-reviev-image-6.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/6-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Елена Полозова-Попова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id412652487
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>24.11.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Сегодня забрали наш жилет с Питера. Если честно, то я очень
+              довольна. Жилет сделан 100% качественно, сшит и обработан на
+              славу, минусы отсутствуют. Я безумно рада, что для нашей любимки
+              приобрели такой. Дальше будем заниматься и делиться нашими
+              прогрессами с этой замечательной группой. Ещё раз огромное вам
+              спасибо!
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/6-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/6-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/6-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/7-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Катёнка Морозова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/katenkasm
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>07.12.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Не смогли устоять и заказали жилет в чёрную пятницу. На малинуа
+              суку взяли свой любимый оранжевый цвет размер М, на кобеля
+              оказалось тоже налезет, если отрегулировать лямки побольше.
+              Сегодня у нас была первая прогулка тренировка в пустом жилете. Он
+              очень круто смотрится на собаке, хорошо сидит, собаке не мешает.
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/7-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/7-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/7-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/7-client-reviev-image-4.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/8-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Борис Доброхотов</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id1884338
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>12.12.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Здравствуйте пользуемся Вашим фитнес желетом неделю, отличное
+              качество, собаке в нем удобно, размер подошёл, есть множество
+              регулировок, спасибо Вам огромное, Вы профессионалы своего дела)
+              Вес в желете 200 грамм.
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/8-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/8-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/8-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/9-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Алина Карандашова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id328793002
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>16.12.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Спасибо огромное за жилеты. Очень довольны!
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/9-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/9-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/9-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/10-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Андрей Виноградов</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/a_vinday
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>24.12.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Спасибо большое за жилет. Шикарная вещь, теперь каждую прогулку
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/10-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/10-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/10-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/11-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Анастасия Царёва</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/nastyawhip
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>11.01.2020</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Добрый день! Наконец-то дошли руки сделать фотографии. Жилетик
+              носим с удовольствием. Очень крутой, не стесняет движений. Спасибо
+              вам огромное! Будем отслеживать результаты и делиться.
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/11-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/11-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/11-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
+          <div class="clients_reviews-item">
+            <div class="clients-name">
+              <img
+                src="assets/images/icons-folder/12-client-reviev-icon-1.png"
+                alt="DsL Dog Sport Life Clients Logo"
+              />
+              <div class="part">
+                <h4>Карина Карандашова</h4>
+                <a style="cursor: default;" class="vk-link">
+                  <p>
+                    vk.com/id328814295
+                  </p>
+                </a>
+
+                <div class="date">
+                  <img
+                    src="assets/images/icons-folder/calendar-icon.png"
+                    alt="DsL Dog Sport Life Calendar Icon"
+                  />
+                  <p>30.10.2019</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Спасибо за жилеты от нашей банды.
+            </p>
+            <div class="clients-image">
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-1.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-2.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-3.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-4.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-5.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+              <img
+                src="assets/images/images-folder/12-client-reviev-image-6.png"
+                alt="DsL Dog Sport Life Review Image"
+              />
+            </div>
+          </div>
+
           <a href="#">
             <div class="btn">
               Все отзывы
@@ -953,13 +1823,25 @@
               <img
                 src="assets/images/images-folder/not_suitable-1.png"
                 alt="DsL DOG SPORT LIFE Not Suitable"
+                class="image"
               />
-              <p>Меньше<span>2х лет </span></p>
+              <img
+                src="assets/images/icons-folder/red-khrest.png"
+                alt="DsL DOG SPORT LIFE Red Khrest"
+                class="red-khrest"
+              />
+              <p>Меньше <span>2х лет</span></p>
             </div>
             <div class="not_suitable-item">
               <img
                 src="assets/images/images-folder/not_suitable-2.png"
                 alt="DsL DOG SPORT LIFE Not Suitable"
+                class="image"
+              />
+              <img
+                src="assets/images/icons-folder/red-khrest.png"
+                alt="DsL DOG SPORT LIFE Red Khrest"
+                class="red-khrest"
               />
               <p>В период <span>течки, беременности, кормления</span></p>
             </div>
@@ -967,6 +1849,12 @@
               <img
                 src="assets/images/images-folder/not_suitable-3.png"
                 alt="DsL DOG SPORT LIFE Not Suitable"
+                class="image"
+              />
+              <img
+                src="assets/images/icons-folder/red-khrest.png"
+                alt="DsL DOG SPORT LIFE Red Khrest"
+                class="red-khrest"
               />
               <p>Собака имеет <span>соматические проблемы в анамнезе</span></p>
             </div>
@@ -974,6 +1862,12 @@
               <img
                 src="assets/images/images-folder/not_suitable-4.png"
                 alt="DsL DOG SPORT LIFE Not Suitable"
+                class="image"
+              />
+              <img
+                src="assets/images/icons-folder/red-khrest.png"
+                alt="DsL DOG SPORT LIFE Red Khrest"
+                class="red-khrest"
               />
               <p>
                 <span>Комнатно-декоративной породе,</span> а так же собакам с
@@ -984,6 +1878,12 @@
               <img
                 src="assets/images/images-folder/not_suitable-5.png"
                 alt="DsL DOG SPORT LIFE Not Suitable"
+                class="image"
+              />
+              <img
+                src="assets/images/icons-folder/red-khrest.png"
+                alt="DsL DOG SPORT LIFE Red Khrest"
+                class="red-khrest"
               />
               <p>
                 Были <span>травмы или операции в прошлом,</span> или проблемы с
@@ -1003,7 +1903,11 @@
             <div class="part">
               <div class="increase_price-image">
                 <div class="top-wrapper">
-                  <div class="top">
+                  <div
+                    class="top"
+                    style="cursor: pointer;"
+                    id="myBtnPhotoZhilet"
+                  >
                     <img
                       src="assets/images/images-folder/good-top-image-1.png"
                       alt="DsL DOG SPORT LIFE Image"
@@ -1025,46 +1929,73 @@
                       alt="DsL DOG SPORT LIFE Image"
                     />
                   </div>
-                  <img
-                    src="assets/images/images-folder/red-zhilet.png"
-                    alt="DsL DOG SPORT LIFE Red Zhilet"
-                  />
+                  <div class="loupe-widget js-loupe myImgFirst-wrapper">
+                    <div class="loupe-widget__loupe js-loupe-element"></div>
+                    <img
+                      src="assets/images/images-folder/red-zhilet.png"
+                      alt="DsL DOG SPORT LIFE Red Zhilet"
+                      class="loupe-widget__image js-loupe-image"
+                      data-image-full="assets/images/images-folder/red-zhilet-full.jpg"
+                      id="myImgFirst"
+                    />
+                  </div>
                 </div>
                 <div class="bottom">
                   <img
                     src="assets/images/images-folder/good-bottom-image-1.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-green"
+                    onmouseover="GreenImg()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-2.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-gray"
+                    onmouseover="GrayImg()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-3.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-yellow"
+                    onmouseover="YellowImg()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-4.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-pink"
+                    onmouseover="PinkImg()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-5.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-red"
+                    onmouseover="normalImgFirst()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-6.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-blue"
+                    onmouseover="BlueImg()"
+                    onmouseout="normalImgFirst()"
                   />
                   <img
                     src="assets/images/images-folder/good-bottom-image-7.png"
                     alt="DsL DOG SPORT LIFE Image"
+                    id="bottom-orange"
+                    onmouseover="OrangeImg()"
+                    onmouseout="normalImgFirst()"
                   />
                 </div>
               </div>
 
               <div class="increase-timer">
                 <h3>
-                  При заказе до окончания таймера, вы получите
+                  Оформите заказ пока идёт таймер, и получите
                   <span> 2 подарка</span>
                 </h3>
                 <div class="timer-wrapper">
@@ -1096,10 +2027,9 @@
                     />
                   </div>
                   <div class="delivery-part">
-                    <h4>Бесплатная Доставка</h4>
+                    <h4>15% скидка</h4>
                     <p>
-                      До пункта <span>СДЭК</span> в вашем городе.
-                      <span>С отслеживанием заказа онлайн.</span>
+                      на жилет (уже рассчитана)
                     </p>
                   </div>
                 </div>
@@ -1112,18 +2042,17 @@
                   </div>
                   <div class="delivery-part">
                     <h4>
-                      Полная тренировочная программа с жилетом 3250 руб.
-                      Бесплатно!
+                      Полная тренировочная программа с жилетом
+                      <span>3250 руб.</span>
+                      <span>
+                        Бесплатно!
+                      </span>
                     </h4>
                     <p>
-                      Используйте потенциал фитнес-жилета на 100%,
-                      <span>ускоряя рост мышц, выносливости и скорости</span>
-                      вашей собаки. Комплексная программа из 3 уровней и
-                      <span>36 упражнений разной сложности</span> помогает
-                      системно подойти к тренировкам и значительно улучшить
-                      результаты на соревнованиях. Разработана совместно с
-                      физиотерапевтом- реабилитологом
-                      <span>Еленой Шпиндлер.</span>
+                      Используйте потенциал фитнес-жилета на 100%, благодаря
+                      комплексной программе из 3 уровней и 36 упражнений разной
+                      сложности. Подходит для начинающих. Разработана совместно
+                      с физиотерапевтом-реабилитологом Еленой Шпиндлер.
                     </p>
                   </div>
                 </div>
@@ -1134,13 +2063,13 @@
               <div class="increase_price-info">
                 <div class="price">
                   <h3>
-                    4990 рублей
+                    3990 руб.
                   </h3>
                   <p>
-                    6000 рублей
+                    4990 рублей
                   </p>
                   <span>
-                    -20%
+                    -15%
                   </span>
                 </div>
                 <div class="increase_price-info-wrapper">
@@ -1150,7 +2079,7 @@
                       alt="DsL DOG SPORT LIFE Brash Icon"
                     />
                     <p>
-                      Доступен любой из <span>7 цветов:</span> оранжевый,
+                      <span>Доступен любой из 7 цветов:</span> оранжевый,
                       красный, зелёный, синий, жёлтый, фуксия, стальной серый
                     </p>
                   </div>
@@ -1160,9 +2089,9 @@
                       alt="DsL DOG SPORT LIFE Girya Icon"
                     />
                     <p>
-                      <span>2-4 кг мешочков с грузом</span> из нержавеющей стали
-                      округлой формы (в зависимости от веса собаки) входят в
-                      комплект
+                      <span>Мешочки с грузом</span> из нержавеющей стали
+                      заказываются дополнительно на странице заказа (1 кг - 250
+                      р.)
                     </p>
                   </div>
                   <div class="increase_price-info-item">
@@ -1188,8 +2117,8 @@
                     />
                     <p>
                       <span>Гарантия 14 дней.</span> Можно вернуть, если не
-                      понравился цвет или размер. Мерка возможна. Но без следов
-                      эксплуатации - прогулок и тренировок.
+                      понравился цвет или размер. Но не должно быть следов
+                      эксплуатации - прогулок и тренировок
                     </p>
                   </div>
                 </div>
@@ -1197,8 +2126,8 @@
 
               <div class="form">
                 <h3>
-                  Закажите Фитнес-Жилет DSL сейчас и
-                  <span>заберите бонусы</span>
+                  Забронируйте бонусы, оформив заказ сейчас (оплатить можно
+                  позже)
                 </h3>
                 <div class="part-line">
                   <div class="part">
@@ -1234,44 +2163,200 @@
       <!-- Question And Answer Section -->
       <section id="question_and_answer">
         <div class="container">
-          <div class="question">
-            <p>Как чистить жилет?</p>
-            <img
-              src="assets/images/icons-folder/arrow-round.png"
-              alt="DsL DOG SPORT LIFE Arrow Round"
-            />
-          </div>
-
           <div class="quest-item">
-            <div class="question">
-              <p>В чём отличие от шлейки?</p>
+            <div class="question question-one">
+              <p>Какие противопоказания?</p>
               <img
                 src="assets/images/icons-folder/arrow-round.png"
                 alt="DsL DOG SPORT LIFE Arrow Round"
               />
             </div>
-            <div class="answer">
+            <div class="answer answer-one">
               <p>
-                Это именно спортивный жилет с утяжелителями и возможностью
-                прикрепить доп. спортивную аммуницию.
+                Только для собак от 2 лет. Не подходит декоративным породам и
+                собакам с очень короткими ногами (такса, вельш-корги и тд.).
+                <br />
+                Противопоказано в период течки, беременности и кормления. При
+                травмах, операциях в прошлом или проблем с опорнодвигательным
+                аппаратом нужна консультация ортопеда или реабилитолога.
+                <br />
+                Даже если собака выглядит здоровой, нужно одобрение врачей
+                (ортопеда, кардиолога и вет. врач). Поскольку жилет делает
+                регулярные прогулки спортивными. А спорт «проявляет» любые
+                скрытые болячки.
               </p>
             </div>
           </div>
 
-          <div class="question">
-            <p>Есть ли гарантия?</p>
-            <img
-              src="assets/images/icons-folder/arrow-round.png"
-              alt="DsL DOG SPORT LIFE Arrow Round"
-            />
+          <div class="quest-item">
+            <div class="question question-two">
+              <p>Как чистить жилет?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-two">
+              <p>
+                Ткань Оксфорд 1680Д имеет водо- и грязеотталкивающие свойства.
+                Поэтому песок и земля легко стряхивается. При сильных
+                загрязнениях часто достаточно промыть под проточной водой.
+                Допустима ручная или машинная стирка при температуре 30 градусов
+                (режим «ручная стирка»). Без отбеливателя. Сушить воздухом, НЕ
+                на батареях.
+              </p>
+            </div>
           </div>
 
-          <div class="question">
-            <p>Как быстро я получу жилет?</p>
-            <img
-              src="assets/images/icons-folder/arrow-round.png"
-              alt="DsL DOG SPORT LIFE Arrow Round"
-            />
+          <div class="quest-item">
+            <div class="question question-three">
+              <p>Есть ли гарантия?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-three">
+              <p>
+                Стандартная 14-дневная на обмен-возврат. Мерка возможна, но без
+                следов эксплуатации - прогулок и тренировок.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-four">
+              <p>Когда привезут жилет?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-four">
+              <p>
+                После оплаты заказ «идёт» в производство. Передача курьеру на 5
+                рабочий день, о чём вы узнаете по СМС и почте (вы получите
+                уведомление с номером для отслеживания заказа). Срок доставки
+                зависит от региона и расчитывается автоматически на странице
+                заказа.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-five">
+              <p>Как тренировать собаку с жилетом?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-five">
+              <p>
+                Пошаговые рекомендации раскрыты в нашем руководстве, которое вы
+                поулчите вместе с жилетом. ����ачиная с веса груза на каждом
+                этапе и способах тренировки до определения симптомов утомления у
+                собаки (чтобы вовремя прекратить занятия).
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-six">
+              <p>Можно ли купить на вырост?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-six">
+              <p>
+                Можно, если собака больше не будет расти и только немного
+                прибавит в объёмах. Регулировок хватит.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-seven">
+              <p>Можно ли в нем просто ходить и использовать как шлейку?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-seven">
+              <p>
+                Это спортивная аммуниция, поэтому носить её рекомендуется не
+                более 15-20 минут (на начальном этапе). Подробные рекомендации
+                смотрите в нашем руководстве по тренировкам с жилетом.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-eight">
+              <p>Можно ли регулировать груз?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-eight">
+              <p>
+                Груз в открываемых пакетиках с замком zip-lock, поэтому его
+                можно регулировать вплоть до грамма.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-nine">
+              <p>
+                Можно ли использовать как вейпуллинговую шлейку и таскать
+                тяжести?
+              </p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-nine">
+              <p>
+                Это разная аммуниция и предназначена для разного вида
+                тренировок. На жилет можно крепить небольшой груз до 10 кг.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-ten">
+              <p>Можно ли использовать при занятиях защитой?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-ten">
+              <p>
+                Да.
+              </p>
+            </div>
+          </div>
+
+          <div class="quest-item">
+            <div class="question question-eleven">
+              <p>Где производят жилет?</p>
+              <img
+                src="assets/images/icons-folder/arrow-round.png"
+                alt="DsL DOG SPORT LIFE Arrow Round"
+              />
+            </div>
+            <div class="answer answer-eleven">
+              <p>
+                В Санкт-Петербурге на собственном производстве.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -1280,39 +2365,113 @@
       <section id="gallarey">
         <div class="container">
           <div class="gallarey-wrapper">
-            <img
-              src="assets/images/images-folder/gallarey-1.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-2.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-3.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-4.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-5.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-6.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-7.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
-            <img
-              src="assets/images/images-folder/gallarey-8.png"
-              alt="DsL DOG SPORT LIFE Gallarey Image"
-            />
+            <div class="gallarey-item" id="myBtnGallarey">
+              <img
+                src="assets/images/images-folder/gallarey-1.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareyTwo">
+              <img
+                src="assets/images/images-folder/gallarey-2.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareyThree">
+              <img
+                src="assets/images/images-folder/gallarey-3.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareyFour">
+              <img
+                src="assets/images/images-folder/gallarey-4.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareyFive">
+              <img
+                src="assets/images/images-folder/gallarey-5.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareySix">
+              <img
+                src="assets/images/images-folder/gallarey-6.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareySeven">
+              <img
+                src="assets/images/images-folder/gallarey-7.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
+            <div class="gallarey-item" id="myBtnGallareyEight">
+              <img
+                src="assets/images/images-folder/gallarey-8.png"
+                alt="DsL DOG SPORT LIFE Gallarey Image"
+              />
+              <img
+                src="assets/images/images-folder/hide-ph.png"
+                alt="DsL DOG SPORT LIFE Hide PH"
+                class="hide-ph"
+              />
+            </div>
           </div>
+
+          <!-- <div class="slider-for">
+            <div style="color: #000;">your content 1</div>
+            <div style="color: #000;">your content 2</div>
+            <div style="color: #000;">your content 3</div>
+            <div style="color: #000;">your content 4</div>
+            <div style="color: #000;">your content 5</div>
+            <div style="color: #000;">your content 6</div>
+          </div>
+          <div class="slider-nav">
+            <div style="color: #000;">your content 1</div>
+            <div style="color: #000;">your content 2</div>
+            <div style="color: #000;">your content 3</div>
+            <div style="color: #000;">your content 4</div>
+            <div style="color: #000;">your content 5</div>
+            <div style="color: #000;">your content 6</div>
+          </div> -->
+
           <p>
             Показать ещё >
           </p>
@@ -1324,7 +2483,9 @@
       <div class="container">
         <p>
           (с) 2020 DogSportLife <br />
-          Политика конфиденциальности
+          <button id="myBtnPolitic" style="cursor: pointer;">
+            Пользовательское соглашение
+          </button>
         </p>
 
         <div class="visa-card">
@@ -1346,5 +2507,6 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
   ></script>
 
+  <script type="text/javascript" src="assets/slick/slick.js"></script>
   <script src="js/main.js"></script>
 </html>
