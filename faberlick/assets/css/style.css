@@ -222,6 +222,11 @@ span,
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0);
+}
+
 main {
   overflow-x: hidden;
 }
@@ -251,6 +256,11 @@ main {
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+}
+@media (max-width: 1900px) {
+  .modal .modal-content {
+    width: 50%;
+  }
 }
 @media (max-width: 475px) {
   .modal .modal-content {
@@ -365,7 +375,7 @@ button p {
   font-size: 36px;
   transition: all 0.3s ease-out;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   button p {
     font-size: 28px;
   }
@@ -430,7 +440,7 @@ h3 {
 h2 {
   font-size: 72px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   h2 {
     font-size: 55px;
   }
@@ -444,7 +454,7 @@ h2 {
 h3 {
   font-size: 48px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   h3 {
     font-size: 36px;
   }
@@ -458,7 +468,7 @@ h3 {
 p {
   font-size: 36px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   p {
     font-size: 28px;
   }
@@ -474,12 +484,17 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  position: fixed;
+  background: #ffff;
+  width: 100vw;
+  left: 0;
+  z-index: 1000;
 }
 header nav p {
   font-size: 20px;
   font-weight: 300;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   header nav p {
     font-size: 0.9vw;
   }
@@ -489,7 +504,7 @@ header nav p {
     font-size: 0.8vw;
   }
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   header nav .logo {
     padding: 0 5px;
     max-width: 20%;
@@ -603,7 +618,7 @@ header nav .social-navigation ul.links li {
   align-items: center;
   transition: all 0.5s ease-out;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   header nav .social-navigation ul.links li {
     min-width: 24px;
     min-height: 24px;
@@ -630,7 +645,7 @@ header nav .social-navigation ul.links li:hover > a {
 
 main section#main {
   background: url("../images/bg-folder/main-bg.png") no-repeat center top/cover;
-  padding: 70px 0 0 0;
+  padding: 170px 0 0 0;
 }
 @media (max-width: 475px) {
   main section#main {
@@ -661,7 +676,7 @@ main section#main .container .part:last-child {
   padding: 350px 0 0 150px;
   text-align: center;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   main section#main .container .part:last-child {
     padding: 200px 0 0 150px;
   }
@@ -685,7 +700,7 @@ main section#main .container .part:last-child h1 {
   font-weight: 200;
   padding: 50px 0;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   main section#main .container .part:last-child h1 {
     font-size: 36px;
   }
@@ -718,6 +733,12 @@ main section#about_company .container {
   main section#about_company .container {
     flex-direction: column;
     padding: 0;
+  }
+}
+@media (max-width: 1900px) {
+  main section#about_company .container .part:first-child {
+    display: flex;
+    align-items: center;
   }
 }
 main section#about_company .container .part:last-child {
@@ -770,7 +791,7 @@ main section#quality_standards h3 {
 main section#quality_standards .standart-items-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 30px 0;
 }
 @media (max-width: 1024px) {
   main section#quality_standards .standart-items-wrapper {
@@ -785,6 +806,11 @@ main section#quality_standards .standart-items-wrapper .standart-item {
 @media (max-width: 1024px) {
   main section#quality_standards .standart-items-wrapper .standart-item {
     max-width: 40%;
+  }
+}
+@media (max-width: 1900px) {
+  main section#quality_standards .standart-items-wrapper .standart-item img {
+    min-height: 200px;
   }
 }
 @media (max-width: 475px) {
@@ -810,6 +836,9 @@ main section#product {
   main section#product {
     padding: 30px 0;
   }
+}
+main section#product h2 {
+  padding: 30px 0;
 }
 main section#product .product-items-wrapper {
   display: flex;
@@ -1068,11 +1097,6 @@ main section#registration .registration-info-wrapper {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 1500px) {
-  main section#registration .registration-info-wrapper {
-    flex-direction: column;
-  }
-}
 main section#registration .registration-info-wrapper .part {
   width: 50%;
   display: flex;
@@ -1084,6 +1108,16 @@ main section#registration .registration-info-wrapper .part {
     width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part {
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part img {
+    max-width: 70%;
+  }
+}
 main section#registration .registration-info-wrapper .part form {
   display: flex;
   flex-direction: column;
@@ -1093,10 +1127,17 @@ main section#registration .registration-info-wrapper .part form {
   background: #fff;
   padding: 60px 60px 30px 60px;
 }
-@media (max-width: 475px) {
+@media (max-width: 1900px) {
   main section#registration .registration-info-wrapper .part form {
-    max-width: 90%;
-    padding: 10px;
+    max-width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part form {
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid #00aca0;
+    min-width: 60vw;
   }
 }
 main section#registration .registration-info-wrapper .part form .personal-wrapper {
@@ -1138,6 +1179,12 @@ main section#registration .registration-info-wrapper .part form .personal-wrappe
   width: 35px;
   background-color: #eee;
 }
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part form .personal-wrapper .chbx-container span.checkmark {
+    height: 20px;
+    width: 20px;
+  }
+}
 main section#registration .registration-info-wrapper .part form .personal-wrapper .chbx-container span.checkmark:after {
   content: "";
   position: absolute;
@@ -1152,6 +1199,14 @@ main section#registration .registration-info-wrapper .part form .personal-wrappe
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part form .personal-wrapper .chbx-container span.checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 8px;
+  }
+}
 main section#registration .registration-info-wrapper .part form .personal-wrapper .chbx-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
@@ -1161,7 +1216,7 @@ main section#registration .registration-info-wrapper .part form .personal-wrappe
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part form .personal-wrapper #personal {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 main section#registration .registration-info-wrapper .part form label {
@@ -1170,7 +1225,7 @@ main section#registration .registration-info-wrapper .part form label {
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part form label {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 main section#registration .registration-info-wrapper .part form input {
@@ -1178,6 +1233,13 @@ main section#registration .registration-info-wrapper .part form input {
   border: 0;
   margin: 10px 0;
   padding: 15px 0;
+}
+@media (max-width: 1024px) {
+  main section#registration .registration-info-wrapper .part form input {
+    margin: 5px 0;
+    padding: 10px 0;
+    font-size: 10px;
+  }
 }
 main section#registration .registration-info-wrapper .part form input::placeholder {
   text-align: center;
@@ -1187,7 +1249,7 @@ main section#registration .registration-info-wrapper .part form input::placehold
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part form input::placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 main section#registration .registration-info-wrapper .part form input[type=submit] {
@@ -1197,7 +1259,7 @@ main section#registration .registration-info-wrapper .part form input[type=submi
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part form input[type=submit] {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 main section#registration .registration-info-wrapper .part h3 {
@@ -1207,7 +1269,7 @@ main section#registration .registration-info-wrapper .part h3 {
 }
 @media (max-width: 475px) {
   main section#registration .registration-info-wrapper .part h3 {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 main section#events_reviews {
@@ -1239,6 +1301,11 @@ main section#events_reviews .container .events-item-wrapper {
     flex-direction: row;
   }
 }
+@media (max-width: 1900px) {
+  main section#events_reviews .container .events-item-wrapper .event-item img {
+    max-width: 30%;
+  }
+}
 @media (max-width: 475px) {
   main section#events_reviews .container .events-item-wrapper .event-item img {
     max-width: 50%;
@@ -1255,6 +1322,11 @@ main section#events_reviews .container .events-item-wrapper .event-wrap {
 main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(2) {
   padding: 120px 0 0 0;
 }
+@media (max-width: 1900px) {
+  main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(2) {
+    padding: 80px 0 0 0;
+  }
+}
 @media (max-width: 1024px) {
   main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(2) {
     padding: 30px 0;
@@ -1262,6 +1334,11 @@ main section#events_reviews .container .events-item-wrapper .event-wrap:nth-chil
 }
 main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(3) {
   padding: 240px 0 0 0;
+}
+@media (max-width: 1900px) {
+  main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(3) {
+    padding: 180px 0 0 0;
+  }
 }
 @media (max-width: 1024px) {
   main section#events_reviews .container .events-item-wrapper .event-wrap:nth-child(3) {
@@ -1312,23 +1389,18 @@ main section#catalog .catalog-part-wrapper {
   width: 90%;
   margin: auto;
 }
-@media (max-width: 475px) {
-  main section#catalog .catalog-part-wrapper {
-    flex-direction: column;
-  }
-}
 main section#catalog .catalog-part-wrapper .part {
   width: 45%;
 }
-@media (max-width: 1024px) {
-  main section#catalog .catalog-part-wrapper .part {
-    width: 100%;
+@media (max-width: 1900px) {
+  main section#catalog .catalog-part-wrapper .part img {
+    max-height: 70vh;
   }
 }
 main section#catalog .catalog-part-wrapper .part h2 {
   font-size: 72px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   main section#catalog .catalog-part-wrapper .part h2 {
     font-size: 56px;
   }
@@ -1340,7 +1412,7 @@ main section#catalog .catalog-part-wrapper .part h2 {
 }
 @media (max-width: 475px) {
   main section#catalog .catalog-part-wrapper .part h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 main section#catalog .catalog-part-wrapper .part p {
@@ -1348,7 +1420,7 @@ main section#catalog .catalog-part-wrapper .part p {
   padding: 40px 0;
   color: #656565;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1900px) {
   main section#catalog .catalog-part-wrapper .part p {
     font-size: 34px;
   }
@@ -1360,7 +1432,8 @@ main section#catalog .catalog-part-wrapper .part p {
 }
 @media (max-width: 475px) {
   main section#catalog .catalog-part-wrapper .part p {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 15px 0;
   }
 }
 main section#catalog .catalog-part-wrapper .part button p {
@@ -1371,6 +1444,11 @@ main section#catalog .catalog-part-wrapper .part button p {
 footer {
   padding: 150px 0 430px 0;
   background: url("../images/bg-folder/footer-bg.png") no-repeat center top/cover;
+}
+@media (max-width: 1900px) {
+  footer {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 1024px) {
   footer {
@@ -1391,6 +1469,11 @@ footer .container {
 footer .container .logo {
   padding: 30px 0;
 }
+@media (max-width: 475px) {
+  footer .container .logo {
+    max-width: 50%;
+  }
+}
 footer .container .footer-item-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -1402,9 +1485,20 @@ footer .container .footer-item-wrapper {
     justify-content: space-between;
   }
 }
+footer .container .footer-item-wrapper .first-item {
+  display: flex;
+}
 @media (max-width: 475px) {
-  footer .container .footer-item-wrapper {
+  footer .container .footer-item-wrapper .first-item {
     flex-direction: column;
+  }
+}
+footer .container .footer-item-wrapper .first-item .footer-item {
+  width: 50%;
+}
+@media (max-width: 475px) {
+  footer .container .footer-item-wrapper .first-item .footer-item {
+    width: 100%;
   }
 }
 footer .container .footer-item-wrapper .footer-item {
@@ -1412,7 +1506,6 @@ footer .container .footer-item-wrapper .footer-item {
 }
 @media (max-width: 475px) {
   footer .container .footer-item-wrapper .footer-item {
-    width: 100%;
     padding: 10px 0;
   }
 }
@@ -1431,7 +1524,7 @@ footer .container .footer-item-wrapper .footer-item ul li {
 }
 @media (max-width: 475px) {
   footer .container .footer-item-wrapper .footer-item ul li {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 footer .container .copyright-wrapper .social-footer ul.links {

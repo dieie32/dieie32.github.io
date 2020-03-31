@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0);
+}
+
 main {
   overflow-x: hidden;
 }
@@ -35,6 +40,10 @@ main {
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
+
+    @media (max-width: 1900px) {
+      width: 50%;
+    }
 
     @media (max-width: 475px) {
       width: 80%;
@@ -168,7 +177,7 @@ button {
     font-size: 36px;
     transition: all 0.3s ease-out;
 
-    @media (max-width: 1920px) {
+    @media (max-width: 1900px) {
       font-size: 28px;
     }
 
@@ -243,7 +252,7 @@ h3 {
 h2 {
   font-size: 72px;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1900px) {
     font-size: 55px;
   }
 
@@ -255,7 +264,7 @@ h2 {
 h3 {
   font-size: 48px;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1900px) {
     font-size: 36px;
   }
 
@@ -267,7 +276,7 @@ h3 {
 p {
   font-size: 36px;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1900px) {
     font-size: 28px;
   }
 
@@ -282,12 +291,17 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    position: fixed;
+    background: #ffff;
+    width: 100vw;
+    left: 0;
+    z-index: 1000;
 
     p {
       font-size: 20px;
       font-weight: 300;
 
-      @media (max-width: 1920px) {
+      @media (max-width: 1900px) {
         font-size: 0.9vw;
       }
 
@@ -297,7 +311,7 @@ header {
     }
 
     .logo {
-      @media (max-width: 1920px) {
+      @media (max-width: 1900px) {
         padding: 0 5px;
         max-width: 20%;
       }
@@ -429,7 +443,7 @@ header {
           align-items: center;
           transition: all 0.5s ease-out;
 
-          @media (max-width: 1920px) {
+          @media (max-width: 1900px) {
             min-width: 24px;
             min-height: 24px;
           }
@@ -461,7 +475,7 @@ main {
   section#main {
     background: url('../images/bg-folder/main-bg.png') no-repeat center
       top/cover;
-    padding: 70px 0 0 0;
+    padding: 170px 0 0 0;
 
     @media (max-width: 475px) {
       background: url('../images/bg-folder/mobile-main-bg.png') no-repeat center
@@ -492,7 +506,7 @@ main {
           padding: 350px 0 0 150px;
           text-align: center;
 
-          @media (max-width: 1920px) {
+          @media (max-width: 1900px) {
             padding: 200px 0 0 150px;
           }
 
@@ -514,7 +528,7 @@ main {
             font-weight: 200;
             padding: 50px 0;
 
-            @media (max-width: 1920px) {
+            @media (max-width: 1900px) {
               font-size: 36px;
             }
 
@@ -554,6 +568,13 @@ main {
       }
 
       .part {
+        &:first-child {
+          @media (max-width: 1900px) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
         &:last-child {
           padding: 0 50px;
           max-width: 60%;
@@ -610,7 +631,7 @@ main {
     .standart-items-wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      padding: 30px 0;
 
       @media (max-width: 1024px) {
         flex-wrap: wrap;
@@ -626,6 +647,10 @@ main {
         }
 
         img {
+          @media (max-width: 1900px) {
+            min-height: 200px;
+          }
+
           @media (max-width: 475px) {
             max-width: 50%;
             margin: 0 auto;
@@ -649,6 +674,10 @@ main {
     padding: 100px 0;
 
     @media (max-width: 475px) {
+      padding: 30px 0;
+    }
+
+    h2 {
       padding: 30px 0;
     }
 
@@ -918,10 +947,6 @@ main {
       display: flex;
       justify-content: space-around;
 
-      @media (max-width: 1500px) {
-        flex-direction: column;
-      }
-
       .part {
         width: 50%;
         display: flex;
@@ -930,6 +955,16 @@ main {
 
         @media (max-width: 1500px) {
           width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          justify-content: center;
+        }
+
+        img {
+          @media (max-width: 1024px) {
+            max-width: 70%;
+          }
         }
 
         form {
@@ -941,9 +976,15 @@ main {
           background: #fff;
           padding: 60px 60px 30px 60px;
 
-          @media (max-width: 475px) {
-            max-width: 90%;
-            padding: 10px;
+          @media (max-width: 1900px) {
+            max-width: 95%;
+          }
+
+          @media (max-width: 1024px) {
+            max-width: 100%;
+            padding: 20px;
+            border: 2px solid #00aca0;
+            min-width: 60vw;
           }
 
           .personal-wrapper {
@@ -989,6 +1030,11 @@ main {
                 width: 35px;
                 background-color: #eee;
 
+                @media (max-width: 1024px) {
+                  height: 20px;
+                  width: 20px;
+                }
+
                 &:after {
                   content: '';
                   position: absolute;
@@ -1005,6 +1051,13 @@ main {
                   -webkit-transform: rotate(45deg);
                   -ms-transform: rotate(45deg);
                   transform: rotate(45deg);
+
+                  @media (max-width: 1024px) {
+                    left: 5px;
+                    top: 2px;
+                    width: 6px;
+                    height: 8px;
+                  }
                 }
               }
 
@@ -1018,7 +1071,7 @@ main {
               text-align: right;
 
               @media (max-width: 475px) {
-                font-size: 10px;
+                font-size: 8px;
               }
             }
           }
@@ -1028,7 +1081,7 @@ main {
             color: #656565;
 
             @media (max-width: 475px) {
-              font-size: 14px;
+              font-size: 10px;
             }
           }
 
@@ -1038,6 +1091,12 @@ main {
             margin: 10px 0;
             padding: 15px 0;
 
+            @media (max-width: 1024px) {
+              margin: 5px 0;
+              padding: 10px 0;
+              font-size: 10px;
+            }
+
             &::placeholder {
               text-align: center;
               color: #fff;
@@ -1045,7 +1104,7 @@ main {
               font-weight: 100;
 
               @media (max-width: 475px) {
-                font-size: 12px;
+                font-size: 10px;
               }
             }
 
@@ -1055,7 +1114,7 @@ main {
               font-size: 36px;
 
               @media (max-width: 475px) {
-                font-size: 14px;
+                font-size: 10px;
               }
             }
           }
@@ -1067,7 +1126,7 @@ main {
           max-width: 730px;
 
           @media (max-width: 475px) {
-            font-size: 16px;
+            font-size: 12px;
           }
         }
       }
@@ -1101,6 +1160,12 @@ main {
         }
 
         .event-item {
+          @media (max-width: 1900px) {
+            img {
+              max-width: 30%;
+            }
+          }
+
           @media (max-width: 475px) {
             img {
               max-width: 50%;
@@ -1118,6 +1183,10 @@ main {
           &:nth-child(2) {
             padding: 120px 0 0 0;
 
+            @media (max-width: 1900px) {
+              padding: 80px 0 0 0;
+            }
+
             @media (max-width: 1024px) {
               padding: 30px 0;
             }
@@ -1125,6 +1194,10 @@ main {
 
           &:nth-child(3) {
             padding: 240px 0 0 0;
+
+            @media (max-width: 1900px) {
+              padding: 180px 0 0 0;
+            }
 
             @media (max-width: 1024px) {
               padding: 30px 0;
@@ -1187,21 +1260,19 @@ main {
       width: 90%;
       margin: auto;
 
-      @media (max-width: 475px) {
-        flex-direction: column;
-      }
-
       .part {
         width: 45%;
 
-        @media (max-width: 1024px) {
-          width: 100%;
+        img {
+          @media (max-width: 1900px) {
+            max-height: 70vh;
+          }
         }
 
         h2 {
           font-size: 72px;
 
-          @media (max-width: 1920px) {
+          @media (max-width: 1900px) {
             font-size: 56px;
           }
 
@@ -1210,7 +1281,7 @@ main {
           }
 
           @media (max-width: 475px) {
-            font-size: 24px;
+            font-size: 18px;
           }
         }
 
@@ -1219,7 +1290,7 @@ main {
           padding: 40px 0;
           color: #656565;
 
-          @media (max-width: 1920px) {
+          @media (max-width: 1900px) {
             font-size: 34px;
           }
 
@@ -1228,7 +1299,8 @@ main {
           }
 
           @media (max-width: 475px) {
-            font-size: 14px;
+            font-size: 12px;
+            padding: 15px 0;
           }
         }
 
@@ -1248,6 +1320,10 @@ footer {
   background: url('../images/bg-folder/footer-bg.png') no-repeat center
     top/cover;
 
+  @media (max-width: 1900px) {
+    padding: 80px 0;
+  }
+
   @media (max-width: 1024px) {
     padding: 100px 0;
   }
@@ -1265,6 +1341,10 @@ footer {
 
     .logo {
       padding: 30px 0;
+
+      @media (max-width: 475px) {
+        max-width: 50%;
+      }
     }
 
     .footer-item-wrapper {
@@ -1277,15 +1357,26 @@ footer {
         justify-content: space-between;
       }
 
-      @media (max-width: 475px) {
-        flex-direction: column;
+      .first-item {
+        display: flex;
+
+        @media (max-width: 475px) {
+          flex-direction: column;
+        }
+
+        .footer-item {
+          width: 50%;
+
+          @media (max-width: 475px) {
+            width: 100%;
+          }
+        }
       }
 
       .footer-item {
         width: 30%;
 
         @media (max-width: 475px) {
-          width: 100%;
           padding: 10px 0;
         }
 
@@ -1304,7 +1395,7 @@ footer {
             }
 
             @media (max-width: 475px) {
-              font-size: 14px;
+              font-size: 12px;
             }
           }
         }
