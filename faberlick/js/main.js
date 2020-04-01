@@ -6,8 +6,8 @@ $('.product-items-wrapper').slick({
     {
       breakpoint: 1600,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
       },
     },
     {
@@ -143,6 +143,36 @@ toggle.addEventListener('click', () => {
 });
 
 ///////////////////////////////
+
+var showOne = document.querySelector('#showtext1');
+var showTwo = document.querySelector('#showtext2');
+var showThree = document.querySelector('#showtext3');
+
+var hiddencontentOne = document.querySelector('#hiddentext1');
+var hiddencontentTwo = document.querySelector('#hiddentext2');
+var hiddencontentThree = document.querySelector('#hiddentext3');
+
+showOne.addEventListener('click', () => {
+  hiddencontentOne.classList.toggle('active1');
+});
+
+showTwo.addEventListener('click', () => {
+  hiddencontentTwo.classList.toggle('active2');
+});
+
+showThree.addEventListener('click', () => {
+  hiddencontentThree.classList.toggle('active3');
+});
+
+
+
+
+
+
+
+
+
+
 
 // var textWrapper = document.querySelector('.ml7 .letters');
 // textWrapper.innerHTML = textWrapper.textContent.replace(
