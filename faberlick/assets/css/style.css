@@ -369,83 +369,101 @@ main {
   background: #ee1e5b;
 }
 
-button {
+button,
+input[type=submit] {
   cursor: pointer;
   padding: 8px 70px;
 }
 @media (max-width: 1024px) {
-  button {
+  button,
+input[type=submit] {
     padding: 8px 40px;
   }
 }
 @media (max-width: 768px) {
-  button {
+  button,
+input[type=submit] {
     padding: 5px 10px;
   }
 }
 @media (max-width: 475px) {
-  button {
+  button,
+input[type=submit] {
     padding: 5px;
   }
 }
-button p {
+button p,
+input[type=submit] p {
   color: #fff;
   font-size: 36px;
   transition: all 0.3s ease-out;
 }
 @media (max-width: 1800px) {
-  button p {
+  button p,
+input[type=submit] p {
     font-size: 28px;
   }
 }
 @media (max-width: 768px) {
-  button p {
+  button p,
+input[type=submit] p {
     font-size: 14px;
   }
 }
 @media (max-width: 475px) {
-  button p {
+  button p,
+input[type=submit] p {
     font-size: 10px;
   }
 }
-button.white-btn {
+button.white-btn,
+input[type=submit].white-btn {
   background: #fff;
   border: 3px solid transparent;
   transition: all 0.3s ease-out;
 }
-button.white-btn:hover {
+button.white-btn:hover,
+input[type=submit].white-btn:hover {
   border: 3px solid #fff;
   background: #ee1e5b;
 }
-button.white-btn:hover > p {
+button.white-btn:hover > p,
+input[type=submit].white-btn:hover > p {
   color: #fff;
   transition: all 0.3s ease-out;
 }
-button.white-btn p {
+button.white-btn p,
+input[type=submit].white-btn p {
   color: #ee1e5b;
 }
-button.pink-btn {
+button.pink-btn,
+input[type=submit].pink-btn {
   background: #ee1e5b;
   transition: all 0.3s ease-out;
   border: 3px solid transparent;
 }
-button.pink-btn:hover {
+button.pink-btn:hover,
+input[type=submit].pink-btn:hover {
   border: 3px solid #ee1e5b;
   background: transparent;
 }
-button.pink-btn:hover > p {
+button.pink-btn:hover > p,
+input[type=submit].pink-btn:hover > p {
   color: #ee1e5b !important;
 }
-button.green-btn {
+button.green-btn,
+input[type=submit].green-btn {
   background: #00aca0;
   border: 3px solid transparent;
   border: 3px solid transparent;
 }
-button.green-btn:hover {
+button.green-btn:hover,
+input[type=submit].green-btn:hover {
   border: 3px solid #00aca0;
   background: transparent;
 }
-button.green-btn:hover > p {
+button.green-btn:hover > p,
+input[type=submit].green-btn:hover > p {
   color: #00aca0 !important;
 }
 

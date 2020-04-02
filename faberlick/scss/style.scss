@@ -172,7 +172,8 @@ main {
 }
 
 // Button Style
-button {
+button,
+input[type=submit] {
   cursor: pointer;
   padding: 8px 70px;
 
