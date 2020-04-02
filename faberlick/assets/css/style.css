@@ -222,6 +222,10 @@ span,
   scroll-behavior: smooth;
 }
 
+input {
+  -webkit-appearance: none;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: rgba(255, 255, 255, 0);
