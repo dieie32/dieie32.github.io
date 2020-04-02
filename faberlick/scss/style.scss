@@ -1071,7 +1071,15 @@ main {
         .showtext {
           color: #999;
           cursor: pointer;
-          font-size: 28px;
+          font-size: 22px;
+
+          @media (max-width: 1024px) {
+            font-size: 18px;
+          }
+
+          @media (max-width: 475px) {
+            font-size: 10px;
+          }
         }
 
         .hiddentext {
@@ -1097,12 +1105,6 @@ main {
           opacity: 1;
           visibility: visible;
           height: auto;
-        }
-
-        #showtext2 {
-        }
-
-        #showtext3 {
         }
 
         img {
@@ -1430,7 +1432,7 @@ main {
             }
 
             @media (max-width: 1024px) {
-              padding: 0;
+              padding: 0 0 30px 0;
               width: 100%;
               display: flex;
               justify-content: center;
