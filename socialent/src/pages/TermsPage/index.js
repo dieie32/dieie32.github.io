@@ -1,28 +1,18 @@
 import React from "react";
-import styles from "./styles";
+import "./style.css";
 
 import Footer from "../../components/Footer";
 
 function Terms() {
   return (
     <div>
-      <h1
-        style={{
-          ...styles.paddingContainer,
-          padding: "95px 0 59px 81px",
-          fontSize: 60,
-        }}
-      >
-        Terms of Use
-      </h1>
-      <p style={{ padding: "0 0 150px 81px", fontSize: 28 }}>
-        Latest Update : May 15, 2020
-      </p>
+      <h1 className="paddingContainer termsHeading">Terms of Use</h1>
+      <p className="termsDateInfo">Latest Update : May 15, 2020</p>
 
-      <div style={styles.paddingContainer}>
+      <div className="paddingContainer">
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -37,8 +27,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -53,8 +43,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -69,8 +59,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -85,8 +75,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -101,8 +91,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -117,8 +107,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -133,8 +123,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked
@@ -149,8 +139,8 @@ function Terms() {
           </p>
         </div>
         <div>
-          <h3 style={styles.HeadingStyle}>Information collected</h3>
-          <p style={styles.LoremText}>
+          <h3 className="HeadingStyle">Information collected</h3>
+          <p className="LoremText">
             You can visit ZestMeUp’s website without identifying yourself or
             revealing any personal information. However, if you request
             information or registration to ZestMeUp’s services, you may be asked

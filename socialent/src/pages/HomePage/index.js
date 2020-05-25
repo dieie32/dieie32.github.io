@@ -1,43 +1,23 @@
 import React from "react";
-import styles from "./styles";
+import "./style.css";
 
 import image_man from "../../assets/images/main-page-man.png";
 import Button from "../../components/Button";
 
 function HomePage() {
   return (
-    <div
-      style={{
-        ...styles.displayFlex,
-        ...styles.wrapperStyle,
-      }}
-    >
+    <div className="homePageWrapper">
       <img
         src={image_man}
         alt="Man with Brush Socialent"
-        style={styles.imageStyle}
+        className="imageStyle"
       />
 
-      <div
-        style={{
-          ...styles.displayFlex,
-          ...styles.textWrapper,
-        }}
-      >
-        <h1
-          style={{
-            ...styles.textArrive,
-            ...styles.headingStyle,
-          }}
-        >
+      <div className="homeInfoWrapper">
+        <h1 className="textArrive homeInfoHeading">
           We love to explore new ways to engage with brands and reach
         </h1>
-        <p
-          style={{
-            ...styles.textArrive,
-            ...styles.loremText,
-          }}
-        >
+        <p className="textArrive homeInfoLorem">
           Nor again is there anyone who loves or pursues or desires to obtain
           pain of itself, because it is pain, but because.
         </p>
