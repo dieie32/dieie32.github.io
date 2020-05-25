@@ -1,0 +1,14 @@
+.buttonStyles {
+  padding: 20px 33px;
+  background: #2196f3;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 564px) {
+  .buttonStyles {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}

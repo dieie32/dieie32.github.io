@@ -1,0 +1,40 @@
+.footStyle {
+  padding: 50px 81px;
+  display: flex;
+  flex-direction: start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 564px) {
+  .footStyle {
+    padding: 20px 30px;
+  }
+}
+
+.displayFlexBlockWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .displayFlexBlockWrapper {
+    flex-direction: column;
+  }
+}
+
+.displayFlexWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .displayFlexWrapper {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.merged {
+  margin: 0 15px;
+}
