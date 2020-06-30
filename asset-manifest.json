@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/element63/static/css/main.d498bfb3.chunk.css",
+    "main.js": "/element63/static/js/main.629c3012.chunk.js",
+    "main.js.map": "/element63/static/js/main.629c3012.chunk.js.map",
+    "runtime-main.js": "/element63/static/js/runtime-main.f577f53e.js",
+    "runtime-main.js.map": "/element63/static/js/runtime-main.f577f53e.js.map",
+    "static/css/2.be838c2a.chunk.css": "/element63/static/css/2.be838c2a.chunk.css",
+    "static/js/2.17c7c0b2.chunk.js": "/element63/static/js/2.17c7c0b2.chunk.js",
+    "static/js/2.17c7c0b2.chunk.js.map": "/element63/static/js/2.17c7c0b2.chunk.js.map",
+    "index.html": "/element63/index.html",
+    "precache-manifest.546027d0bf3241f0d519031a5d201e8d.js": "/element63/precache-manifest.546027d0bf3241f0d519031a5d201e8d.js",
+    "service-worker.js": "/element63/service-worker.js",
+    "static/css/2.be838c2a.chunk.css.map": "/element63/static/css/2.be838c2a.chunk.css.map",
+    "static/css/main.d498bfb3.chunk.css.map": "/element63/static/css/main.d498bfb3.chunk.css.map",
+    "static/js/2.17c7c0b2.chunk.js.LICENSE.txt": "/element63/static/js/2.17c7c0b2.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/element63/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f577f53e.js",
+    "static/css/2.be838c2a.chunk.css",
+    "static/js/2.17c7c0b2.chunk.js",
+    "static/css/main.d498bfb3.chunk.css",
+    "static/js/main.629c3012.chunk.js"
+  ]
+}
