@@ -1,0 +1,29 @@
+/* hide show mixin */
+
+@mixin show () {
+    display: block;
+    animation: grow .5s ease-in-out; // optional animation
+}
+  
+@mixin hide () {
+    display: none;
+}
+
+// ttm-icon mixin function
+@mixin icon-box($size, $radius: 0) {
+    width: $size;
+    height: $size;
+    line-height: $size;
+    @if $radius != 0 {
+      border-radius: $radius;
+    }
+}
+// bgimage mixin function
+@mixin replace-image($image, $position:center, $size:cover) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    size: $size;
+    position: $position;
+  }
+}
